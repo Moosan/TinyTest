@@ -1,0 +1,67 @@
+{
+    "Success": true,
+    "Diagnostics": [],
+    "Systems": [
+        {
+            "Name": "MovementSystem",
+            "QualifiedName": "game.MovementSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinySamples/SimpleInput/Scripts/MovementSystem.ts",
+                "Line": 7,
+                "Character": 15
+            },
+            "ExecuteAfter": [
+                "ut.Shared.InputFence"
+            ],
+            "ExecuteBefore": [
+                "ut.Shared.RenderingFence"
+            ],
+            "RequiredComponents": [
+                "ut.Core2D.TransformLocalPosition",
+                "game.Movement"
+            ]
+        }
+    ],
+    "Filters": [],
+    "Behaviours": [],
+    "Performance": [
+        {
+            "Key": "tsconfig",
+            "Description": "Time taken to read and parse the given tsconfig.json file",
+            "Duration": 121,
+            "Steps": 1
+        },
+        {
+            "Key": "checksum",
+            "Description": "Time taken to compute the MD5 of all inputs",
+            "Duration": 252,
+            "Steps": 1
+        },
+        {
+            "Key": "compile",
+            "Description": "Time taken to compile the TypeScript program",
+            "Duration": 1065,
+            "Steps": 10
+        },
+        {
+            "Key": "emit",
+            "Description": "Time taken to generate and write the JavaScript output",
+            "Duration": 44,
+            "Steps": 2
+        },
+        {
+            "Key": "metadata",
+            "Description": "Time taken to reflect Tiny metadata from the compiled program",
+            "Duration": 5,
+            "Steps": 1
+        }
+    ],
+    "SourceFiles": [
+        "C:/Users/Washer/p/tinytest/Assets/TinySamples/SimpleInput/Scripts/MovementSystem.ts",
+        "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
+        "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
+    ],
+    "InputHash": "bcfc7545748208f2cc6df8c2e9b71e3f",
+    "GeneratedAt": "Mon Dec 24 2018 16:17:59 GMT+0900 (東京 (標準時))"
+}
