@@ -1,12 +1,12 @@
 ﻿/**
  * TINY GENERATED CODE, DO NOT EDIT BY HAND
- * @project GalaxyRaiders
+ * @project PhysicsDemo
  */
 
 var Module = {TOTAL_MEMORY: 16777216};
 
-Module.WSServerURL = "ws://192.168.11.7:17700/";
-Module.ProfilerServerURL = "ws://192.168.11.7:54997/";
+Module.WSServerURL = "ws://10.32.222.75:17700/";
+Module.ProfilerServerURL = "ws://10.32.222.75:54997/";
 
 /*
  * Workaround for issue UTINY-1091

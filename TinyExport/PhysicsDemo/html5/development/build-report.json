@@ -1,0 +1,100 @@
+﻿{
+    "Item": {
+        "Name": "Project",
+        "Size": 0,
+        "CompressedSize": 0
+    },
+    "Children": [{
+        "Item": {
+            "Name": "Runtime",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "TinyExport/PhysicsDemo/html5/development/bin/runtime.js",
+                "Size": 6196610,
+                "CompressedSize": 784949
+            }
+        }]
+    }, {
+        "Item": {
+            "Name": "Assets",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "JavaScript",
+                "Size": 3145,
+                "CompressedSize": 0
+            }
+        }, {
+            "Item": {
+                "Name": "Assets/TinySamples/PhysicsDemo/Textures/PhysicsDemo.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "892392a92dd8841bd814c19af3368e28", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Assets/PhysicsDemo.png",
+                    "Size": 5076,
+                    "CompressedSize": 3677,
+                    "Object": { "$TypeId": 10, "Guid": "892392a92dd8841bd814c19af3368e28", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }]
+    }, {
+        "Item": {
+            "Name": "Code",
+            "Size": 0,
+            "CompressedSize": 0
+        },
+        "Children": [{
+            "Item": {
+                "Name": "TinyExport/PhysicsDemo/html5/development/bin/entities.js",
+                "Size": 78157,
+                "CompressedSize": 11730
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "Scene",
+                    "Size": 78074,
+                    "CompressedSize": 11633
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "TinyExport/PhysicsDemo/html5/development/bin/bindings.js",
+                "Size": 78631,
+                "CompressedSize": 6245
+            }
+        }, {
+            "Item": {
+                "Name": "Linked Code Files",
+                "Size": 0,
+                "CompressedSize": 0
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "C:\\Users\\Washer\\p\\tinytest\\TinyExport\\PhysicsDemo\\html5\\development\\ScriptAssemblies\\tsc-emit.js",
+                    "Size": 7799,
+                    "CompressedSize": 1971
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "TinyExport/PhysicsDemo/html5/development/bin/main.js",
+                "Size": 3006,
+                "CompressedSize": 941
+            }
+        }, {
+            "Item": {
+                "Name": "TinyExport/PhysicsDemo/html5/development/bin/wsclient.js",
+                "Size": 9651,
+                "CompressedSize": 2635
+            }
+        }]
+    }]
+}
