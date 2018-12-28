@@ -5,8 +5,8 @@
 
 var Module = {TOTAL_MEMORY: 16777216};
 
-Module.WSServerURL = "ws://10.32.222.155:17700/";
-Module.ProfilerServerURL = "ws://10.32.222.155:54997/";
+Module.WSServerURL = "ws://192.168.11.7:17700/";
+Module.ProfilerServerURL = "ws://192.168.11.7:54997/";
 
 /*
  * Workaround for issue UTINY-1091
