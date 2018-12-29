@@ -12,7 +12,7 @@ using ut.EditorExtensions;
  */
 namespace entities.game
 {
-    namespace NewEntityGroup
+    namespace MainGroup
     {
         public struct Component : IComponentData
         {

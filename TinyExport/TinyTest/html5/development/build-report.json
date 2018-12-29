@@ -54,21 +54,21 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/development/bin/entities.js",
-                "Size": 2581,
-                "CompressedSize": 849
+                "Size": 4235,
+                "CompressedSize": 1135
             },
             "Children": [{
                 "Item": {
-                    "Name": "NewEntityGroup",
-                    "Size": 2501,
-                    "CompressedSize": 776
+                    "Name": "MainGroup",
+                    "Size": 4155,
+                    "CompressedSize": 1060
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/development/bin/bindings.js",
-                "Size": 75782,
-                "CompressedSize": 5804
+                "Size": 75567,
+                "CompressedSize": 5798
             }
         }, {
             "Item": {
@@ -86,8 +86,8 @@
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/development/bin/main.js",
-                "Size": 2077,
-                "CompressedSize": 739
+                "Size": 2038,
+                "CompressedSize": 721
             }
         }, {
             "Item": {

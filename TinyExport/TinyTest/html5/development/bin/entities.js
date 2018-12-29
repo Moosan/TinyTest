@@ -3,14 +3,16 @@
  * @project TinyTest
  */
 
-entities.game.NewEntityGroup.name = "NewEntityGroup";
-entities.game.NewEntityGroup.load = function(world) {
+entities.game.MainGroup.name = "MainGroup";
+entities.game.MainGroup.load = function(world) {
     var arch0 = world.createArchetype(this.Component, ut.Core2D.Camera2D, ut.Core2D.TransformNode, ut.EditorExtensions.CameraCullingMask, ut.layers.Default)
     var e0 = world.createEntity(arch0);
     world.setEntityName(e0, "Camera");
-    var arch1 = world.createArchetype(this.Component, ut.Core2D.Sprite2DRenderer, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformLocalRotation, ut.Core2D.TransformLocalScale, ut.Core2D.TransformNode, ut.layers.Default)
+    var arch1 = world.createArchetype(this.Component, ut.Core2D.LayerSorting, ut.Core2D.Sprite2DRenderer, ut.Core2D.Sprite2DRendererOptions, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformLocalRotation, ut.Core2D.TransformLocalScale, ut.Core2D.TransformNode, ut.layers.Default)
     var e1 = world.createEntity(arch1);
     world.setEntityName(e1, "Sprite");
+    var e2 = world.createEntity(arch1);
+    world.setEntityName(e2, "BackGround");
     var c0 = new ut.Core2D.TransformNode();
     world.setComponentData(e0, c0);
     var c1 = new ut.Core2D.Camera2D();
@@ -69,6 +71,58 @@ entities.game.NewEntityGroup.load = function(world) {
     c7.color = s5;
     c7.blending = 0;
     world.setComponentData(e1, c7);
-    return [e0, e1];
+    var c8 = new ut.Core2D.Sprite2DRendererOptions();
+    var s6 = new ut.Math.Vector2();
+    s6.x = 5;
+    s6.y = 4.8;
+    c8.size = s6;
+    c8.drawMode = 2;
+    world.setComponentData(e1, c8);
+    var c9 = new ut.Core2D.LayerSorting();
+    c9.order = 1;
+    world.setComponentData(e1, c9);
+    var c10 = new ut.Core2D.TransformNode();
+    world.setComponentData(e2, c10);
+    var c11 = new ut.Core2D.TransformLocalPosition();
+    var s7 = new ut.Math.Vector3();
+    s7.x = 0;
+    s7.y = 0;
+    s7.z = 0;
+    c11.position = s7;
+    world.setComponentData(e2, c11);
+    var c12 = new ut.Core2D.TransformLocalRotation();
+    var s8 = new ut.Math.Quaternion();
+    s8.x = 0;
+    s8.y = 0;
+    s8.z = 0;
+    s8.w = 1;
+    c12.rotation = s8;
+    world.setComponentData(e2, c12);
+    var c13 = new ut.Core2D.TransformLocalScale();
+    var s9 = new ut.Math.Vector3();
+    s9.x = 1;
+    s9.y = 1;
+    s9.z = 1;
+    c13.scale = s9;
+    world.setComponentData(e2, c13);
+    var c14 = new ut.Core2D.Sprite2DRenderer();
+    var s10 = new ut.Core2D.Color();
+    s10.r = 1;
+    s10.g = 1;
+    s10.b = 1;
+    s10.a = 1;
+    c14.color = s10;
+    c14.blending = 0;
+    world.setComponentData(e2, c14);
+    var c15 = new ut.Core2D.LayerSorting();
+    world.setComponentData(e2, c15);
+    var c16 = new ut.Core2D.Sprite2DRendererOptions();
+    var s11 = new ut.Math.Vector2();
+    s11.x = 7;
+    s11.y = 10;
+    c16.size = s11;
+    c16.drawMode = 2;
+    world.setComponentData(e2, c16);
+    return [e0, e1, e2];
 }
 

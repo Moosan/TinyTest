@@ -41,9 +41,8 @@ ut.main = function() {
 
     // Initialize all configuration data
     var c0 = world.getConfigData(ut.Core2D.DisplayInfo);
-    c0.width = 1920;
-    c0.height = 1080;
-    c0.autoSizeToFrame = true;
+    c0.width = 360;
+    c0.height = 540;
     c0.renderMode = 0;
     world.setConfigData(c0);
 
@@ -51,7 +50,7 @@ ut.main = function() {
     UT_ASSETS_SETUP(world);
 
     // Create and initialize all startup entities
-    ut.EntityGroup.instantiate(world, "game.NewEntityGroup");
+    ut.EntityGroup.instantiate(world, "game.MainGroup");
 
     // Set up the WebSocket client
     ut._wsclient = ut._wsclient || {};

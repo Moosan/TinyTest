@@ -5,50 +5,50 @@
 ut.meta.registerTypes();
 var entities = entities || {};
 entities.game = entities.game || {};
-entities.game.NewEntityGroup = entities.game.NewEntityGroup || {};
-entities.game.NewEntityGroup.Component = function() {
+entities.game.MainGroup = entities.game.MainGroup || {};
+entities.game.MainGroup.Component = function() {
 };
-entities.game.NewEntityGroup.Component.prototype = Object.create(null);
-entities.game.NewEntityGroup.Component.prototype.constructor = entities.game.NewEntityGroup.Component;
-Object.defineProperties(entities.game.NewEntityGroup.Component.prototype, {
+entities.game.MainGroup.Component.prototype = Object.create(null);
+entities.game.MainGroup.Component.prototype.constructor = entities.game.MainGroup.Component;
+Object.defineProperties(entities.game.MainGroup.Component.prototype, {
 });
-entities.game.NewEntityGroup.Component._size = 1;
-entities.game.NewEntityGroup.Component._fromPtr = function(ptr, v) {
-  v = v || Object.create(entities.game.NewEntityGroup.Component.prototype);
+entities.game.MainGroup.Component._size = 1;
+entities.game.MainGroup.Component._fromPtr = function(ptr, v) {
+  v = v || Object.create(entities.game.MainGroup.Component.prototype);
   return v;
 };
-entities.game.NewEntityGroup.Component._toPtr = function(ptr, v) {
+entities.game.MainGroup.Component._toPtr = function(ptr, v) {
 };
-entities.game.NewEntityGroup.Component._toTempHeapPtr = function(ptr, v) {
+entities.game.MainGroup.Component._toTempHeapPtr = function(ptr, v) {
 };
-entities.game.NewEntityGroup.Component._tempHeapPtr = function(v) {
+entities.game.MainGroup.Component._tempHeapPtr = function(v) {
   var ptr = ut.tempHeapPtrBufferZero(1);
-  if (v) entities.game.NewEntityGroup.Component._toTempHeapPtr(ptr, v);
+  if (v) entities.game.MainGroup.Component._toTempHeapPtr(ptr, v);
   return ptr;
 };
-entities.game.NewEntityGroup.Component.StorageView = function(ptr) {
+entities.game.MainGroup.Component.StorageView = function(ptr) {
   this._ptr = ptr;
 };
-entities.game.NewEntityGroup.Component.StorageView.prototype = Object.create(null);
-entities.game.NewEntityGroup.Component.StorageView.prototype.constructor = entities.game.NewEntityGroup.Component.StorageView;
-entities.game.NewEntityGroup.Component._view = entities.game.NewEntityGroup.Component.StorageView;
-entities.game.NewEntityGroup.Component.StorageView._isSharedComp = entities.game.NewEntityGroup.Component._isSharedComp = false;
-entities.game.NewEntityGroup.Component.StorageView._fromPtr = entities.game.NewEntityGroup.Component._fromPtr;
-entities.game.NewEntityGroup.Component.StorageView._toPtr = entities.game.NewEntityGroup.Component._toPtr;
-entities.game.NewEntityGroup.Component.StorageView._tempHeapPtr = entities.game.NewEntityGroup.Component._tempHeapPtr;
-entities.game.NewEntityGroup.Component.StorageView._size = entities.game.NewEntityGroup.Component._size;
-entities.game.NewEntityGroup.Component.StorageView.prototype.$advance = function() {
+entities.game.MainGroup.Component.StorageView.prototype = Object.create(null);
+entities.game.MainGroup.Component.StorageView.prototype.constructor = entities.game.MainGroup.Component.StorageView;
+entities.game.MainGroup.Component._view = entities.game.MainGroup.Component.StorageView;
+entities.game.MainGroup.Component.StorageView._isSharedComp = entities.game.MainGroup.Component._isSharedComp = false;
+entities.game.MainGroup.Component.StorageView._fromPtr = entities.game.MainGroup.Component._fromPtr;
+entities.game.MainGroup.Component.StorageView._toPtr = entities.game.MainGroup.Component._toPtr;
+entities.game.MainGroup.Component.StorageView._tempHeapPtr = entities.game.MainGroup.Component._tempHeapPtr;
+entities.game.MainGroup.Component.StorageView._size = entities.game.MainGroup.Component._size;
+entities.game.MainGroup.Component.StorageView.prototype.$advance = function() {
   this._ptr += 1;
 };
-Object.defineProperties(entities.game.NewEntityGroup.Component.StorageView.prototype, {
+Object.defineProperties(entities.game.MainGroup.Component.StorageView.prototype, {
 });
-entities.game.NewEntityGroup.Component._dtorFn = function dtor(ptr) { /* POD, no-op */ }
-// entities.game.NewEntityGroup.Component is a POD type, so a JavaScript side copy constructor entities.game.NewEntityGroup.Component._copyFn = function copy(src, dst) { ... } does not need to be generated for it
-entities.game.NewEntityGroup.Component._typeDesc = (function() {
-  return ut.meta.allocType(5, 'entities.game.NewEntityGroup.Component', 1, []);
+entities.game.MainGroup.Component._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// entities.game.MainGroup.Component is a POD type, so a JavaScript side copy constructor entities.game.MainGroup.Component._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+entities.game.MainGroup.Component._typeDesc = (function() {
+  return ut.meta.allocType(5, 'entities.game.MainGroup.Component', 1, []);
 })();
-Object.defineProperties(entities.game.NewEntityGroup.Component, { cid: { configurable: true, get: function() { delete entities.game.NewEntityGroup.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.NewEntityGroup.Component.cid = Module._ut_component_register_cid_with_type(entities.game.NewEntityGroup.Component._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
-Object.defineProperties(entities.game.NewEntityGroup.Component.StorageView, { cid: { configurable: true, get: function() { return entities.game.NewEntityGroup.Component.cid; } } });
+Object.defineProperties(entities.game.MainGroup.Component, { cid: { configurable: true, get: function() { delete entities.game.MainGroup.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.MainGroup.Component.cid = Module._ut_component_register_cid_with_type(entities.game.MainGroup.Component._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(entities.game.MainGroup.Component.StorageView, { cid: { configurable: true, get: function() { return entities.game.MainGroup.Component.cid; } } });
 var ut = ut || {};
 ut.Core2D = ut.Core2D || {};
 ut.Core2D.layers = ut.Core2D.layers || {};

@@ -1,7 +1,7 @@
 /**
 
 @component
-@memberof entities.game.NewEntityGroup
+@memberof entities.game.MainGroup
 @name Component
 */
 /**
