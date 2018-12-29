@@ -193,31 +193,31 @@
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 114,
+            "Duration": 117,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 218,
+            "Duration": 202,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 1238,
+            "Duration": 1239,
             "Steps": 16
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 97,
+            "Duration": 81,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 9,
+            "Duration": 10,
             "Steps": 5
         }
     ],
@@ -233,5 +233,5 @@
         "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
     "InputHash": "586fe16537a2de2b5a9aab3a0a5010d3",
-    "GeneratedAt": "Sat Dec 29 2018 00:14:30 GMT+0900 (東京 (標準時))"
+    "GeneratedAt": "Sun Dec 30 2018 07:49:43 GMT+0900 (東京 (標準時))"
 }

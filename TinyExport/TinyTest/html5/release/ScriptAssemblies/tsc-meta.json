@@ -2,44 +2,327 @@
     "Success": true,
     "Diagnostics": [],
     "Systems": [],
-    "Filters": [],
-    "Behaviours": [],
+    "Filters": [
+        {
+            "Name": "AkeomeBehaviorFilter",
+            "QualifiedName": "game.AkeomeBehaviorFilter",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                "Line": 4,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "node",
+                    "QualifiedName": "ut.Core2D.TransformNode",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                        "Line": 4,
+                        "Character": 64
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "localRottion",
+                    "QualifiedName": "ut.Core2D.TransformLocalRotation",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                        "Line": 5,
+                        "Character": 39
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": true,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "akeome",
+                    "QualifiedName": "game.Akeome",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                        "Line": 6,
+                        "Character": 57
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ]
+        },
+        {
+            "Name": "PlayerBehaviorFilter",
+            "QualifiedName": "game.PlayerBehaviorFilter",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
+                "Line": 4,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "entity",
+                    "QualifiedName": "ut.Entity",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
+                        "Line": 4,
+                        "Character": 64
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "move",
+                    "QualifiedName": "game.Move",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
+                        "Line": 5,
+                        "Character": 21
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "groundBool",
+                    "QualifiedName": "game.IsGround",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
+                        "Line": 6,
+                        "Character": 19
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "newColliderContacts",
+                    "QualifiedName": "ut.Physics2D.NewColliderContacts",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
+                        "Line": 7,
+                        "Character": 29
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ]
+        },
+        {
+            "Name": "ScrollBackgroundBehaviorFilter",
+            "QualifiedName": "game.ScrollBackgroundBehaviorFilter",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+                "Line": 4,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "node",
+                    "QualifiedName": "ut.Core2D.TransformNode",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+                        "Line": 4,
+                        "Character": 74
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "position",
+                    "QualifiedName": "ut.Core2D.TransformLocalPosition",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+                        "Line": 5,
+                        "Character": 39
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": true,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "scrolling",
+                    "QualifiedName": "game.ScrollBackground",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+                        "Line": 6,
+                        "Character": 53
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ]
+        }
+    ],
+    "Behaviours": [
+        {
+            "Name": "AkeomeBehavior",
+            "QualifiedName": "game.AkeomeBehavior",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                "Line": 10,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "data",
+                    "QualifiedName": "game.AkeomeBehaviorFilter",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                        "Line": 10,
+                        "Character": 64
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ],
+            "Methods": [
+                "OnEntityUpdate"
+            ]
+        },
+        {
+            "Name": "PlayerBehavior",
+            "QualifiedName": "game.PlayerBehavior",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
+                "Line": 11,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "data",
+                    "QualifiedName": "game.PlayerBehaviorFilter",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
+                        "Line": 11,
+                        "Character": 64
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ],
+            "Methods": [
+                "OnEntityUpdate"
+            ]
+        },
+        {
+            "Name": "ScrollBackgroundBehavior",
+            "QualifiedName": "game.ScrollBackgroundBehavior",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+                "Line": 10,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "data",
+                    "QualifiedName": "game.ScrollBackgroundBehaviorFilter",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+                        "Line": 10,
+                        "Character": 74
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "isStart",
+                    "QualifiedName": "game.ScrollBackgroundBehavior.isStart",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+                        "Line": 12,
+                        "Character": 46
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ],
+            "Methods": [
+                "OnEntityEnable",
+                "OnEntityUpdate"
+            ]
+        }
+    ],
     "Performance": [
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 97,
+            "Duration": 101,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 265,
+            "Duration": 241,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 978,
-            "Steps": 9
+            "Duration": 943,
+            "Steps": 12
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 21,
+            "Duration": 49,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 2,
+            "Duration": 9,
             "Steps": 0
         }
     ],
     "SourceFiles": [
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
         "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "5aae29747e2e18d0cfb9b50fbcd6011d",
-    "GeneratedAt": "Sat Dec 29 2018 18:30:06 GMT+0900 (東京 (標準時))"
+    "InputHash": "c98509aefdeffb11d7f1f084b2bc47e0",
+    "GeneratedAt": "Sun Dec 30 2018 08:18:26 GMT+0900 (東京 (標準時))"
 }

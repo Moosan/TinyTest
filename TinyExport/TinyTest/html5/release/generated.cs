@@ -6,6 +6,7 @@ using ut;
 using UTiny.HTML;
 using UTiny.Rendering;
 using ut.EditorExtensions;
+using UTiny.Physics2D;
 
 /*
  * !!! TEMP UNITL PROPER SCENE FORMAT !!!
@@ -22,6 +23,24 @@ namespace entities.game
 
 namespace game
 {
+    public struct Akeome : IComponentData
+    {
+        public float speed;
+    }
+    public struct IsGround : IComponentData
+    {
+        public bool isGround;
+    }
+    public struct Move : IComponentData
+    {
+        public Vector2 upForce;
+    }
+    public struct ScrollBackground : IComponentData
+    {
+        public float speed;
+        public float threshold;
+        public float distance;
+    }
 }
 
 namespace ut.Core2D
@@ -155,5 +174,70 @@ namespace ut.EditorExtensions
     public struct EntityLayer : IComponentData
     {
         public int layer;
+    }
+}
+
+namespace ut.Physics2D
+{
+}
+namespace game
+{
+    public struct AkeomeBehavior_State : IComponentData
+    {
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
+    }
+}
+namespace game
+{
+    public struct PlayerBehavior_State : IComponentData
+    {
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
+    }
+}
+namespace game
+{
+    public struct ScrollBackgroundBehavior_State : IComponentData
+    {
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
+    }
+}
+namespace game
+{
+    [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
+    [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
+    public class AkeomeBehavior_OnEntityUpdateJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
+    [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
+    public class PlayerBehavior_OnEntityUpdateJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    [UpdateBefore(typeof(UTiny.Shared.InputFence))]
+    public class ScrollBackgroundBehavior_OnEntityEnableJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
+    [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
+    public class ScrollBackgroundBehavior_OnEntityUpdateJS : IComponentSystem
+    {
     }
 }

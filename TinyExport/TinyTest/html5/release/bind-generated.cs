@@ -11,6 +11,60 @@ namespace entities.game.MainGroup
 
     }
 }
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Akeome : UTiny.IComponentData
+    {
+
+
+        public float speed;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct IsGround : UTiny.IComponentData
+    {
+
+
+        public bool isGround;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Move : UTiny.IComponentData
+    {
+
+
+        public Unity.Mathematics.float2 upForce;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct ScrollBackground : UTiny.IComponentData
+    {
+
+
+        public float speed;
+        public float threshold;
+        public float distance;
+
+
+
+    }
+}
 namespace ut.Core2D.layers
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -221,6 +275,54 @@ namespace ut.EditorExtensions
 
 
         public int layer;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct AkeomeBehavior_State : UTiny.IComponentData
+    {
+
+
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct PlayerBehavior_State : UTiny.IComponentData
+    {
+
+
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct ScrollBackgroundBehavior_State : UTiny.IComponentData
+    {
+
+
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
 
 
 

@@ -35,6 +35,12 @@ namespace game
     {
         public Vector2 upForce;
     }
+    public struct ScrollBackground : IComponentData
+    {
+        public float speed;
+        public float threshold;
+        public float distance;
+    }
 }
 
 namespace ut.Core2D
@@ -196,6 +202,16 @@ namespace game
 }
 namespace game
 {
+    public struct ScrollBackgroundBehavior_State : IComponentData
+    {
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
+    }
+}
+namespace game
+{
     [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
     [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
     public class AkeomeBehavior_OnEntityUpdateJS : IComponentSystem
@@ -207,6 +223,21 @@ namespace game
     [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
     [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
     public class PlayerBehavior_OnEntityUpdateJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    [UpdateBefore(typeof(UTiny.Shared.InputFence))]
+    public class ScrollBackgroundBehavior_OnEntityEnableJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
+    [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
+    public class ScrollBackgroundBehavior_OnEntityUpdateJS : IComponentSystem
     {
     }
 }

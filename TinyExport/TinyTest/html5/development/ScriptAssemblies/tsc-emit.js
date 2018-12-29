@@ -85,6 +85,46 @@ var game;
     }(ut.ComponentBehaviour));
     game.PlayerBehavior = PlayerBehavior;
 })(game || (game = {}));
+var game;
+(function (game) {
+    var ScrollBackgroundBehaviorFilter = /** @class */ (function (_super) {
+        __extends(ScrollBackgroundBehaviorFilter, _super);
+        function ScrollBackgroundBehaviorFilter() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return ScrollBackgroundBehaviorFilter;
+    }(ut.EntityFilter));
+    game.ScrollBackgroundBehaviorFilter = ScrollBackgroundBehaviorFilter;
+    var ScrollBackgroundBehavior = /** @class */ (function (_super) {
+        __extends(ScrollBackgroundBehavior, _super);
+        function ScrollBackgroundBehavior() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        // ComponentBehaviour lifecycle events
+        // uncomment any method you need
+        // this method is called for each entity matching the ScrollBackgroundBehaviorFilter signature, once when enabled
+        ScrollBackgroundBehavior.prototype.OnEntityEnable = function () {
+            this.isStart = false;
+        };
+        // this method is called for each entity matching the ScrollBackgroundBehaviorFilter signature, every frame it's enabled
+        ScrollBackgroundBehavior.prototype.OnEntityUpdate = function () {
+            if (!this.isStart) {
+                if (!ut.Runtime.Input.getMouseButton(0))
+                    return;
+                this.isStart = true;
+            }
+            var position = this.data.position;
+            var scrolling = this.data.scrolling;
+            var localPosition = position.position;
+            localPosition.x -= scrolling.speed * 0.01;
+            if (localPosition.x < scrolling.threshold)
+                localPosition.x += scrolling.distance;
+            position.position = localPosition;
+        };
+        return ScrollBackgroundBehavior;
+    }(ut.ComponentBehaviour));
+    game.ScrollBackgroundBehavior = ScrollBackgroundBehavior;
+})(game || (game = {}));
 var ut;
 (function (ut) {
     var EntityGroup = /** @class */ (function () {

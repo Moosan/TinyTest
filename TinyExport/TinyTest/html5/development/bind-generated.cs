@@ -50,6 +50,21 @@ namespace game
 
     }
 }
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct ScrollBackground : UTiny.IComponentData
+    {
+
+
+        public float speed;
+        public float threshold;
+        public float distance;
+
+
+
+    }
+}
 namespace ut.Core2D.layers
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -285,6 +300,22 @@ namespace game
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
     public struct PlayerBehavior_State : UTiny.IComponentData
+    {
+
+
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct ScrollBackgroundBehavior_State : UTiny.IComponentData
     {
 
 

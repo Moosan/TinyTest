@@ -43,6 +43,30 @@
 /**
 
 @component
+@memberof game
+@name ScrollBackground
+*/
+/**
+
+@member {float}
+@memberof game.ScrollBackground
+@name speed
+*/
+/**
+
+@member {float}
+@memberof game.ScrollBackground
+@name threshold
+*/
+/**
+
+@member {float}
+@memberof game.ScrollBackground
+@name distance
+*/
+/**
+
+@component
 @memberof ut.Core2D.layers
 @name Default
 */
@@ -336,6 +360,36 @@
 */
 /**
 
+@component
+@memberof game
+@name ScrollBackgroundBehavior_State
+*/
+/**
+
+@member {bool}
+@memberof game.ScrollBackgroundBehavior_State
+@name initialized
+*/
+/**
+
+@member {bool}
+@memberof game.ScrollBackgroundBehavior_State
+@name enabled
+*/
+/**
+
+@member {bool}
+@memberof game.ScrollBackgroundBehavior_State
+@name onEnableCalled
+*/
+/**
+
+@member {bool}
+@memberof game.ScrollBackgroundBehavior_State
+@name onDisableCalled
+*/
+/**
+
 @system
 @memberof game
 @name AkeomeBehavior_OnEntityUpdateJS
@@ -345,6 +399,18 @@
 @system
 @memberof game
 @name PlayerBehavior_OnEntityUpdateJS
+*/
+/**
+
+@system
+@memberof game
+@name ScrollBackgroundBehavior_OnEntityEnableJS
+*/
+/**
+
+@system
+@memberof game
+@name ScrollBackgroundBehavior_OnEntityUpdateJS
 */
 
 

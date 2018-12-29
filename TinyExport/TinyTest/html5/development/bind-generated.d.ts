@@ -114,6 +114,20 @@ declare namespace game{
         static _tempHeapPtr(v: Move): number;
         static _dtorFn(v: Move): void;
     }
+    class ScrollBackground extends ut.Component {
+        constructor();
+        speed: number;
+        threshold: number;
+        distance: number;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: ScrollBackground): ScrollBackground;
+        static _toPtr(p: number, v: ScrollBackground): void;
+        static _tempHeapPtr(v: ScrollBackground): number;
+        static _dtorFn(v: ScrollBackground): void;
+    }
 }
 declare namespace ut{
 }

@@ -124,6 +124,60 @@
                     "IsPublic": true
                 }
             ]
+        },
+        {
+            "Name": "ScrollBackgroundBehaviorFilter",
+            "QualifiedName": "game.ScrollBackgroundBehaviorFilter",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+                "Line": 4,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "node",
+                    "QualifiedName": "ut.Core2D.TransformNode",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+                        "Line": 4,
+                        "Character": 74
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "position",
+                    "QualifiedName": "ut.Core2D.TransformLocalPosition",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+                        "Line": 5,
+                        "Character": 39
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": true,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "scrolling",
+                    "QualifiedName": "game.ScrollBackground",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+                        "Line": 6,
+                        "Character": 53
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ]
         }
     ],
     "Behaviours": [
@@ -184,46 +238,91 @@
             "Methods": [
                 "OnEntityUpdate"
             ]
+        },
+        {
+            "Name": "ScrollBackgroundBehavior",
+            "QualifiedName": "game.ScrollBackgroundBehavior",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+                "Line": 10,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "data",
+                    "QualifiedName": "game.ScrollBackgroundBehaviorFilter",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+                        "Line": 10,
+                        "Character": 74
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "isStart",
+                    "QualifiedName": "game.ScrollBackgroundBehavior.isStart",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+                        "Line": 12,
+                        "Character": 46
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ],
+            "Methods": [
+                "OnEntityEnable",
+                "OnEntityUpdate"
+            ]
         }
     ],
     "Performance": [
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 84,
+            "Duration": 77,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 214,
+            "Duration": 236,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 939,
-            "Steps": 11
+            "Duration": 956,
+            "Steps": 12
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 42,
+            "Duration": 45,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 7,
+            "Duration": 20,
             "Steps": 0
         }
     ],
     "SourceFiles": [
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
         "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "6f29a5a6b2774b52bfb64b858759189e",
-    "GeneratedAt": "Sun Dec 30 2018 07:34:54 GMT+0900 (東京 (標準時))"
+    "InputHash": "af6d72ba4bdb05d05fbdf57757b61c81",
+    "GeneratedAt": "Sun Dec 30 2018 08:17:18 GMT+0900 (東京 (標準時))"
 }

@@ -226,6 +226,92 @@ Object.defineProperties(game.Move.StorageView, { cid: { configurable: true, get:
 game.Move.upForce = { $ofs:0, $t:"ut.Math.Vector2", $c:game.Move };
 game.Move.upForce.y = { $ofs:4, $t:"float", $c:game.Move };
 game.Move.upForce.x = { $ofs:0, $t:"float", $c:game.Move };
+game.ScrollBackground = function(arg0, arg1, arg2) {
+  this._speed = (+(arg0===undefined ? 0 : arg0));
+  this._threshold = (+(arg1===undefined ? 0 : arg1));
+  this._distance = (+(arg2===undefined ? 0 : arg2));
+};
+game.ScrollBackground.prototype = Object.create(null);
+game.ScrollBackground.prototype.constructor = game.ScrollBackground;
+Object.defineProperties(game.ScrollBackground.prototype, {
+  speed: {
+    get: function() { return this._speed; },
+    set: function(v) { this._speed = (+(v===undefined ? 0 : v)); },
+  },
+  threshold: {
+    get: function() { return this._threshold; },
+    set: function(v) { this._threshold = (+(v===undefined ? 0 : v)); },
+  },
+  distance: {
+    get: function() { return this._distance; },
+    set: function(v) { this._distance = (+(v===undefined ? 0 : v)); },
+  },
+});
+game.ScrollBackground._size = 12;
+game.ScrollBackground._fromPtr = function(ptr, v) {
+  v = v || Object.create(game.ScrollBackground.prototype);
+  v._speed = HEAPF32[(ptr+0)>>2];
+  v._threshold = HEAPF32[(ptr+4)>>2];
+  v._distance = HEAPF32[(ptr+8)>>2];
+  return v;
+};
+game.ScrollBackground._toPtr = function(ptr, v) {
+  HEAPF32[(ptr+0)>>2] = v.speed;
+  HEAPF32[(ptr+4)>>2] = v.threshold;
+  HEAPF32[(ptr+8)>>2] = v.distance;
+};
+game.ScrollBackground._toTempHeapPtr = function(ptr, v) {
+  HEAPF32[(ptr+0)>>2] = v.speed;
+  HEAPF32[(ptr+4)>>2] = v.threshold;
+  HEAPF32[(ptr+8)>>2] = v.distance;
+};
+game.ScrollBackground._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(12);
+  if (v) game.ScrollBackground._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+game.ScrollBackground.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+game.ScrollBackground.StorageView.prototype = Object.create(null);
+game.ScrollBackground.StorageView.prototype.constructor = game.ScrollBackground.StorageView;
+game.ScrollBackground._view = game.ScrollBackground.StorageView;
+game.ScrollBackground.StorageView._isSharedComp = game.ScrollBackground._isSharedComp = false;
+game.ScrollBackground.StorageView._fromPtr = game.ScrollBackground._fromPtr;
+game.ScrollBackground.StorageView._toPtr = game.ScrollBackground._toPtr;
+game.ScrollBackground.StorageView._tempHeapPtr = game.ScrollBackground._tempHeapPtr;
+game.ScrollBackground.StorageView._size = game.ScrollBackground._size;
+game.ScrollBackground.StorageView.prototype.$advance = function() {
+  this._ptr += 12;
+};
+Object.defineProperties(game.ScrollBackground.StorageView.prototype, {
+  speed: {
+    get: function() { return HEAPF32[(this._ptr+0)>>2]; },
+    set: function(v) { HEAPF32[(this._ptr+0)>>2] = v; },
+  },
+  threshold: {
+    get: function() { return HEAPF32[(this._ptr+4)>>2]; },
+    set: function(v) { HEAPF32[(this._ptr+4)>>2] = v; },
+  },
+  distance: {
+    get: function() { return HEAPF32[(this._ptr+8)>>2]; },
+    set: function(v) { HEAPF32[(this._ptr+8)>>2] = v; },
+  },
+});
+game.ScrollBackground._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// game.ScrollBackground is a POD type, so a JavaScript side copy constructor game.ScrollBackground._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+game.ScrollBackground._typeDesc = (function() {
+  return ut.meta.allocType(5, 'game.ScrollBackground', 12, [
+    {name: 'speed', offset: 0, type: ut.meta.getType('float')},
+    {name: 'threshold', offset: 4, type: ut.meta.getType('float')},
+    {name: 'distance', offset: 8, type: ut.meta.getType('float')}
+  ]);
+})();
+Object.defineProperties(game.ScrollBackground, { cid: { configurable: true, get: function() { delete game.ScrollBackground.cid; var offsetsPtr = 0, offsetsCount = 0; return game.ScrollBackground.cid = Module._ut_component_register_cid_with_type(game.ScrollBackground._typeDesc, 4, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(game.ScrollBackground.StorageView, { cid: { configurable: true, get: function() { return game.ScrollBackground.cid; } } });
+game.ScrollBackground.speed = { $ofs:0, $t:"float", $c:game.ScrollBackground };
+game.ScrollBackground.threshold = { $ofs:4, $t:"float", $c:game.ScrollBackground };
+game.ScrollBackground.distance = { $ofs:8, $t:"float", $c:game.ScrollBackground };
 var ut = ut || {};
 ut.Core2D = ut.Core2D || {};
 ut.Core2D.layers = ut.Core2D.layers || {};
@@ -1512,6 +1598,106 @@ game.PlayerBehavior_State.initialized = { $ofs:0, $t:"bool", $c:game.PlayerBehav
 game.PlayerBehavior_State.enabled = { $ofs:1, $t:"bool", $c:game.PlayerBehavior_State };
 game.PlayerBehavior_State.onEnableCalled = { $ofs:2, $t:"bool", $c:game.PlayerBehavior_State };
 game.PlayerBehavior_State.onDisableCalled = { $ofs:3, $t:"bool", $c:game.PlayerBehavior_State };
+game.ScrollBackgroundBehavior_State = function(arg0, arg1, arg2, arg3) {
+  this._initialized = (arg0 ? true : false);
+  this._enabled = (arg1 ? true : false);
+  this._onEnableCalled = (arg2 ? true : false);
+  this._onDisableCalled = (arg3 ? true : false);
+};
+game.ScrollBackgroundBehavior_State.prototype = Object.create(null);
+game.ScrollBackgroundBehavior_State.prototype.constructor = game.ScrollBackgroundBehavior_State;
+Object.defineProperties(game.ScrollBackgroundBehavior_State.prototype, {
+  initialized: {
+    get: function() { return this._initialized; },
+    set: function(v) { this._initialized = (v ? true : false); },
+  },
+  enabled: {
+    get: function() { return this._enabled; },
+    set: function(v) { this._enabled = (v ? true : false); },
+  },
+  onEnableCalled: {
+    get: function() { return this._onEnableCalled; },
+    set: function(v) { this._onEnableCalled = (v ? true : false); },
+  },
+  onDisableCalled: {
+    get: function() { return this._onDisableCalled; },
+    set: function(v) { this._onDisableCalled = (v ? true : false); },
+  },
+});
+game.ScrollBackgroundBehavior_State._size = 4;
+game.ScrollBackgroundBehavior_State._fromPtr = function(ptr, v) {
+  v = v || Object.create(game.ScrollBackgroundBehavior_State.prototype);
+  v._initialized = (HEAP8[ptr+0]?true:false);
+  v._enabled = (HEAP8[ptr+1]?true:false);
+  v._onEnableCalled = (HEAP8[ptr+2]?true:false);
+  v._onDisableCalled = (HEAP8[ptr+3]?true:false);
+  return v;
+};
+game.ScrollBackgroundBehavior_State._toPtr = function(ptr, v) {
+  HEAP8[ptr+0] = (v.initialized)?1:0;
+  HEAP8[ptr+1] = (v.enabled)?1:0;
+  HEAP8[ptr+2] = (v.onEnableCalled)?1:0;
+  HEAP8[ptr+3] = (v.onDisableCalled)?1:0;
+};
+game.ScrollBackgroundBehavior_State._toTempHeapPtr = function(ptr, v) {
+  HEAP8[ptr+0] = (v.initialized)?1:0;
+  HEAP8[ptr+1] = (v.enabled)?1:0;
+  HEAP8[ptr+2] = (v.onEnableCalled)?1:0;
+  HEAP8[ptr+3] = (v.onDisableCalled)?1:0;
+};
+game.ScrollBackgroundBehavior_State._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(4);
+  if (v) game.ScrollBackgroundBehavior_State._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+game.ScrollBackgroundBehavior_State.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+game.ScrollBackgroundBehavior_State.StorageView.prototype = Object.create(null);
+game.ScrollBackgroundBehavior_State.StorageView.prototype.constructor = game.ScrollBackgroundBehavior_State.StorageView;
+game.ScrollBackgroundBehavior_State._view = game.ScrollBackgroundBehavior_State.StorageView;
+game.ScrollBackgroundBehavior_State.StorageView._isSharedComp = game.ScrollBackgroundBehavior_State._isSharedComp = false;
+game.ScrollBackgroundBehavior_State.StorageView._fromPtr = game.ScrollBackgroundBehavior_State._fromPtr;
+game.ScrollBackgroundBehavior_State.StorageView._toPtr = game.ScrollBackgroundBehavior_State._toPtr;
+game.ScrollBackgroundBehavior_State.StorageView._tempHeapPtr = game.ScrollBackgroundBehavior_State._tempHeapPtr;
+game.ScrollBackgroundBehavior_State.StorageView._size = game.ScrollBackgroundBehavior_State._size;
+game.ScrollBackgroundBehavior_State.StorageView.prototype.$advance = function() {
+  this._ptr += 4;
+};
+Object.defineProperties(game.ScrollBackgroundBehavior_State.StorageView.prototype, {
+  initialized: {
+    get: function() { return (HEAP8[this._ptr+0]?true:false); },
+    set: function(v) { HEAP8[this._ptr+0] = (v)?1:0; },
+  },
+  enabled: {
+    get: function() { return (HEAP8[this._ptr+1]?true:false); },
+    set: function(v) { HEAP8[this._ptr+1] = (v)?1:0; },
+  },
+  onEnableCalled: {
+    get: function() { return (HEAP8[this._ptr+2]?true:false); },
+    set: function(v) { HEAP8[this._ptr+2] = (v)?1:0; },
+  },
+  onDisableCalled: {
+    get: function() { return (HEAP8[this._ptr+3]?true:false); },
+    set: function(v) { HEAP8[this._ptr+3] = (v)?1:0; },
+  },
+});
+game.ScrollBackgroundBehavior_State._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// game.ScrollBackgroundBehavior_State is a POD type, so a JavaScript side copy constructor game.ScrollBackgroundBehavior_State._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+game.ScrollBackgroundBehavior_State._typeDesc = (function() {
+  return ut.meta.allocType(5, 'game.ScrollBackgroundBehavior_State', 4, [
+    {name: 'initialized', offset: 0, type: ut.meta.getType('bool')},
+    {name: 'enabled', offset: 1, type: ut.meta.getType('bool')},
+    {name: 'onEnableCalled', offset: 2, type: ut.meta.getType('bool')},
+    {name: 'onDisableCalled', offset: 3, type: ut.meta.getType('bool')}
+  ]);
+})();
+Object.defineProperties(game.ScrollBackgroundBehavior_State, { cid: { configurable: true, get: function() { delete game.ScrollBackgroundBehavior_State.cid; var offsetsPtr = 0, offsetsCount = 0; return game.ScrollBackgroundBehavior_State.cid = Module._ut_component_register_cid_with_type(game.ScrollBackgroundBehavior_State._typeDesc, 1, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(game.ScrollBackgroundBehavior_State.StorageView, { cid: { configurable: true, get: function() { return game.ScrollBackgroundBehavior_State.cid; } } });
+game.ScrollBackgroundBehavior_State.initialized = { $ofs:0, $t:"bool", $c:game.ScrollBackgroundBehavior_State };
+game.ScrollBackgroundBehavior_State.enabled = { $ofs:1, $t:"bool", $c:game.ScrollBackgroundBehavior_State };
+game.ScrollBackgroundBehavior_State.onEnableCalled = { $ofs:2, $t:"bool", $c:game.ScrollBackgroundBehavior_State };
+game.ScrollBackgroundBehavior_State.onDisableCalled = { $ofs:3, $t:"bool", $c:game.ScrollBackgroundBehavior_State };
 game.AkeomeBehavior_OnEntityUpdateJS = ut.System.define({
   name: "game.AkeomeBehavior_OnEntityUpdateJS"
  ,updatesBefore: ["UTiny.Shared.UserCodeEnd"]
@@ -1519,6 +1705,15 @@ game.AkeomeBehavior_OnEntityUpdateJS = ut.System.define({
 });
 game.PlayerBehavior_OnEntityUpdateJS = ut.System.define({
   name: "game.PlayerBehavior_OnEntityUpdateJS"
+ ,updatesBefore: ["UTiny.Shared.UserCodeEnd"]
+ ,updatesAfter: ["UTiny.Shared.UserCodeStart"]
+});
+game.ScrollBackgroundBehavior_OnEntityEnableJS = ut.System.define({
+  name: "game.ScrollBackgroundBehavior_OnEntityEnableJS"
+ ,updatesBefore: ["UTiny.Shared.InputFence"]
+});
+game.ScrollBackgroundBehavior_OnEntityUpdateJS = ut.System.define({
+  name: "game.ScrollBackgroundBehavior_OnEntityUpdateJS"
  ,updatesBefore: ["UTiny.Shared.UserCodeEnd"]
  ,updatesAfter: ["UTiny.Shared.UserCodeStart"]
 });

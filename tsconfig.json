@@ -2,7 +2,7 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "skipLibCheck": true,
-        "outFile": "C:/Users/Washer/p/tinytest/TinyExport/TinyTest/html5/development/ScriptAssemblies/tsc-emit.js",
+        "outFile": "C:/Users/Washer/p/tinytest/TinyExport/TinyTest/html5/release/ScriptAssemblies/tsc-emit.js",
         "sourceMap": true,
         "target": "ES5"
     },
@@ -28,7 +28,7 @@
     ],
     "exclude": [],
     "files": [
-        "TinyExport/TinyTest/html5/development/bind-generated.d.ts",
+        "TinyExport/TinyTest/html5/release/bind-generated.d.ts",
         "Tiny/Dist/runtimedll/RuntimeFull.d.ts"
     ]
 }

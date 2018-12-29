@@ -74,26 +74,59 @@ ut.main = function() {
             if (world.exists($entity)) { _this.Write(world, $entity); }
         });
     };
+    game.ScrollBackgroundBehaviorFilter._Components = [ut.Entity, 
+        ut.Core2D.TransformNode, game.ScrollBackground
+    ];
+    game.ScrollBackgroundBehaviorFilter.prototype.Read = function(world, entity) {
+        this.node = world.getComponentData(entity, ut.Core2D.TransformNode);
+        this.position = world.hasComponent(entity, ut.Core2D.TransformLocalPosition) ? world.getComponentData(entity, ut.Core2D.TransformLocalPosition) : undefined;
+        this.scrolling = world.getComponentData(entity, game.ScrollBackground);
+    };
+    game.ScrollBackgroundBehaviorFilter.prototype.Reset = function() {
+        this.node = undefined;
+        this.position = undefined;
+        this.scrolling = undefined;
+    };
+    game.ScrollBackgroundBehaviorFilter.prototype.Write = function(world, entity) {
+        world.setComponentData(entity, this.node);
+        if (this.position) { world.setOrAddComponentData(entity, this.position); }
+        world.setComponentData(entity, this.scrolling);
+    };
+    game.ScrollBackgroundBehaviorFilter.prototype.ForEach = function(world, callback) {
+        var _this = this;
+        world.forEach(this.constructor._Components, function($entity, node, scrolling) {
+            _this.Read(world, $entity);
+            callback($entity);
+            if (world.exists($entity)) { _this.Write(world, $entity); }
+        });
+    };
     game.AkeomeBehavior.Instance = new game.AkeomeBehavior();
     game.AkeomeBehavior._StateType = game.AkeomeBehavior_State;
     game.AkeomeBehavior.prototype._GetFilter = function() { if (!this.data) { this.data = new game.AkeomeBehaviorFilter(); } return this.data; }
     game.PlayerBehavior.Instance = new game.PlayerBehavior();
     game.PlayerBehavior._StateType = game.PlayerBehavior_State;
     game.PlayerBehavior.prototype._GetFilter = function() { if (!this.data) { this.data = new game.PlayerBehaviorFilter(); } return this.data; }
+    game.ScrollBackgroundBehavior.Instance = new game.ScrollBackgroundBehavior();
+    game.ScrollBackgroundBehavior._StateType = game.ScrollBackgroundBehavior_State;
+    game.ScrollBackgroundBehavior.prototype._GetFilter = function() { if (!this.data) { this.data = new game.ScrollBackgroundBehaviorFilter(); } return this.data; }
     // Singleton world
     var world = new ut.World();
 
     // Schedule all systems
     var scheduler = world.scheduler();
+    game.ScrollBackgroundBehavior_OnEntityEnableJS.update = game.ScrollBackgroundBehavior.Instance._MakeOnEntityEnable();
     game.AkeomeBehavior_OnEntityUpdateJS.update = game.AkeomeBehavior.Instance._MakeOnEntityUpdate();
     game.PlayerBehavior_OnEntityUpdateJS.update = game.PlayerBehavior.Instance._MakeOnEntityUpdate();
+    game.ScrollBackgroundBehavior_OnEntityUpdateJS.update = game.ScrollBackgroundBehavior.Instance._MakeOnEntityUpdate();
     scheduler.schedule(ut.HTML.InputHandler);
     scheduler.schedule(ut.HTML.AssetLoader);
     scheduler.schedule(ut.Core2D.SequencePlayerSystem);
+    scheduler.schedule(game.ScrollBackgroundBehavior_OnEntityEnableJS);
     scheduler.schedule(ut.Shared.InputFence);
     scheduler.schedule(ut.Shared.UserCodeStart);
     scheduler.schedule(game.AkeomeBehavior_OnEntityUpdateJS);
     scheduler.schedule(game.PlayerBehavior_OnEntityUpdateJS);
+    scheduler.schedule(game.ScrollBackgroundBehavior_OnEntityUpdateJS);
     scheduler.schedule(ut.Shared.UserCodeEnd);
     scheduler.schedule(ut.Shared.RenderingFence);
     scheduler.schedule(ut.Core2D.UpdateLocalTransformSystem);

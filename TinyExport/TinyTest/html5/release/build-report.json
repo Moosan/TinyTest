@@ -13,8 +13,8 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/release/bin/runtime.js",
-                "Size": 729260,
-                "CompressedSize": 150493
+                "Size": 917901,
+                "CompressedSize": 194581
             }
         }]
     }, {
@@ -46,21 +46,6 @@
             }]
         }, {
             "Item": {
-                "Name": "Assets/Resorces/Images/bg_natural_sougen.jpg",
-                "Size": 0,
-                "CompressedSize": 0,
-                "Object": { "$TypeId": 10, "Guid": "c14c16b942150a34a909709e6a9537df", "FileId": 2800000, "Type": 3 }
-            },
-            "Children": [{
-                "Item": {
-                    "Name": "TinyExport/Assets/bg_natural_sougen.jpg",
-                    "Size": 123944,
-                    "CompressedSize": 93421,
-                    "Object": { "$TypeId": 10, "Guid": "c14c16b942150a34a909709e6a9537df", "FileId": 2800000, "Type": 3 }
-                }
-            }]
-        }, {
-            "Item": {
                 "Name": "Assets/Resorces/Images/osyougatsu_akemashite_omedetou.png",
                 "Size": 0,
                 "CompressedSize": 0,
@@ -74,6 +59,21 @@
                     "Object": { "$TypeId": 10, "Guid": "1048c4c0283a21a49b6ed38469f698c7", "FileId": 2800000, "Type": 3 }
                 }
             }]
+        }, {
+            "Item": {
+                "Name": "Assets/Resorces/Images/bg_natural_sougen.jpg",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "c14c16b942150a34a909709e6a9537df", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Assets/bg_natural_sougen.jpg",
+                    "Size": 123944,
+                    "CompressedSize": 93421,
+                    "Object": { "$TypeId": 10, "Guid": "c14c16b942150a34a909709e6a9537df", "FileId": 2800000, "Type": 3 }
+                }
+            }]
         }]
     }, {
         "Item": {
@@ -84,40 +84,40 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/release/bin/entities.js",
-                "Size": 7088,
-                "CompressedSize": 1566
+                "Size": 13729,
+                "CompressedSize": 2569
             },
             "Children": [{
                 "Item": {
                     "Name": "MainGroup",
-                    "Size": 7008,
-                    "CompressedSize": 1489
+                    "Size": 13649,
+                    "CompressedSize": 2487
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/release/bin/bindings.js",
-                "Size": 71318,
-                "CompressedSize": 5486
+                "Size": 97729,
+                "CompressedSize": 7780
             }
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/release/bin/code.js",
-                "Size": 3252,
-                "CompressedSize": 999
+                "Size": 9257,
+                "CompressedSize": 2059
             },
             "Children": [{
                 "Item": {
                     "Name": "C:\\Users\\Washer\\p\\tinytest\\TinyExport\\TinyTest\\html5\\release\\ScriptAssemblies\\tsc-emit.js",
-                    "Size": 3170,
-                    "CompressedSize": 929
+                    "Size": 9175,
+                    "CompressedSize": 1983
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/release/bin/main.js",
-                "Size": 1927,
-                "CompressedSize": 681
+                "Size": 7879,
+                "CompressedSize": 1509
             }
         }]
     }]
