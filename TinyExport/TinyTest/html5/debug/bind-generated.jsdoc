@@ -7,6 +7,18 @@
 /**
 
 @component
+@memberof game
+@name Akeome
+*/
+/**
+
+@member {float}
+@memberof game.Akeome
+@name speed
+*/
+/**
+
+@component
 @memberof ut.Core2D.layers
 @name Default
 */
@@ -237,6 +249,42 @@
 @member {int32}
 @memberof ut.EditorExtensions.EntityLayer
 @name layer
+*/
+/**
+
+@component
+@memberof game
+@name AkeomeBehavior_State
+*/
+/**
+
+@member {bool}
+@memberof game.AkeomeBehavior_State
+@name initialized
+*/
+/**
+
+@member {bool}
+@memberof game.AkeomeBehavior_State
+@name enabled
+*/
+/**
+
+@member {bool}
+@memberof game.AkeomeBehavior_State
+@name onEnableCalled
+*/
+/**
+
+@member {bool}
+@memberof game.AkeomeBehavior_State
+@name onDisableCalled
+*/
+/**
+
+@system
+@memberof game
+@name AkeomeBehavior_OnEntityUpdateJS
 */
 
 

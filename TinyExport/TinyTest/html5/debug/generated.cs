@@ -22,6 +22,10 @@ namespace entities.game
 
 namespace game
 {
+    public struct Akeome : IComponentData
+    {
+        public float speed;
+    }
 }
 
 namespace ut.Core2D
@@ -155,5 +159,23 @@ namespace ut.EditorExtensions
     public struct EntityLayer : IComponentData
     {
         public int layer;
+    }
+}
+namespace game
+{
+    public struct AkeomeBehavior_State : IComponentData
+    {
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
+    }
+}
+namespace game
+{
+    [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
+    [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
+    public class AkeomeBehavior_OnEntityUpdateJS : IComponentSystem
+    {
     }
 }

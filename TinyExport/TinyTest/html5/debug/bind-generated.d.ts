@@ -78,6 +78,18 @@ declare namespace ut {
 }
 declare var UT_ASSETS: Object;
 declare namespace game{
+    class Akeome extends ut.Component {
+        constructor();
+        speed: number;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Akeome): Akeome;
+        static _toPtr(p: number, v: Akeome): void;
+        static _tempHeapPtr(v: Akeome): number;
+        static _dtorFn(v: Akeome): void;
+    }
 }
 declare namespace ut{
 }

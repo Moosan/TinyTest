@@ -2,44 +2,130 @@
     "Success": true,
     "Diagnostics": [],
     "Systems": [],
-    "Filters": [],
-    "Behaviours": [],
+    "Filters": [
+        {
+            "Name": "AkeomeBehaviorFilter",
+            "QualifiedName": "game.AkeomeBehaviorFilter",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                "Line": 4,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "node",
+                    "QualifiedName": "ut.Core2D.TransformNode",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                        "Line": 4,
+                        "Character": 64
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "localRottion",
+                    "QualifiedName": "ut.Core2D.TransformLocalRotation",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                        "Line": 5,
+                        "Character": 39
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": true,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "akeome",
+                    "QualifiedName": "game.Akeome",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                        "Line": 6,
+                        "Character": 57
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ]
+        }
+    ],
+    "Behaviours": [
+        {
+            "Name": "AkeomeBehavior",
+            "QualifiedName": "game.AkeomeBehavior",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                "Line": 10,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "data",
+                    "QualifiedName": "game.AkeomeBehaviorFilter",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                        "Line": 10,
+                        "Character": 64
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ],
+            "Methods": [
+                "OnEntityUpdate"
+            ]
+        }
+    ],
     "Performance": [
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 95,
+            "Duration": 73,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 253,
+            "Duration": 204,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 966,
-            "Steps": 9
+            "Duration": 964,
+            "Steps": 10
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 35,
+            "Duration": 40,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 2,
+            "Duration": 5,
             "Steps": 0
         }
     ],
     "SourceFiles": [
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
         "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "5500b9f4570968335558c0a67cb301f3",
-    "GeneratedAt": "Sat Dec 29 2018 18:31:08 GMT+0900 (東京 (標準時))"
+    "InputHash": "95c5ecc914939920e435812f9e2714d6",
+    "GeneratedAt": "Sun Dec 30 2018 06:40:41 GMT+0900 (東京 (標準時))"
 }

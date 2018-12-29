@@ -49,6 +49,65 @@ entities.game.MainGroup.Component._typeDesc = (function() {
 })();
 Object.defineProperties(entities.game.MainGroup.Component, { cid: { configurable: true, get: function() { delete entities.game.MainGroup.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.MainGroup.Component.cid = Module._ut_component_register_cid_with_type(entities.game.MainGroup.Component._typeDesc, 0, 0, offsetsPtr, offsetsCount, 0, 0); } } });
 Object.defineProperties(entities.game.MainGroup.Component.StorageView, { cid: { configurable: true, get: function() { return entities.game.MainGroup.Component.cid; } } });
+var game = game || {};
+game.Akeome = function(arg0) {
+  this._speed = (+(arg0===undefined ? 0 : arg0));
+};
+game.Akeome.prototype = Object.create(null);
+game.Akeome.prototype.constructor = game.Akeome;
+Object.defineProperties(game.Akeome.prototype, {
+  speed: {
+    get: function() { return this._speed; },
+    set: function(v) { this._speed = (+(v===undefined ? 0 : v)); },
+  },
+});
+game.Akeome._size = 4;
+game.Akeome._fromPtr = function(ptr, v) {
+  v = v || Object.create(game.Akeome.prototype);
+  v._speed = HEAPF32[(ptr+0)>>2];
+  return v;
+};
+game.Akeome._toPtr = function(ptr, v) {
+  HEAPF32[(ptr+0)>>2] = v.speed;
+};
+game.Akeome._toTempHeapPtr = function(ptr, v) {
+  HEAPF32[(ptr+0)>>2] = v.speed;
+};
+game.Akeome._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(4);
+  if (v) game.Akeome._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+game.Akeome.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+game.Akeome.StorageView.prototype = Object.create(null);
+game.Akeome.StorageView.prototype.constructor = game.Akeome.StorageView;
+game.Akeome._view = game.Akeome.StorageView;
+game.Akeome.StorageView._isSharedComp = game.Akeome._isSharedComp = false;
+game.Akeome.StorageView._fromPtr = game.Akeome._fromPtr;
+game.Akeome.StorageView._toPtr = game.Akeome._toPtr;
+game.Akeome.StorageView._tempHeapPtr = game.Akeome._tempHeapPtr;
+game.Akeome.StorageView._size = game.Akeome._size;
+game.Akeome.StorageView.prototype.$advance = function() {
+  this._ptr += 4;
+};
+Object.defineProperties(game.Akeome.StorageView.prototype, {
+  speed: {
+    get: function() { return HEAPF32[(this._ptr+0)>>2]; },
+    set: function(v) { HEAPF32[(this._ptr+0)>>2] = v; },
+  },
+});
+game.Akeome._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// game.Akeome is a POD type, so a JavaScript side copy constructor game.Akeome._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+game.Akeome._typeDesc = (function() {
+  return ut.meta.allocType(5, 'game.Akeome', 4, [
+    {name: 'speed', offset: 0, type: ut.meta.getType('float')}
+  ]);
+})();
+Object.defineProperties(game.Akeome, { cid: { configurable: true, get: function() { delete game.Akeome.cid; var offsetsPtr = 0, offsetsCount = 0; return game.Akeome.cid = Module._ut_component_register_cid_with_type(game.Akeome._typeDesc, 4, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(game.Akeome.StorageView, { cid: { configurable: true, get: function() { return game.Akeome.cid; } } });
+game.Akeome.speed = { $ofs:0, $t:"float", $c:game.Akeome };
 var ut = ut || {};
 ut.Core2D = ut.Core2D || {};
 ut.Core2D.layers = ut.Core2D.layers || {};
@@ -1135,6 +1194,111 @@ ut.EditorExtensions.EntityLayer._typeDesc = (function() {
 Object.defineProperties(ut.EditorExtensions.EntityLayer, { cid: { configurable: true, get: function() { delete ut.EditorExtensions.EntityLayer.cid; var offsetsPtr = 0, offsetsCount = 0; return ut.EditorExtensions.EntityLayer.cid = Module._ut_component_register_cid_with_type(ut.EditorExtensions.EntityLayer._typeDesc, 4, 0, offsetsPtr, offsetsCount, 0, 0); } } });
 Object.defineProperties(ut.EditorExtensions.EntityLayer.StorageView, { cid: { configurable: true, get: function() { return ut.EditorExtensions.EntityLayer.cid; } } });
 ut.EditorExtensions.EntityLayer.layer = { $ofs:0, $t:"int32_t", $c:ut.EditorExtensions.EntityLayer };
+game.AkeomeBehavior_State = function(arg0, arg1, arg2, arg3) {
+  this._initialized = (arg0 ? true : false);
+  this._enabled = (arg1 ? true : false);
+  this._onEnableCalled = (arg2 ? true : false);
+  this._onDisableCalled = (arg3 ? true : false);
+};
+game.AkeomeBehavior_State.prototype = Object.create(null);
+game.AkeomeBehavior_State.prototype.constructor = game.AkeomeBehavior_State;
+Object.defineProperties(game.AkeomeBehavior_State.prototype, {
+  initialized: {
+    get: function() { return this._initialized; },
+    set: function(v) { this._initialized = (v ? true : false); },
+  },
+  enabled: {
+    get: function() { return this._enabled; },
+    set: function(v) { this._enabled = (v ? true : false); },
+  },
+  onEnableCalled: {
+    get: function() { return this._onEnableCalled; },
+    set: function(v) { this._onEnableCalled = (v ? true : false); },
+  },
+  onDisableCalled: {
+    get: function() { return this._onDisableCalled; },
+    set: function(v) { this._onDisableCalled = (v ? true : false); },
+  },
+});
+game.AkeomeBehavior_State._size = 4;
+game.AkeomeBehavior_State._fromPtr = function(ptr, v) {
+  v = v || Object.create(game.AkeomeBehavior_State.prototype);
+  v._initialized = (HEAP8[ptr+0]?true:false);
+  v._enabled = (HEAP8[ptr+1]?true:false);
+  v._onEnableCalled = (HEAP8[ptr+2]?true:false);
+  v._onDisableCalled = (HEAP8[ptr+3]?true:false);
+  return v;
+};
+game.AkeomeBehavior_State._toPtr = function(ptr, v) {
+  HEAP8[ptr+0] = (v.initialized)?1:0;
+  HEAP8[ptr+1] = (v.enabled)?1:0;
+  HEAP8[ptr+2] = (v.onEnableCalled)?1:0;
+  HEAP8[ptr+3] = (v.onDisableCalled)?1:0;
+};
+game.AkeomeBehavior_State._toTempHeapPtr = function(ptr, v) {
+  HEAP8[ptr+0] = (v.initialized)?1:0;
+  HEAP8[ptr+1] = (v.enabled)?1:0;
+  HEAP8[ptr+2] = (v.onEnableCalled)?1:0;
+  HEAP8[ptr+3] = (v.onDisableCalled)?1:0;
+};
+game.AkeomeBehavior_State._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(4);
+  if (v) game.AkeomeBehavior_State._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+game.AkeomeBehavior_State.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+game.AkeomeBehavior_State.StorageView.prototype = Object.create(null);
+game.AkeomeBehavior_State.StorageView.prototype.constructor = game.AkeomeBehavior_State.StorageView;
+game.AkeomeBehavior_State._view = game.AkeomeBehavior_State.StorageView;
+game.AkeomeBehavior_State.StorageView._isSharedComp = game.AkeomeBehavior_State._isSharedComp = false;
+game.AkeomeBehavior_State.StorageView._fromPtr = game.AkeomeBehavior_State._fromPtr;
+game.AkeomeBehavior_State.StorageView._toPtr = game.AkeomeBehavior_State._toPtr;
+game.AkeomeBehavior_State.StorageView._tempHeapPtr = game.AkeomeBehavior_State._tempHeapPtr;
+game.AkeomeBehavior_State.StorageView._size = game.AkeomeBehavior_State._size;
+game.AkeomeBehavior_State.StorageView.prototype.$advance = function() {
+  this._ptr += 4;
+};
+Object.defineProperties(game.AkeomeBehavior_State.StorageView.prototype, {
+  initialized: {
+    get: function() { return (HEAP8[this._ptr+0]?true:false); },
+    set: function(v) { HEAP8[this._ptr+0] = (v)?1:0; },
+  },
+  enabled: {
+    get: function() { return (HEAP8[this._ptr+1]?true:false); },
+    set: function(v) { HEAP8[this._ptr+1] = (v)?1:0; },
+  },
+  onEnableCalled: {
+    get: function() { return (HEAP8[this._ptr+2]?true:false); },
+    set: function(v) { HEAP8[this._ptr+2] = (v)?1:0; },
+  },
+  onDisableCalled: {
+    get: function() { return (HEAP8[this._ptr+3]?true:false); },
+    set: function(v) { HEAP8[this._ptr+3] = (v)?1:0; },
+  },
+});
+game.AkeomeBehavior_State._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// game.AkeomeBehavior_State is a POD type, so a JavaScript side copy constructor game.AkeomeBehavior_State._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+game.AkeomeBehavior_State._typeDesc = (function() {
+  return ut.meta.allocType(5, 'game.AkeomeBehavior_State', 4, [
+    {name: 'initialized', offset: 0, type: ut.meta.getType('bool')},
+    {name: 'enabled', offset: 1, type: ut.meta.getType('bool')},
+    {name: 'onEnableCalled', offset: 2, type: ut.meta.getType('bool')},
+    {name: 'onDisableCalled', offset: 3, type: ut.meta.getType('bool')}
+  ]);
+})();
+Object.defineProperties(game.AkeomeBehavior_State, { cid: { configurable: true, get: function() { delete game.AkeomeBehavior_State.cid; var offsetsPtr = 0, offsetsCount = 0; return game.AkeomeBehavior_State.cid = Module._ut_component_register_cid_with_type(game.AkeomeBehavior_State._typeDesc, 1, 0, offsetsPtr, offsetsCount, 0, 0); } } });
+Object.defineProperties(game.AkeomeBehavior_State.StorageView, { cid: { configurable: true, get: function() { return game.AkeomeBehavior_State.cid; } } });
+game.AkeomeBehavior_State.initialized = { $ofs:0, $t:"bool", $c:game.AkeomeBehavior_State };
+game.AkeomeBehavior_State.enabled = { $ofs:1, $t:"bool", $c:game.AkeomeBehavior_State };
+game.AkeomeBehavior_State.onEnableCalled = { $ofs:2, $t:"bool", $c:game.AkeomeBehavior_State };
+game.AkeomeBehavior_State.onDisableCalled = { $ofs:3, $t:"bool", $c:game.AkeomeBehavior_State };
+game.AkeomeBehavior_OnEntityUpdateJS = ut.System.define({
+  name: "game.AkeomeBehavior_OnEntityUpdateJS"
+ ,updatesBefore: ["UTiny.Shared.UserCodeEnd"]
+ ,updatesAfter: ["UTiny.Shared.UserCodeStart"]
+});
 
 
 

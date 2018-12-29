@@ -11,7 +11,6 @@ Module.ProfilerServerURL = "ws://192.168.11.7:54997/";
 /*
  * Workaround for issue UTINY-1091
  */
-var game = game || {}
 var ut = ut || {}
 ut.Shared = ut.Shared || {}
 ut.HTML = ut.HTML || {}

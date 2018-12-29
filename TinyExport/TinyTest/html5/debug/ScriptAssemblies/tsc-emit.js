@@ -1,3 +1,50 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var game;
+(function (game) {
+    var AkeomeBehaviorFilter = /** @class */ (function (_super) {
+        __extends(AkeomeBehaviorFilter, _super);
+        function AkeomeBehaviorFilter() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return AkeomeBehaviorFilter;
+    }(ut.EntityFilter));
+    game.AkeomeBehaviorFilter = AkeomeBehaviorFilter;
+    var AkeomeBehavior = /** @class */ (function (_super) {
+        __extends(AkeomeBehavior, _super);
+        function AkeomeBehavior() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        // ComponentBehaviour lifecycle events
+        // uncomment any method you need
+        // this method is called for each entity matching the AkeomeBehaviorFilter signature, once when enabled
+        //OnEntityEnable():void { }
+        // this method is called for each entity matching the AkeomeBehaviorFilter signature, every frame it's enabled
+        AkeomeBehavior.prototype.OnEntityUpdate = function () {
+            var rotation = this.data.localRottion.rotation;
+            if (rotation.y == 0.0)
+                return;
+            var speed = this.data.akeome.speed;
+            rotation.y += speed;
+            if (rotation.y >= 0.0) {
+                rotation.y = 0.0;
+            }
+        };
+        return AkeomeBehavior;
+    }(ut.ComponentBehaviour));
+    game.AkeomeBehavior = AkeomeBehavior;
+})(game || (game = {}));
 var ut;
 (function (ut) {
     var EntityGroup = /** @class */ (function () {

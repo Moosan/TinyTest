@@ -167,7 +167,18 @@
             }
         }
     }, {
-        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" },
+        "Properties": {
+            "rotation": {
+                "Type": { "Id": "dc7e11e5d517ed01fd5d084a6c9fd64d", "Name": "Quaternion" },
+                "Properties": {
+                    "x": 0,
+                    "y": -0.7071068,
+                    "z": 0,
+                    "w": 0.7071068
+                }
+            }
+        }
     }, {
         "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
     }, {
@@ -191,6 +202,8 @@
                 }
             }
         }
+    }, {
+        "Type": { "Id": "9c990f511c2e49abae986f71899d0664", "Name": "Akeome" }
     }]
 },
 {
