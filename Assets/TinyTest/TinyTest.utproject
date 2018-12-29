@@ -6,7 +6,7 @@
     "SerializedVersion": 6,
     "Settings": {
         "CanvasWidth": 360,
-        "CanvasHeight": 540,
+        "CanvasHeight": 580,
         "EmbedAssets": true,
         "CanvasAutoResize": false,
         "RenderMode": 0,
@@ -58,7 +58,8 @@
         { "Id": "404877ed746affa8a6081ad8161dd8de", "Name": "UTiny.EditorExtensions" },
         { "Id": "a1b50987659c653138795a8f4079fc10", "Name": "UTiny.Math" },
         { "Id": "ce3f1bd7050540b70d450a606e226ea2", "Name": "UTiny.Shared" },
-        { "Id": "f65115fc769546398da02b820303100e", "Name": "Main" }
+        { "Id": "f65115fc769546398da02b820303100e", "Name": "Main" },
+        { "Id": "259902b84b3ed0f7213a1b5e37040709", "Name": "UTiny.Physics2D" }
     ],
     "StartupEntityGroup": { "Id": "5dee5fd8c6ae4eee8977f952c67e6149", "Name": "NewEntityGroup" }
 },
@@ -73,8 +74,18 @@
         "Type": { "Id": "575fe161bc06950c954480d04c70c9ab", "Name": "DisplayInfo" },
         "Properties": {
             "width": 360,
-            "height": 540,
+            "height": 580,
             "autoSizeToFrame": false
+        }
+    }, {
+        "Type": { "Id": "38283a6cef9faa790b5c9936163d59e3", "Name": "Physics2DConfig" },
+        "Properties": {
+            "gravity": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "y": -20
+                }
+            }
         }
     }]
 }]

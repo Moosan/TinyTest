@@ -90,6 +90,18 @@ declare namespace game{
         static _tempHeapPtr(v: Akeome): number;
         static _dtorFn(v: Akeome): void;
     }
+    class Move extends ut.Component {
+        constructor();
+        upForce: ut.Math.Vector2;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Move): Move;
+        static _toPtr(p: number, v: Move): void;
+        static _tempHeapPtr(v: Move): number;
+        static _dtorFn(v: Move): void;
+    }
 }
 declare namespace ut{
 }

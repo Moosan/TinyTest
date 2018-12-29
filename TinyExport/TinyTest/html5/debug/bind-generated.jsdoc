@@ -19,6 +19,18 @@
 /**
 
 @component
+@memberof game
+@name Move
+*/
+/**
+
+@member {ut.Math.Vector2}
+@memberof game.Move
+@name upForce
+*/
+/**
+
+@component
 @memberof ut.Core2D.layers
 @name Default
 */
@@ -282,9 +294,45 @@
 */
 /**
 
+@component
+@memberof game
+@name PlayerBehavior_State
+*/
+/**
+
+@member {bool}
+@memberof game.PlayerBehavior_State
+@name initialized
+*/
+/**
+
+@member {bool}
+@memberof game.PlayerBehavior_State
+@name enabled
+*/
+/**
+
+@member {bool}
+@memberof game.PlayerBehavior_State
+@name onEnableCalled
+*/
+/**
+
+@member {bool}
+@memberof game.PlayerBehavior_State
+@name onDisableCalled
+*/
+/**
+
 @system
 @memberof game
 @name AkeomeBehavior_OnEntityUpdateJS
+*/
+/**
+
+@system
+@memberof game
+@name PlayerBehavior_OnEntityUpdateJS
 */
 
 

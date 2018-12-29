@@ -6,6 +6,7 @@ using ut;
 using UTiny.HTML;
 using UTiny.Rendering;
 using ut.EditorExtensions;
+using UTiny.Physics2D;
 
 /*
  * !!! TEMP UNITL PROPER SCENE FORMAT !!!
@@ -25,6 +26,10 @@ namespace game
     public struct Akeome : IComponentData
     {
         public float speed;
+    }
+    public struct Move : IComponentData
+    {
+        public Vector2 upForce;
     }
 }
 
@@ -161,6 +166,10 @@ namespace ut.EditorExtensions
         public int layer;
     }
 }
+
+namespace ut.Physics2D
+{
+}
 namespace game
 {
     public struct AkeomeBehavior_State : IComponentData
@@ -173,9 +182,27 @@ namespace game
 }
 namespace game
 {
+    public struct PlayerBehavior_State : IComponentData
+    {
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
+    }
+}
+namespace game
+{
     [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
     [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
     public class AkeomeBehavior_OnEntityUpdateJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
+    [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
+    public class PlayerBehavior_OnEntityUpdateJS : IComponentSystem
     {
     }
 }

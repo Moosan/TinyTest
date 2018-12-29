@@ -1,0 +1,22 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "29a493384d674cea90336e680ef3b9ab",
+    "Name": "IsGround",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "f05fad2c535845a5bdf701ad67803b68",
+        "Name": "isGround",
+        "FieldType": { "Id": "2b477f505af74487b7092b5617d88d3f", "Name": "Boolean" },
+        "Array": false,
+        "Visibility": 0
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "29a493384d674cea90336e680ef3b9ab", "Name": "IsGround" },
+        "Properties": {
+            "isGround": true
+        }
+    }
+}]

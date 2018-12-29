@@ -2,7 +2,7 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "skipLibCheck": true,
-        "outFile": "C:/Users/Washer/p/tinytest/TinyExport/TinyTest/html5/debug/ScriptAssemblies/tsc-emit.js",
+        "outFile": "C:/Users/Washer/p/tinytest/TinyExport/TinyTest/html5/development/ScriptAssemblies/tsc-emit.js",
         "sourceMap": true,
         "target": "ES5"
     },
@@ -23,11 +23,12 @@
         "Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.RendererGLWebGL/**/*.ts",
         "Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.RendererGL/**/*.ts",
         "Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.Sprite2D/**/*.ts",
-        "Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EditorExtensions/**/*.ts"
+        "Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EditorExtensions/**/*.ts",
+        "Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.Physics2D/**/*.ts"
     ],
     "exclude": [],
     "files": [
-        "TinyExport/TinyTest/html5/debug/bind-generated.d.ts",
-        "Tiny/Dist/runtimedll/RuntimeStripped.d.ts"
+        "TinyExport/TinyTest/html5/development/bind-generated.d.ts",
+        "Tiny/Dist/runtimedll/RuntimeFull.d.ts"
     ]
 }

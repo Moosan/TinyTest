@@ -45,6 +45,37 @@ var game;
     }(ut.ComponentBehaviour));
     game.AkeomeBehavior = AkeomeBehavior;
 })(game || (game = {}));
+var game;
+(function (game) {
+    var PlayerBehaviorFilter = /** @class */ (function (_super) {
+        __extends(PlayerBehaviorFilter, _super);
+        function PlayerBehaviorFilter() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return PlayerBehaviorFilter;
+    }(ut.EntityFilter));
+    game.PlayerBehaviorFilter = PlayerBehaviorFilter;
+    var PlayerBehavior = /** @class */ (function (_super) {
+        __extends(PlayerBehavior, _super);
+        function PlayerBehavior() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        // ComponentBehaviour lifecycle events
+        // uncomment any method you need
+        // this method is called for each entity matching the PlayerBehaviorFilter signature, once when enabled
+        //OnEntityEnable():void { }
+        // this method is called for each entity matching the PlayerBehaviorFilter signature, every frame it's enabled
+        PlayerBehavior.prototype.OnEntityUpdate = function () {
+            if (ut.Runtime.Input.getMouseButton(0)) {
+                var impulse = new ut.Physics2D.AddImpulse2D;
+                impulse.impulse = new Vector2(0, this.data.move.upForce.y);
+                this.world.addComponentData(this.data.entity, impulse);
+            }
+        };
+        return PlayerBehavior;
+    }(ut.ComponentBehaviour));
+    game.PlayerBehavior = PlayerBehavior;
+})(game || (game = {}));
 var ut;
 (function (ut) {
     var EntityGroup = /** @class */ (function () {

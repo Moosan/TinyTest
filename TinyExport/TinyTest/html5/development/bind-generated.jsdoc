@@ -7,6 +7,42 @@
 /**
 
 @component
+@memberof game
+@name Akeome
+*/
+/**
+
+@member {float}
+@memberof game.Akeome
+@name speed
+*/
+/**
+
+@component
+@memberof game
+@name IsGround
+*/
+/**
+
+@member {bool}
+@memberof game.IsGround
+@name isGround
+*/
+/**
+
+@component
+@memberof game
+@name Move
+*/
+/**
+
+@member {ut.Math.Vector2}
+@memberof game.Move
+@name upForce
+*/
+/**
+
+@component
 @memberof ut.Core2D.layers
 @name Default
 */
@@ -237,6 +273,78 @@
 @member {int32}
 @memberof ut.EditorExtensions.EntityLayer
 @name layer
+*/
+/**
+
+@component
+@memberof game
+@name AkeomeBehavior_State
+*/
+/**
+
+@member {bool}
+@memberof game.AkeomeBehavior_State
+@name initialized
+*/
+/**
+
+@member {bool}
+@memberof game.AkeomeBehavior_State
+@name enabled
+*/
+/**
+
+@member {bool}
+@memberof game.AkeomeBehavior_State
+@name onEnableCalled
+*/
+/**
+
+@member {bool}
+@memberof game.AkeomeBehavior_State
+@name onDisableCalled
+*/
+/**
+
+@component
+@memberof game
+@name PlayerBehavior_State
+*/
+/**
+
+@member {bool}
+@memberof game.PlayerBehavior_State
+@name initialized
+*/
+/**
+
+@member {bool}
+@memberof game.PlayerBehavior_State
+@name enabled
+*/
+/**
+
+@member {bool}
+@memberof game.PlayerBehavior_State
+@name onEnableCalled
+*/
+/**
+
+@member {bool}
+@memberof game.PlayerBehavior_State
+@name onDisableCalled
+*/
+/**
+
+@system
+@memberof game
+@name AkeomeBehavior_OnEntityUpdateJS
+*/
+/**
+
+@system
+@memberof game
+@name PlayerBehavior_OnEntityUpdateJS
 */
 
 

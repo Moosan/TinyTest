@@ -13,8 +13,8 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/debug/bin/runtime.js",
-                "Size": 6997797,
-                "CompressedSize": 1038864
+                "Size": 7616729,
+                "CompressedSize": 1157180
             }
         }]
     }, {
@@ -84,21 +84,21 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/debug/bin/entities.js",
-                "Size": 7615,
-                "CompressedSize": 1641
+                "Size": 10014,
+                "CompressedSize": 2013
             },
             "Children": [{
                 "Item": {
                     "Name": "MainGroup",
-                    "Size": 7535,
-                    "CompressedSize": 1563
+                    "Size": 9934,
+                    "CompressedSize": 1933
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/debug/bin/bindings.js",
-                "Size": 83323,
-                "CompressedSize": 6693
+                "Size": 91279,
+                "CompressedSize": 7302
             }
         }, {
             "Item": {
@@ -109,15 +109,15 @@
             "Children": [{
                 "Item": {
                     "Name": "C:\\Users\\Washer\\p\\tinytest\\TinyExport\\TinyTest\\html5\\debug\\ScriptAssemblies\\tsc-emit.js",
-                    "Size": 5260,
-                    "CompressedSize": 1482
+                    "Size": 6742,
+                    "CompressedSize": 1670
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/debug/bin/main.js",
-                "Size": 3805,
-                "CompressedSize": 1121
+                "Size": 5403,
+                "CompressedSize": 1306
             }
         }, {
             "Item": {

@@ -1,0 +1,27 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "24e9160778894749b40f15ecec886ad7",
+    "Name": "Move",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "785a72d50bdc47f6b94f746c69f28d8b",
+        "Name": "upForce",
+        "FieldType": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+        "Array": false,
+        "Visibility": 0
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "24e9160778894749b40f15ecec886ad7", "Name": "Move" },
+        "Properties": {
+            "upForce": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "y": 1
+                }
+            }
+        }
+    }
+}]
