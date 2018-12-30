@@ -8,7 +8,7 @@
         "CanvasWidth": 360,
         "CanvasHeight": 580,
         "EmbedAssets": true,
-        "CanvasAutoResize": false,
+        "CanvasAutoResize": true,
         "RenderMode": 0,
         "DefaultTextureSettings": {
             "$TypeId": 2,
@@ -75,7 +75,7 @@
         "Properties": {
             "width": 360,
             "height": 580,
-            "autoSizeToFrame": false
+            "autoSizeToFrame": true
         }
     }, {
         "Type": { "Id": "38283a6cef9faa790b5c9936163d59e3", "Name": "Physics2DConfig" },

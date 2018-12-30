@@ -142,6 +142,7 @@ ut.main = function() {
     var c0 = world.getConfigData(ut.Core2D.DisplayInfo);
     c0.width = 360;
     c0.height = 580;
+    c0.autoSizeToFrame = true;
     c0.renderMode = 0;
     world.setConfigData(c0);
     var c1 = world.getConfigData(ut.Physics2D.Physics2DConfig);

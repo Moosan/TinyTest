@@ -84,14 +84,14 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/release/bin/entities.js",
-                "Size": 13729,
-                "CompressedSize": 2569
+                "Size": 13754,
+                "CompressedSize": 2581
             },
             "Children": [{
                 "Item": {
                     "Name": "MainGroup",
-                    "Size": 13649,
-                    "CompressedSize": 2487
+                    "Size": 13674,
+                    "CompressedSize": 2498
                 }
             }]
         }, {
@@ -116,8 +116,8 @@
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/release/bin/main.js",
-                "Size": 7879,
-                "CompressedSize": 1509
+                "Size": 7911,
+                "CompressedSize": 1524
             }
         }]
     }]
