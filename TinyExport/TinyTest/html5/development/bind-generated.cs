@@ -11,6 +11,18 @@ namespace entities.game.MainGroup
 
     }
 }
+namespace entities.game.OtosidamaGroup
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Component : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
 namespace game
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -19,6 +31,22 @@ namespace game
 
 
         public float speed;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Boundaries : UTiny.IComponentData
+    {
+
+
+        public float minX;
+        public float maxX;
+        public float minY;
+        public float maxY;
 
 
 
@@ -53,6 +81,43 @@ namespace game
 namespace game
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct MoveSpeed : UTiny.IComponentData
+    {
+
+
+        public float speed;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Otosidama : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Player : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
     public struct ScrollBackground : UTiny.IComponentData
     {
 
@@ -60,6 +125,22 @@ namespace game
         public float speed;
         public float threshold;
         public float distance;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Spawner : UTiny.IComponentData
+    {
+
+
+        public float time;
+        public float delay;
+        public bool isPaused;
+        public string spawnedGroup;
 
 
 
@@ -283,7 +364,23 @@ namespace ut.EditorExtensions
 namespace game
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
-    public struct AkeomeBehavior_State : UTiny.IComponentData
+    public struct AkeomeBehaviour_State : UTiny.IComponentData
+    {
+
+
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct OkaneBehavir_State : UTiny.IComponentData
     {
 
 

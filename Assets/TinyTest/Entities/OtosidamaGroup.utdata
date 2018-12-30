@@ -1,0 +1,62 @@
+﻿[{
+    "$TypeId": 4,
+    "Id": "5ddef9fbb96c45fda692c2276768d795",
+    "Name": "OtosidamaGroup",
+    "ExportFlags": 0,
+    "SerializedVersion": 0,
+    "Entities": [
+        { "$TypeId": 9, "Id": "cd91ee3e06914f758adef9cd756951b3", "Name": "Sprite" }
+    ]
+},
+{
+    "$TypeId": 5,
+    "Id": "cd91ee3e06914f758adef9cd756951b3",
+    "Name": "Sprite",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" },
+        "Properties": {
+            "scale": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0.1,
+                    "y": 0.1
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "3e90858211eab834b8f781ed932e14c9", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "order": 1
+        }
+    }, {
+        "Type": { "Id": "879152b99a2840429aac304132ced551", "Name": "Boundaries" },
+        "Properties": {
+            "minX": -9,
+            "maxX": 9,
+            "minY": 1,
+            "maxY": -3
+        }
+    }, {
+        "Type": { "Id": "03f0e9409fad4523bf428dccd1b4e965", "Name": "MoveSpeed" }
+    }, {
+        "Type": { "Id": "06011b79106247e0aa9a1c12be1dec36", "Name": "Otosidama" }
+    }, {
+        "Type": { "Id": "4eb2060bab60f5bab6e889be1cdad8ed", "Name": "ColliderContacts" }
+    }, {
+        "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" }
+    }]
+}]

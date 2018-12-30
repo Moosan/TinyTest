@@ -1,0 +1,12 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "06011b79106247e0aa9a1c12be1dec36",
+    "Name": "Otosidama",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "DefaultValue": {
+        "Type": { "Id": "06011b79106247e0aa9a1c12be1dec36", "Name": "Otosidama" }
+    }
+}]

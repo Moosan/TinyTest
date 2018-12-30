@@ -1,0 +1,22 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "03f0e9409fad4523bf428dccd1b4e965",
+    "Name": "MoveSpeed",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "799791704984412fb41f320c922ee616",
+        "Name": "speed",
+        "FieldType": { "Id": "67325dccf2f047c19c7ef4a045354e67", "Name": "Float32" },
+        "Array": false,
+        "Visibility": 0
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "03f0e9409fad4523bf428dccd1b4e965", "Name": "MoveSpeed" },
+        "Properties": {
+            "speed": 1
+        }
+    }
+}]

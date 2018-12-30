@@ -20,25 +20,25 @@ ut.importModule(ut.Rendering);
 ut.importModule(ut.Core2D);
 ut.importModule(ut.Physics2D);
 ut.main = function() {
-    game.AkeomeBehaviorFilter._Components = [ut.Entity, 
+    game.AkeomeBehaviourFilter._Components = [ut.Entity, 
         ut.Core2D.TransformNode, game.Akeome
     ];
-    game.AkeomeBehaviorFilter.prototype.Read = function(world, entity) {
+    game.AkeomeBehaviourFilter.prototype.Read = function(world, entity) {
         this.node = world.getComponentData(entity, ut.Core2D.TransformNode);
         this.localRottion = world.hasComponent(entity, ut.Core2D.TransformLocalRotation) ? world.getComponentData(entity, ut.Core2D.TransformLocalRotation) : undefined;
         this.akeome = world.getComponentData(entity, game.Akeome);
     };
-    game.AkeomeBehaviorFilter.prototype.Reset = function() {
+    game.AkeomeBehaviourFilter.prototype.Reset = function() {
         this.node = undefined;
         this.localRottion = undefined;
         this.akeome = undefined;
     };
-    game.AkeomeBehaviorFilter.prototype.Write = function(world, entity) {
+    game.AkeomeBehaviourFilter.prototype.Write = function(world, entity) {
         world.setComponentData(entity, this.node);
         if (this.localRottion) { world.setOrAddComponentData(entity, this.localRottion); }
         world.setComponentData(entity, this.akeome);
     };
-    game.AkeomeBehaviorFilter.prototype.ForEach = function(world, callback) {
+    game.AkeomeBehaviourFilter.prototype.ForEach = function(world, callback) {
         var _this = this;
         world.forEach(this.constructor._Components, function($entity, node, akeome) {
             _this.Read(world, $entity);
@@ -46,29 +46,69 @@ ut.main = function() {
             if (world.exists($entity)) { _this.Write(world, $entity); }
         });
     };
+    game.OkaneBehavirFilter._Components = [ut.Entity, 
+        ut.Core2D.TransformNode, game.MoveSpeed, game.Boundaries, game.Otosidama
+    ];
+    game.OkaneBehavirFilter.prototype.Read = function(world, entity) {
+        this.entity = entity;
+        this.node = world.getComponentData(entity, ut.Core2D.TransformNode);
+        this.position = world.hasComponent(entity, ut.Core2D.TransformLocalPosition) ? world.getComponentData(entity, ut.Core2D.TransformLocalPosition) : undefined;
+        this.colliderContacts = world.hasComponent(entity, ut.Physics2D.ColliderContacts) ? world.getComponentData(entity, ut.Physics2D.ColliderContacts) : undefined;
+        this.speed = world.getComponentData(entity, game.MoveSpeed);
+        this.bounds = world.getComponentData(entity, game.Boundaries);
+        this.otosi = world.getComponentData(entity, game.Otosidama);
+    };
+    game.OkaneBehavirFilter.prototype.Reset = function() {
+        this.entity = undefined;
+        this.node = undefined;
+        this.position = undefined;
+        this.colliderContacts = undefined;
+        this.speed = undefined;
+        this.bounds = undefined;
+        this.otosi = undefined;
+    };
+    game.OkaneBehavirFilter.prototype.Write = function(world, entity) {
+        world.setComponentData(entity, this.node);
+        if (this.position) { world.setOrAddComponentData(entity, this.position); }
+        if (this.colliderContacts) { world.setOrAddComponentData(entity, this.colliderContacts); }
+        world.setComponentData(entity, this.speed);
+        world.setComponentData(entity, this.bounds);
+        world.setComponentData(entity, this.otosi);
+    };
+    game.OkaneBehavirFilter.prototype.ForEach = function(world, callback) {
+        var _this = this;
+        world.forEach(this.constructor._Components, function($entity, node, speed, bounds, otosi) {
+            _this.Read(world, $entity);
+            callback($entity);
+            if (world.exists($entity)) { _this.Write(world, $entity); }
+        });
+    };
     game.PlayerBehaviorFilter._Components = [ut.Entity, 
-        game.Move, game.IsGround, ut.Physics2D.NewColliderContacts
+        game.Move, game.IsGround, ut.Physics2D.NewColliderContacts, game.Player
     ];
     game.PlayerBehaviorFilter.prototype.Read = function(world, entity) {
         this.entity = entity;
         this.move = world.getComponentData(entity, game.Move);
         this.groundBool = world.getComponentData(entity, game.IsGround);
         this.newColliderContacts = world.getComponentData(entity, ut.Physics2D.NewColliderContacts);
+        this.player = world.getComponentData(entity, game.Player);
     };
     game.PlayerBehaviorFilter.prototype.Reset = function() {
         this.entity = undefined;
         this.move = undefined;
         this.groundBool = undefined;
         this.newColliderContacts = undefined;
+        this.player = undefined;
     };
     game.PlayerBehaviorFilter.prototype.Write = function(world, entity) {
         world.setComponentData(entity, this.move);
         world.setComponentData(entity, this.groundBool);
         world.setComponentData(entity, this.newColliderContacts);
+        world.setComponentData(entity, this.player);
     };
     game.PlayerBehaviorFilter.prototype.ForEach = function(world, callback) {
         var _this = this;
-        world.forEach(this.constructor._Components, function($entity, move, groundBool, newColliderContacts) {
+        world.forEach(this.constructor._Components, function($entity, move, groundBool, newColliderContacts, player) {
             _this.Read(world, $entity);
             callback($entity);
             if (world.exists($entity)) { _this.Write(world, $entity); }
@@ -100,9 +140,12 @@ ut.main = function() {
             if (world.exists($entity)) { _this.Write(world, $entity); }
         });
     };
-    game.AkeomeBehavior.Instance = new game.AkeomeBehavior();
-    game.AkeomeBehavior._StateType = game.AkeomeBehavior_State;
-    game.AkeomeBehavior.prototype._GetFilter = function() { if (!this.data) { this.data = new game.AkeomeBehaviorFilter(); } return this.data; }
+    game.AkeomeBehaviour.Instance = new game.AkeomeBehaviour();
+    game.AkeomeBehaviour._StateType = game.AkeomeBehaviour_State;
+    game.AkeomeBehaviour.prototype._GetFilter = function() { if (!this.data) { this.data = new game.AkeomeBehaviourFilter(); } return this.data; }
+    game.OkaneBehavir.Instance = new game.OkaneBehavir();
+    game.OkaneBehavir._StateType = game.OkaneBehavir_State;
+    game.OkaneBehavir.prototype._GetFilter = function() { if (!this.data) { this.data = new game.OkaneBehavirFilter(); } return this.data; }
     game.PlayerBehavior.Instance = new game.PlayerBehavior();
     game.PlayerBehavior._StateType = game.PlayerBehavior_State;
     game.PlayerBehavior.prototype._GetFilter = function() { if (!this.data) { this.data = new game.PlayerBehaviorFilter(); } return this.data; }
@@ -114,17 +157,25 @@ ut.main = function() {
 
     // Schedule all systems
     var scheduler = world.scheduler();
+    game.SpawnSystemJS.update = new game.SpawnSystem()._MakeSystemFn();
+    ut.TimeJS.update = new ut.Time()._MakeSystemFn();
+    game.OkaneBehavir_OnEntityEnableJS.update = game.OkaneBehavir.Instance._MakeOnEntityEnable();
     game.ScrollBackgroundBehavior_OnEntityEnableJS.update = game.ScrollBackgroundBehavior.Instance._MakeOnEntityEnable();
-    game.AkeomeBehavior_OnEntityUpdateJS.update = game.AkeomeBehavior.Instance._MakeOnEntityUpdate();
+    game.AkeomeBehaviour_OnEntityUpdateJS.update = game.AkeomeBehaviour.Instance._MakeOnEntityUpdate();
+    game.OkaneBehavir_OnEntityUpdateJS.update = game.OkaneBehavir.Instance._MakeOnEntityUpdate();
     game.PlayerBehavior_OnEntityUpdateJS.update = game.PlayerBehavior.Instance._MakeOnEntityUpdate();
     game.ScrollBackgroundBehavior_OnEntityUpdateJS.update = game.ScrollBackgroundBehavior.Instance._MakeOnEntityUpdate();
+    scheduler.schedule(game.SpawnSystemJS);
+    scheduler.schedule(ut.TimeJS);
     scheduler.schedule(ut.HTML.InputHandler);
     scheduler.schedule(ut.HTML.AssetLoader);
     scheduler.schedule(ut.Core2D.SequencePlayerSystem);
+    scheduler.schedule(game.OkaneBehavir_OnEntityEnableJS);
     scheduler.schedule(game.ScrollBackgroundBehavior_OnEntityEnableJS);
     scheduler.schedule(ut.Shared.InputFence);
     scheduler.schedule(ut.Shared.UserCodeStart);
-    scheduler.schedule(game.AkeomeBehavior_OnEntityUpdateJS);
+    scheduler.schedule(game.AkeomeBehaviour_OnEntityUpdateJS);
+    scheduler.schedule(game.OkaneBehavir_OnEntityUpdateJS);
     scheduler.schedule(game.PlayerBehavior_OnEntityUpdateJS);
     scheduler.schedule(game.ScrollBackgroundBehavior_OnEntityUpdateJS);
     scheduler.schedule(ut.Shared.UserCodeEnd);

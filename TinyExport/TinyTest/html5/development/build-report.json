@@ -26,7 +26,7 @@
         "Children": [{
             "Item": {
                 "Name": "JavaScript",
-                "Size": 4363,
+                "Size": 5589,
                 "CompressedSize": 0
             }
         }, {
@@ -74,6 +74,21 @@
                     "Object": { "$TypeId": 10, "Guid": "c14c16b942150a34a909709e6a9537df", "FileId": 2800000, "Type": 3 }
                 }
             }]
+        }, {
+            "Item": {
+                "Name": "Assets/Resorces/Images/money_1000.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "3e90858211eab834b8f781ed932e14c9", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Assets/money_1000.png",
+                    "Size": 649164,
+                    "CompressedSize": 491368,
+                    "Object": { "$TypeId": 10, "Guid": "3e90858211eab834b8f781ed932e14c9", "FileId": 2800000, "Type": 3 }
+                }
+            }]
         }]
     }, {
         "Item": {
@@ -84,21 +99,27 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/development/bin/entities.js",
-                "Size": 16770,
-                "CompressedSize": 2983
+                "Size": 19224,
+                "CompressedSize": 3333
             },
             "Children": [{
                 "Item": {
                     "Name": "MainGroup",
-                    "Size": 16690,
-                    "CompressedSize": 2901
+                    "Size": 17047,
+                    "CompressedSize": 2992
+                }
+            }, {
+                "Item": {
+                    "Name": "OtosidamaGroup",
+                    "Size": 2099,
+                    "CompressedSize": 678
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/development/bin/bindings.js",
-                "Size": 103926,
-                "CompressedSize": 8216
+                "Size": 128394,
+                "CompressedSize": 10158
             }
         }, {
             "Item": {
@@ -109,15 +130,15 @@
             "Children": [{
                 "Item": {
                     "Name": "C:\\Users\\Washer\\p\\tinytest\\TinyExport\\TinyTest\\html5\\development\\ScriptAssemblies\\tsc-emit.js",
-                    "Size": 9173,
-                    "CompressedSize": 1982
+                    "Size": 14103,
+                    "CompressedSize": 2841
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/development/bin/main.js",
-                "Size": 8022,
-                "CompressedSize": 1567
+                "Size": 11048,
+                "CompressedSize": 1854
             }
         }, {
             "Item": {

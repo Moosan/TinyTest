@@ -11,27 +11,33 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var game;
 (function (game) {
-    var AkeomeBehaviorFilter = /** @class */ (function (_super) {
-        __extends(AkeomeBehaviorFilter, _super);
-        function AkeomeBehaviorFilter() {
+    var AkeomeBehaviourFilter = /** @class */ (function (_super) {
+        __extends(AkeomeBehaviourFilter, _super);
+        function AkeomeBehaviourFilter() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
-        return AkeomeBehaviorFilter;
+        return AkeomeBehaviourFilter;
     }(ut.EntityFilter));
-    game.AkeomeBehaviorFilter = AkeomeBehaviorFilter;
-    var AkeomeBehavior = /** @class */ (function (_super) {
-        __extends(AkeomeBehavior, _super);
-        function AkeomeBehavior() {
+    game.AkeomeBehaviourFilter = AkeomeBehaviourFilter;
+    var AkeomeBehaviour = /** @class */ (function (_super) {
+        __extends(AkeomeBehaviour, _super);
+        function AkeomeBehaviour() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
         // ComponentBehaviour lifecycle events
         // uncomment any method you need
-        // this method is called for each entity matching the AkeomeBehaviorFilter signature, once when enabled
+        // this method is called for each entity matching the AkeomeBehaviourFilter signature, once when enabled
         //OnEntityEnable():void { }
-        // this method is called for each entity matching the AkeomeBehaviorFilter signature, every frame it's enabled
-        AkeomeBehavior.prototype.OnEntityUpdate = function () {
+        // this method is called for each entity matching the AkeomeBehaviourFilter signature, every frame it's enabled
+        AkeomeBehaviour.prototype.OnEntityUpdate = function () {
             var rotation = this.data.localRottion.rotation;
             if (rotation.y == 0.0)
                 return;
@@ -41,9 +47,56 @@ var game;
                 rotation.y = 0.0;
             }
         };
-        return AkeomeBehavior;
+        return AkeomeBehaviour;
     }(ut.ComponentBehaviour));
-    game.AkeomeBehavior = AkeomeBehavior;
+    game.AkeomeBehaviour = AkeomeBehaviour;
+})(game || (game = {}));
+var game;
+(function (game) {
+    var OkaneBehavirFilter = /** @class */ (function (_super) {
+        __extends(OkaneBehavirFilter, _super);
+        function OkaneBehavirFilter() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return OkaneBehavirFilter;
+    }(ut.EntityFilter));
+    game.OkaneBehavirFilter = OkaneBehavirFilter;
+    var OkaneBehavir = /** @class */ (function (_super) {
+        __extends(OkaneBehavir, _super);
+        function OkaneBehavir() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        // ComponentBehaviour lifecycle events
+        // uncomment any method you need
+        // this method is called for each entity matching the OkaneBehavirFilter signature, once when enabled
+        OkaneBehavir.prototype.OnEntityEnable = function () {
+            var randomY = getRandom(this.data.bounds.minY, this.data.bounds.maxY);
+            var newPos = new Vector3(this.data.bounds.maxX, randomY, 0);
+            this.data.position.position = newPos;
+        };
+        // this method is called for each entity matching the OkaneBehavirFilter signature, every frame it's enabled
+        OkaneBehavir.prototype.OnEntityUpdate = function () {
+            var localPosition = this.data.position.position;
+            localPosition.x -= this.data.speed.speed * ut.Time.deltaTime();
+            this.data.position.position = localPosition;
+            if (localPosition.x <= this.data.bounds.minX) {
+                this.world.destroyEntity(this.data.entity);
+                return;
+            }
+            var contacts = this.data.colliderContacts.contacts;
+            if (contacts.length > 0) {
+                if ((this.world.getEntityName(contacts[0]) == "Player")) {
+                    this.world.destroyEntity(this.data.entity);
+                    return;
+                }
+            }
+        };
+        return OkaneBehavir;
+    }(ut.ComponentBehaviour));
+    game.OkaneBehavir = OkaneBehavir;
+    function getRandom(min, max) {
+        return Math.random() * (max - min + 1) + min;
+    }
 })(game || (game = {}));
 var game;
 (function (game) {
@@ -125,6 +178,73 @@ var game;
     }(ut.ComponentBehaviour));
     game.ScrollBackgroundBehavior = ScrollBackgroundBehavior;
 })(game || (game = {}));
+var game;
+(function (game) {
+    /** New System */
+    var SpawnSystem = /** @class */ (function (_super) {
+        __extends(SpawnSystem, _super);
+        function SpawnSystem() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        SpawnSystem.prototype.OnUpdate = function () {
+            var _this = this;
+            this.world.forEach([game.Spawner], function (spawner) {
+                if (spawner.isPaused)
+                    return;
+                var time = spawner.time;
+                var delay = spawner.delay;
+                time -= ut.Time.deltaTime();
+                if (time <= 0) {
+                    time += delay;
+                    ut.EntityGroup.instantiate(_this.world, spawner.spawnedGroup);
+                }
+                spawner.time = time;
+            });
+        };
+        return SpawnSystem;
+    }(ut.ComponentSystem));
+    game.SpawnSystem = SpawnSystem;
+})(game || (game = {}));
+var ut;
+(function (ut) {
+    /**
+     * Placeholder system to provide a UnityEngine.Time like API
+     *
+     * e.g.
+     *  let deltaTime = ut.Time.deltaTime();
+     *  let time = ut.Time.time();
+     *
+     */
+    var Time = /** @class */ (function (_super) {
+        __extends(Time, _super);
+        function Time() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        Time_1 = Time;
+        Time.deltaTime = function () {
+            return Time_1._deltaTime;
+        };
+        Time.time = function () {
+            return Time_1._time;
+        };
+        Time.reset = function () {
+            Time_1._time = 0;
+        };
+        Time.prototype.OnUpdate = function () {
+            var dt = this.scheduler.deltaTime();
+            Time_1._deltaTime = dt;
+            Time_1._time += dt;
+        };
+        var Time_1;
+        Time._deltaTime = 0;
+        Time._time = 0;
+        Time = Time_1 = __decorate([
+            ut.executeBefore(ut.Shared.UserCodeStart)
+        ], Time);
+        return Time;
+    }(ut.ComponentSystem));
+    ut.Time = Time;
+})(ut || (ut = {}));
 var ut;
 (function (ut) {
     var EntityGroup = /** @class */ (function () {

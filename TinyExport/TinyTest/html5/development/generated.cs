@@ -19,6 +19,12 @@ namespace entities.game
         {
         }
     }
+    namespace OtosidamaGroup
+    {
+        public struct Component : IComponentData
+        {
+        }
+    }
 }
 
 namespace game
@@ -26,6 +32,13 @@ namespace game
     public struct Akeome : IComponentData
     {
         public float speed;
+    }
+    public struct Boundaries : IComponentData
+    {
+        public float minX;
+        public float maxX;
+        public float minY;
+        public float maxY;
     }
     public struct IsGround : IComponentData
     {
@@ -35,11 +48,28 @@ namespace game
     {
         public Vector2 upForce;
     }
+    public struct MoveSpeed : IComponentData
+    {
+        public float speed;
+    }
+    public struct Otosidama : IComponentData
+    {
+    }
+    public struct Player : IComponentData
+    {
+    }
     public struct ScrollBackground : IComponentData
     {
         public float speed;
         public float threshold;
         public float distance;
+    }
+    public struct Spawner : IComponentData
+    {
+        public float time;
+        public float delay;
+        public bool isPaused;
+        public string spawnedGroup;
     }
 }
 
@@ -182,7 +212,17 @@ namespace ut.Physics2D
 }
 namespace game
 {
-    public struct AkeomeBehavior_State : IComponentData
+    public struct AkeomeBehaviour_State : IComponentData
+    {
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
+    }
+}
+namespace game
+{
+    public struct OkaneBehavir_State : IComponentData
     {
         public bool initialized;
         public bool enabled;
@@ -212,9 +252,37 @@ namespace game
 }
 namespace game
 {
+    public class SpawnSystemJS : IComponentSystem
+    {
+    }
+}
+namespace ut
+{
+    [UpdateBefore(typeof(UTiny.Shared.UserCodeStart))]
+    public class TimeJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
     [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
     [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
-    public class AkeomeBehavior_OnEntityUpdateJS : IComponentSystem
+    public class AkeomeBehaviour_OnEntityUpdateJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    [UpdateBefore(typeof(UTiny.Shared.InputFence))]
+    public class OkaneBehavir_OnEntityEnableJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
+    [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
+    public class OkaneBehavir_OnEntityUpdateJS : IComponentSystem
     {
     }
 }

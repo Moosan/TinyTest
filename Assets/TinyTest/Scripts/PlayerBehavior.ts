@@ -6,6 +6,7 @@ namespace game {
 		move: game.Move;
 		groundBool: game.IsGround;
 		newColliderContacts: ut.Physics2D.NewColliderContacts;
+		player: game.Player;
     }
 
     export class PlayerBehavior extends ut.ComponentBehaviour {

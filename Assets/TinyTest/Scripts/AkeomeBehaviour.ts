@@ -1,23 +1,23 @@
 
 namespace game {
 
-    export class AkeomeBehaviorFilter extends ut.EntityFilter {
+    export class AkeomeBehaviourFilter extends ut.EntityFilter {
         node: ut.Core2D.TransformNode;
         localRottion?: ut.Core2D.TransformLocalRotation;
 		akeome: game.Akeome;
     }
 
-    export class AkeomeBehavior extends ut.ComponentBehaviour {
+    export class AkeomeBehaviour extends ut.ComponentBehaviour {
 
-        data: AkeomeBehaviorFilter;
+        data: AkeomeBehaviourFilter;
 
         // ComponentBehaviour lifecycle events
         // uncomment any method you need
         
-        // this method is called for each entity matching the AkeomeBehaviorFilter signature, once when enabled
+        // this method is called for each entity matching the AkeomeBehaviourFilter signature, once when enabled
         //OnEntityEnable():void { }
         
-        // this method is called for each entity matching the AkeomeBehaviorFilter signature, every frame it's enabled
+        // this method is called for each entity matching the AkeomeBehaviourFilter signature, every frame it's enabled
         OnEntityUpdate():void {
 			let rotation = this.data.localRottion.rotation;
 			if(rotation.y == 0.0)return;
@@ -28,7 +28,7 @@ namespace game {
 			}
 		}
 
-        // this method is called for each entity matching the AkeomeBehaviorFilter signature, once when disabled
+        // this method is called for each entity matching the AkeomeBehaviourFilter signature, once when disabled
         //OnEntityDisable():void { }
 
     }
