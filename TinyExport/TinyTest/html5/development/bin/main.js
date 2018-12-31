@@ -19,6 +19,7 @@ ut.importModule(ut.Rendering);
 ut.importModule(ut.Rendering);
 ut.importModule(ut.Core2D);
 ut.importModule(ut.Physics2D);
+ut.importModule(ut.HitBox2D);
 ut.main = function() {
     game.AkeomeBehaviourFilter._Components = [ut.Entity, 
         ut.Core2D.TransformNode, game.Akeome
@@ -53,7 +54,6 @@ ut.main = function() {
         this.entity = entity;
         this.node = world.getComponentData(entity, ut.Core2D.TransformNode);
         this.position = world.hasComponent(entity, ut.Core2D.TransformLocalPosition) ? world.getComponentData(entity, ut.Core2D.TransformLocalPosition) : undefined;
-        this.colliderContacts = world.hasComponent(entity, ut.Physics2D.ColliderContacts) ? world.getComponentData(entity, ut.Physics2D.ColliderContacts) : undefined;
         this.speed = world.getComponentData(entity, game.MoveSpeed);
         this.bounds = world.getComponentData(entity, game.Boundaries);
         this.otosi = world.getComponentData(entity, game.Otosidama);
@@ -62,7 +62,6 @@ ut.main = function() {
         this.entity = undefined;
         this.node = undefined;
         this.position = undefined;
-        this.colliderContacts = undefined;
         this.speed = undefined;
         this.bounds = undefined;
         this.otosi = undefined;
@@ -70,7 +69,6 @@ ut.main = function() {
     game.OkaneBehavirFilter.prototype.Write = function(world, entity) {
         world.setComponentData(entity, this.node);
         if (this.position) { world.setOrAddComponentData(entity, this.position); }
-        if (this.colliderContacts) { world.setOrAddComponentData(entity, this.colliderContacts); }
         world.setComponentData(entity, this.speed);
         world.setComponentData(entity, this.bounds);
         world.setComponentData(entity, this.otosi);
@@ -157,6 +155,7 @@ ut.main = function() {
 
     // Schedule all systems
     var scheduler = world.scheduler();
+    game.CollisionSystemJS.update = new game.CollisionSystem()._MakeSystemFn();
     game.SpawnSystemJS.update = new game.SpawnSystem()._MakeSystemFn();
     ut.TimeJS.update = new ut.Time()._MakeSystemFn();
     game.OkaneBehavir_OnEntityEnableJS.update = game.OkaneBehavir.Instance._MakeOnEntityEnable();
@@ -165,11 +164,13 @@ ut.main = function() {
     game.OkaneBehavir_OnEntityUpdateJS.update = game.OkaneBehavir.Instance._MakeOnEntityUpdate();
     game.PlayerBehavior_OnEntityUpdateJS.update = game.PlayerBehavior.Instance._MakeOnEntityUpdate();
     game.ScrollBackgroundBehavior_OnEntityUpdateJS.update = game.ScrollBackgroundBehavior.Instance._MakeOnEntityUpdate();
+    scheduler.schedule(game.CollisionSystemJS);
     scheduler.schedule(game.SpawnSystemJS);
     scheduler.schedule(ut.TimeJS);
     scheduler.schedule(ut.HTML.InputHandler);
     scheduler.schedule(ut.HTML.AssetLoader);
     scheduler.schedule(ut.Core2D.SequencePlayerSystem);
+    scheduler.schedule(ut.HitBox2D.HitBox2DSystem);
     scheduler.schedule(game.OkaneBehavir_OnEntityEnableJS);
     scheduler.schedule(game.ScrollBackgroundBehavior_OnEntityEnableJS);
     scheduler.schedule(ut.Shared.InputFence);

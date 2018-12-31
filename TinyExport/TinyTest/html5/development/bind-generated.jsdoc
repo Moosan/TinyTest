@@ -512,6 +512,12 @@
 
 @system
 @memberof game
+@name CollisionSystemJS
+*/
+/**
+
+@system
+@memberof game
 @name SpawnSystemJS
 */
 /**

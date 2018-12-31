@@ -7,6 +7,7 @@ using UTiny.HTML;
 using UTiny.Rendering;
 using ut.EditorExtensions;
 using UTiny.Physics2D;
+using UTiny.HitBox2D;
 
 /*
  * !!! TEMP UNITL PROPER SCENE FORMAT !!!
@@ -210,6 +211,10 @@ namespace ut.EditorExtensions
 namespace ut.Physics2D
 {
 }
+
+namespace ut.HitBox2D
+{
+}
 namespace game
 {
     public struct AkeomeBehaviour_State : IComponentData
@@ -248,6 +253,12 @@ namespace game
         public bool enabled;
         public bool onEnableCalled;
         public bool onDisableCalled;
+    }
+}
+namespace game
+{
+    public class CollisionSystemJS : IComponentSystem
+    {
     }
 }
 namespace game

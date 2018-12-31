@@ -143,7 +143,7 @@
             "upForce": {
                 "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
-                    "y": 10
+                    "y": 15
                 }
             }
         }
@@ -153,6 +153,19 @@
         "Type": { "Id": "6aa408a099444473aafcc7928cd5b6e2", "Name": "Player" }
     }, {
         "Type": { "Id": "4949f090b99e534bfc09271dda0efa1f", "Name": "NewColliderContacts" }
+    }, {
+        "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
+        "Properties": {
+            "box": {
+                "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
+                "Properties": {
+                    "x": -0.95,
+                    "y": -1,
+                    "width": 1.9,
+                    "height": 2
+                }
+            }
+        }
     }]
 },
 {
@@ -612,8 +625,9 @@
     "Components": [{
         "Type": { "Id": "2be17b5928cf44c6a22546291ae9f993", "Name": "Spawner" },
         "Properties": {
-            "time": 1.5,
-            "delay": 1.5,
+            "time": 3,
+            "delay": 3,
+            "isPaused": true,
             "spawnedGroup": "game.OtosidamaGroup"
         }
     }]

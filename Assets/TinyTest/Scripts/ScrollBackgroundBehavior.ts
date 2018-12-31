@@ -24,6 +24,10 @@ namespace game {
 			if(!this.isStart){
 				if(!ut.Runtime.Input.getMouseButton(0))return;
 				this.isStart = true;
+				this.world.forEach([game.Spawner], (spawner) => 
+				{
+					spawner.isPaused = false;
+				});
 			}
 			let position = this.data.position;
 			let scrolling = this.data.scrolling;

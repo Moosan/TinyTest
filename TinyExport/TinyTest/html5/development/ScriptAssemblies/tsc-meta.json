@@ -3,6 +3,16 @@
     "Diagnostics": [],
     "Systems": [
         {
+            "Name": "CollisionSystem",
+            "QualifiedName": "game.CollisionSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/CollisionSystem.ts",
+                "Line": 2,
+                "Character": 17
+            }
+        },
+        {
             "Name": "SpawnSystem",
             "QualifiedName": "game.SpawnSystem",
             "Description": "New System",
@@ -134,27 +144,13 @@
                     "IsPublic": true
                 },
                 {
-                    "Name": "colliderContacts",
-                    "QualifiedName": "ut.Physics2D.ColliderContacts",
-                    "Description": "",
-                    "Source": {
-                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
-                        "Line": 7,
-                        "Character": 53
-                    },
-                    "IsStatic": false,
-                    "IsReadonly": false,
-                    "IsOptional": true,
-                    "IsPublic": true
-                },
-                {
                     "Name": "speed",
                     "QualifiedName": "game.MoveSpeed",
                     "Description": "",
                     "Source": {
                         "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
-                        "Line": 8,
-                        "Character": 52
+                        "Line": 7,
+                        "Character": 53
                     },
                     "IsStatic": false,
                     "IsReadonly": false,
@@ -167,7 +163,7 @@
                     "Description": "",
                     "Source": {
                         "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
-                        "Line": 9,
+                        "Line": 8,
                         "Character": 25
                     },
                     "IsStatic": false,
@@ -181,7 +177,7 @@
                     "Description": "",
                     "Source": {
                         "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
-                        "Line": 10,
+                        "Line": 9,
                         "Character": 27
                     },
                     "IsStatic": false,
@@ -364,7 +360,7 @@
             "Description": "",
             "Source": {
                 "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
-                "Line": 14,
+                "Line": 13,
                 "Character": 17
             },
             "Fields": [
@@ -374,7 +370,7 @@
                     "Description": "",
                     "Source": {
                         "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
-                        "Line": 14,
+                        "Line": 13,
                         "Character": 62
                     },
                     "IsStatic": false,
@@ -466,36 +462,37 @@
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 88,
+            "Duration": 130,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 228,
+            "Duration": 354,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 1165,
-            "Steps": 15
+            "Duration": 991,
+            "Steps": 16
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 83,
+            "Duration": 71,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 16,
-            "Steps": 2
+            "Duration": 13,
+            "Steps": 3
         }
     ],
     "SourceFiles": [
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehaviour.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/CollisionSystem.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
@@ -504,6 +501,6 @@
         "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "b0e424f1a0ab3eb16bb6428cba1c93b7",
-    "GeneratedAt": "Mon Dec 31 2018 03:23:44 GMT+0900 (東京 (標準時))"
+    "InputHash": "adeb82204f7f8268099772c445eb4a2c",
+    "GeneratedAt": "Tue Jan 01 2019 04:30:55 GMT+0900 (東京 (標準時))"
 }

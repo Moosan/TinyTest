@@ -99,27 +99,27 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/development/bin/entities.js",
-                "Size": 19224,
-                "CompressedSize": 3333
+                "Size": 19491,
+                "CompressedSize": 3432
             },
             "Children": [{
                 "Item": {
                     "Name": "MainGroup",
-                    "Size": 17047,
-                    "CompressedSize": 2992
+                    "Size": 17315,
+                    "CompressedSize": 3054
                 }
             }, {
                 "Item": {
                     "Name": "OtosidamaGroup",
-                    "Size": 2099,
-                    "CompressedSize": 678
+                    "Size": 2098,
+                    "CompressedSize": 702
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/development/bin/bindings.js",
-                "Size": 128394,
-                "CompressedSize": 10158
+                "Size": 128475,
+                "CompressedSize": 10172
             }
         }, {
             "Item": {
@@ -130,15 +130,15 @@
             "Children": [{
                 "Item": {
                     "Name": "C:\\Users\\Washer\\p\\tinytest\\TinyExport\\TinyTest\\html5\\development\\ScriptAssemblies\\tsc-emit.js",
-                    "Size": 14103,
-                    "CompressedSize": 2841
+                    "Size": 14636,
+                    "CompressedSize": 2922
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/development/bin/main.js",
-                "Size": 11048,
-                "CompressedSize": 1854
+                "Size": 10950,
+                "CompressedSize": 1853
             }
         }, {
             "Item": {

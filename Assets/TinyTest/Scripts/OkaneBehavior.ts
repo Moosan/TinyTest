@@ -5,12 +5,11 @@ namespace game {
 		entity: ut.Entity;
         node: ut.Core2D.TransformNode;
         position?: ut.Core2D.TransformLocalPosition;
-		colliderContacts?: ut.Physics2D.ColliderContacts;
 		speed: game.MoveSpeed;
 		bounds: game.Boundaries;
 		otosi: game.Otosidama;
     }
-
+	
     export class OkaneBehavir extends ut.ComponentBehaviour {
 
         data: OkaneBehavirFilter;
@@ -35,13 +34,6 @@ namespace game {
 				this.world.destroyEntity(this.data.entity);
 				return;
 			}
-			let contacts = this.data.colliderContacts.contacts;
-			if(contacts.length > 0){
-				if((this.world.getEntityName(contacts[0]) == "Player")){
-					this.world.destroyEntity(this.data.entity);
-					return;
-				}
-			}
 		}
 
         // this method is called for each entity matching the OkaneBehavirFilter signature, once when disabled
@@ -51,4 +43,5 @@ namespace game {
 	{
 		return Math.random() * (max - min + 1) + min;
 	}
+	
 }

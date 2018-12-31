@@ -2196,6 +2196,9 @@ game.ScrollBackgroundBehavior_State.initialized = { $ofs:0, $t:"bool", $c:game.S
 game.ScrollBackgroundBehavior_State.enabled = { $ofs:1, $t:"bool", $c:game.ScrollBackgroundBehavior_State };
 game.ScrollBackgroundBehavior_State.onEnableCalled = { $ofs:2, $t:"bool", $c:game.ScrollBackgroundBehavior_State };
 game.ScrollBackgroundBehavior_State.onDisableCalled = { $ofs:3, $t:"bool", $c:game.ScrollBackgroundBehavior_State };
+game.CollisionSystemJS = ut.System.define({
+  name: "game.CollisionSystemJS"
+});
 game.SpawnSystemJS = ut.System.define({
   name: "game.SpawnSystemJS"
 });

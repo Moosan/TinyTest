@@ -53,6 +53,23 @@ var game;
 })(game || (game = {}));
 var game;
 (function (game) {
+    var CollisionSystem = /** @class */ (function (_super) {
+        __extends(CollisionSystem, _super);
+        function CollisionSystem() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        CollisionSystem.prototype.OnUpdate = function () {
+            var _this = this;
+            this.world.forEach([ut.Entity, ut.HitBox2D.HitBoxOverlapResults, game.Otosidama], function (entity, hitResult, tag) {
+                _this.world.destroyEntity(entity);
+            });
+        };
+        return CollisionSystem;
+    }(ut.ComponentSystem));
+    game.CollisionSystem = CollisionSystem;
+})(game || (game = {}));
+var game;
+(function (game) {
     var OkaneBehavirFilter = /** @class */ (function (_super) {
         __extends(OkaneBehavirFilter, _super);
         function OkaneBehavirFilter() {
@@ -82,13 +99,6 @@ var game;
             if (localPosition.x <= this.data.bounds.minX) {
                 this.world.destroyEntity(this.data.entity);
                 return;
-            }
-            var contacts = this.data.colliderContacts.contacts;
-            if (contacts.length > 0) {
-                if ((this.world.getEntityName(contacts[0]) == "Player")) {
-                    this.world.destroyEntity(this.data.entity);
-                    return;
-                }
             }
         };
         return OkaneBehavir;
@@ -165,6 +175,9 @@ var game;
                 if (!ut.Runtime.Input.getMouseButton(0))
                     return;
                 this.isStart = true;
+                this.world.forEach([game.Spawner], function (spawner) {
+                    spawner.isPaused = false;
+                });
             }
             var position = this.data.position;
             var scrolling = this.data.scrolling;
