@@ -1,0 +1,81 @@
+﻿[{
+    "$TypeId": 4,
+    "Id": "939f2926676046d3bc8f0886a8fbfc5b",
+    "Name": "TakaGroup",
+    "ExportFlags": 0,
+    "SerializedVersion": 0,
+    "Entities": [
+        { "$TypeId": 9, "Id": "482299f0e1c646b8b1b32e214e9cacba", "Name": "Sprite" }
+    ]
+},
+{
+    "$TypeId": 5,
+    "Id": "482299f0e1c646b8b1b32e214e9cacba",
+    "Name": "Sprite",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "a786594cdc94ef143913dfb982029ee2", "FileId": 21300000, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "order": 5
+        }
+    }, {
+        "Type": { "Id": "9901bcfafbcb462fbd764d87d74bcbbd", "Name": "Taka" }
+    }, {
+        "Type": { "Id": "03f0e9409fad4523bf428dccd1b4e965", "Name": "MoveSpeed" },
+        "Properties": {
+            "speed": 3
+        }
+    }, {
+        "Type": { "Id": "879152b99a2840429aac304132ced551", "Name": "Boundaries" },
+        "Properties": {
+            "minX": -9,
+            "maxX": 9,
+            "minY": 1,
+            "maxY": 3
+        }
+    }, {
+        "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
+        "Properties": {
+            "size": {
+                "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
+                "Properties": {
+                    "x": 2,
+                    "y": 2
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "20acd38580c947869a64859c64b66929", "Name": "ChangeOverTime" },
+        "Properties": {
+            "changePerSecond": 0.1
+        }
+    }, {
+        "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },
+        "Properties": {
+            "box": {
+                "Type": { "Id": "f216da154c4054842adb590807e977ba", "Name": "Rect" },
+                "Properties": {
+                    "x": -1,
+                    "y": -0.5,
+                    "width": 1,
+                    "height": 1
+                }
+            }
+        }
+    }]
+}]

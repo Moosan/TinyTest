@@ -3531,7 +3531,7 @@ entities.game.Dinosaur.load = function(world) {
     c2.CrushAnimation = e3;
     c2.LaunchAnimation = e4;
     c2.JumpAnimation = e5;
-    c2.JumpAnimationHeightCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/956bd858a99f4bdd8607f2c48f6a9499');
+    c2.JumpAnimationHeightCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/67ad411305444c6680ad4ec4d2f2effd');
     c2.JumpHeight = 250;
     c2.Shadow = e10;
     c2.LaserAnimation = e8;
@@ -4262,7 +4262,7 @@ entities.game.DinosaurLaserAttackBlackCover.load = function(world) {
     c1.Delay = 2;
     world.setComponentData(e0, c1);
     var c2 = new game.DinosaurLaserAttackBlackCover();
-    c2.AlphaCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/0dcdf377aedd403783ae12e488f0dd06');
+    c2.AlphaCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/602b9785bce94c80a5789d553c94e733');
     world.setComponentData(e0, c2);
     var c3 = new ut.Core2D.TransformNode();
     c3.parent = e0;
@@ -7163,10 +7163,10 @@ entities.game.ParticleExplosion.load = function(world) {
     c4.attachToEmitter = true;
     world.setComponentData(e0, c4);
     var c5 = new ut.Particles.LifetimeScale();
-    c5.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/a4110177a4a64cd39ec61cdbb5307e42');
+    c5.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/82c799a7c29c4795bc9e2a9f87ef0319');
     world.setComponentData(e0, c5);
     var c6 = new ut.Particles.LifetimeVelocity();
-    c6.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/3df9f539144546c999d2f6a65fc07c60');
+    c6.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/c11bcb771c9846709921e785fab205ae');
     world.setComponentData(e0, c6);
     var c7 = new ut.Particles.EmitterInitialScale();
     var s4 = new ut.Math.Range();
@@ -7818,8 +7818,8 @@ entities.game.CollectedEgg.load = function(world) {
     s6.z = 0;
     c6.EndPosition = s6;
     c6.Duration = 1.35;
-    c6.ProgressCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/0583f1dc8e7f40a78b72353478ba8713');
-    c6.ScaleCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/19ffa82749334d15b616457c97dedbee');
+    c6.ProgressCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/3a8925b53b49403f907a181d2ab28e7c');
+    c6.ScaleCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/4fe08c68996f4ebca42cec518a4dedbb');
     world.setComponentData(e0, c6);
     var c7 = new ut.EditorExtensions.EntityLayer();
     c7.layer = 5;
@@ -7953,7 +7953,7 @@ entities.game.DestroyLineAnimation.load = function(world) {
     var c7 = new game.DestroyLineAnimation();
     c7.Duration = 1;
     c7.ScaleDuration = 0.1;
-    c7.ColorGradient = ut.EntityLookupCache.getByName(world, 'assets/gradients/7f3da6e1f42b4124b2675b84f96db782');
+    c7.ColorGradient = ut.EntityLookupCache.getByName(world, 'assets/gradients/0fdcbbdc81524da3b52842062f438262');
     world.setComponentData(e0, c7);
     var c8 = new game.DestroyAfterDelay();
     c8.Delay = 1;
@@ -8006,7 +8006,7 @@ entities.game.ExplodingGem1.load = function(world) {
     c4.attachToEmitter = true;
     world.setComponentData(e0, c4);
     var c5 = new ut.Particles.LifetimeVelocity();
-    c5.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/e60feca81d86416486daba3218ce0ecc');
+    c5.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/c7ae8ce1aebd47e8859b22d6ac46ec11');
     world.setComponentData(e0, c5);
     var c6 = new ut.Particles.EmitterInitialRotation();
     var s4 = new ut.Math.Range();
@@ -8015,10 +8015,10 @@ entities.game.ExplodingGem1.load = function(world) {
     c6.angle = s4;
     world.setComponentData(e0, c6);
     var c7 = new ut.Particles.LifetimeScale();
-    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/7c14a18a3bab42d6bea793ba2cf01474');
+    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/2f24e272a8fe4fec9309a27f89ec5881');
     world.setComponentData(e0, c7);
     var c8 = new ut.Particles.LifetimeColor();
-    c8.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/ef3c52287ae44143bb01b2defa2216de');
+    c8.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/2bee05697201401390f2897506edacb7');
     world.setComponentData(e0, c8);
     var c9 = new ut.Particles.BurstEmission();
     var s5 = new ut.Math.Range();
@@ -8051,7 +8051,7 @@ entities.game.ExplodingGem1.load = function(world) {
     c12.angularVelocity = s9;
     world.setComponentData(e0, c12);
     var c13 = new ut.Particles.LifetimeAngularVelocity();
-    c13.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/ce5eac3578c74bb1aa164be70e72a56f');
+    c13.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/5a7876283db948f49afb752b34ea3865');
     world.setComponentData(e0, c13);
     var c14 = new ut.Particles.EmitterInitialScale();
     var s10 = new ut.Math.Range();
@@ -8148,7 +8148,7 @@ entities.game.ExplodingGem2.load = function(world) {
     c4.attachToEmitter = true;
     world.setComponentData(e0, c4);
     var c5 = new ut.Particles.LifetimeVelocity();
-    c5.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/7b54ecaec45c4831a27689394223e1b2');
+    c5.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/82f56227ded2476185e676715d56e9b7');
     world.setComponentData(e0, c5);
     var c6 = new ut.Particles.EmitterInitialRotation();
     var s4 = new ut.Math.Range();
@@ -8157,10 +8157,10 @@ entities.game.ExplodingGem2.load = function(world) {
     c6.angle = s4;
     world.setComponentData(e0, c6);
     var c7 = new ut.Particles.LifetimeScale();
-    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/d99feb1410e241d4af517a4226d148fb');
+    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/f29b8c9180034e6e897e6433fec5ad85');
     world.setComponentData(e0, c7);
     var c8 = new ut.Particles.LifetimeColor();
-    c8.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/a26fc8047707443abc061886423341e7');
+    c8.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/bb4f63cff5fa4352a98a6120a4c2187e');
     world.setComponentData(e0, c8);
     var c9 = new ut.Particles.BurstEmission();
     var s5 = new ut.Math.Range();
@@ -8193,7 +8193,7 @@ entities.game.ExplodingGem2.load = function(world) {
     c12.angularVelocity = s9;
     world.setComponentData(e0, c12);
     var c13 = new ut.Particles.LifetimeAngularVelocity();
-    c13.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/a9f0b2c89f0842f6ba4aa0321f256cd9');
+    c13.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/b12ac3ad5585447a9282786413ed361e');
     world.setComponentData(e0, c13);
     var c14 = new ut.Particles.EmitterInitialScale();
     var s10 = new ut.Math.Range();
@@ -8683,7 +8683,7 @@ entities.game.ScoreGainLabel.load = function(world) {
     var c4 = new game.ScoreGainLabel();
     c4.Duration = 1;
     c4.SpeedY = 10;
-    c4.AlphaCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/d02ee2b82f444fc88edee769f1a98de1');
+    c4.AlphaCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/8098c66c2c8e45a78193d24f47abe065');
     world.setComponentData(e0, c4);
     var c5 = new game.CustomLabel();
     var s3 = new ut.Core2D.Color();
@@ -8830,8 +8830,8 @@ entities.game.TutorialEggPointer.load = function(world) {
     s4.y = 0;
     c4.EndPosition = s4;
     c4.Duration = 2.2;
-    c4.AlphaCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/a8b0202bd3b34fdca9589075f0788236');
-    c4.MoveCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/1a1e98e734464818805004137d719ee7');
+    c4.AlphaCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/bcef267fedf743258f6aaa1f82f10ae7');
+    c4.MoveCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/868cd6ca73994d31aaa70d860ee11f87');
     c4.StretchToMove = true;
     world.setComponentData(e0, c4);
     var c5 = new game.TutorialEggPointer();
@@ -9559,8 +9559,8 @@ entities.game.TutorialMatchPointer.load = function(world) {
     s5.y = 0;
     c6.EndPosition = s5;
     c6.Duration = 1.65;
-    c6.AlphaCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/87223b0c42fd4acb95c93ac808287ac3');
-    c6.MoveCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/25e12d58b19b4cd382228fddbb1c07fd');
+    c6.AlphaCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/917bd99e0628423e899e460ef63f6ccd');
+    c6.MoveCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/01bd50f349d64d438d52512432d11c7c');
     world.setComponentData(e0, c6);
     var c7 = new ut.EditorExtensions.EntityLayer();
     c7.layer = 8;
@@ -9621,8 +9621,8 @@ entities.game.TutorialSurvivalPointer.load = function(world) {
     s5.y = 0;
     c6.EndPosition = s5;
     c6.Duration = 2;
-    c6.AlphaCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/43c03ea2b84a4ce7baf82a9fc109918a');
-    c6.MoveCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/84d82bbffdff412cb5a6165673ca1fc2');
+    c6.AlphaCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/16208e4bbe7248f091d5bb056643a6f5');
+    c6.MoveCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/8716bcf8c57a4ee2ad2337b202ebfcb1');
     world.setComponentData(e0, c6);
     var c7 = new ut.EditorExtensions.EntityLayer();
     c7.layer = 8;
@@ -15472,8 +15472,8 @@ entities.game.MainMenu.load = function(world) {
     world.setComponentData(e1, c13);
     var c14 = new ut.Core2D.Sprite2DRendererOptions();
     var s18 = new ut.Math.Vector2();
-    s18.x = 1106;
-    s18.y = 1244;
+    s18.x = 824;
+    s18.y = 756;
     c14.size = s18;
     c14.drawMode = 0;
     world.setComponentData(e1, c14);
@@ -15547,7 +15547,7 @@ entities.game.MainMenu.load = function(world) {
     world.setComponentData(e2, c23);
     var c24 = new ut.Core2D.Sprite2DRendererOptions();
     var s28 = new ut.Math.Vector2();
-    s28.x = 906.8;
+    s28.x = 624.8;
     s28.y = 82;
     c24.size = s28;
     c24.drawMode = 2;
@@ -15617,7 +15617,7 @@ entities.game.MainMenu.load = function(world) {
     world.setComponentData(e3, c32);
     var c33 = new ut.Core2D.Sprite2DRendererOptions();
     var s38 = new ut.Math.Vector2();
-    s38.x = 906.8;
+    s38.x = 624.8;
     s38.y = 82;
     c33.size = s38;
     c33.drawMode = 2;
@@ -17469,7 +17469,7 @@ entities.game.ScreenTransition.load = function(world) {
     c6.BlackCurtain = e1;
     c6.TransitionToState = 8;
     c6.ScaleHole = e2;
-    c6.ScaleHoleCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/1ce9b8a1c83549d09dcfc85da877d61e');
+    c6.ScaleHoleCurve = ut.EntityLookupCache.getByName(world, 'assets/curves/d0b947e19b3a44928d4394a617d93767');
     world.setComponentData(e0, c6);
     var c7 = new ut.EditorExtensions.EntityLayer();
     c7.layer = 5;

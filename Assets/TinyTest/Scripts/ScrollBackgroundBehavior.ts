@@ -28,6 +28,7 @@ namespace game {
 				{
 					spawner.isPaused = false;
 				});
+				ut.EntityGroup.instantiate(this.world, "game.OkaneView");
 			}
 			let position = this.data.position;
 			let scrolling = this.data.scrolling;

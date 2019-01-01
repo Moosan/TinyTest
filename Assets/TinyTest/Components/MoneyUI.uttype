@@ -1,0 +1,12 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "2c24e9ff6b45415a83d1fe0002bac9bb",
+    "Name": "MoneyUI",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "DefaultValue": {
+        "Type": { "Id": "2c24e9ff6b45415a83d1fe0002bac9bb", "Name": "MoneyUI" }
+    }
+}]

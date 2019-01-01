@@ -1,13 +1,37 @@
 /**
 
 @component
+@memberof entities.game.End
+@name Component
+*/
+/**
+
+@component
 @memberof entities.game.MainGroup
 @name Component
 */
 /**
 
 @component
+@memberof entities.game.OkaneView
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.Oops
+@name Component
+*/
+/**
+
+@component
 @memberof entities.game.OtosidamaGroup
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.TakaGroup
 @name Component
 */
 /**
@@ -56,6 +80,18 @@
 
 @component
 @memberof game
+@name ChangeOverTime
+*/
+/**
+
+@member {float}
+@memberof game.ChangeOverTime
+@name changePerSecond
+*/
+/**
+
+@component
+@memberof game
 @name IsGround
 */
 /**
@@ -63,6 +99,18 @@
 @member {bool}
 @memberof game.IsGround
 @name isGround
+*/
+/**
+
+@component
+@memberof game
+@name MissButton
+*/
+/**
+
+@component
+@memberof game
+@name MoneyUI
 */
 /**
 
@@ -99,6 +147,12 @@
 @component
 @memberof game
 @name Player
+*/
+/**
+
+@component
+@memberof game
+@name ResultText
 */
 /**
 
@@ -153,6 +207,12 @@
 @member {string}
 @memberof game.Spawner
 @name spawnedGroup
+*/
+/**
+
+@component
+@memberof game
+@name Taka
 */
 /**
 
@@ -482,6 +542,36 @@
 
 @component
 @memberof game
+@name Result_State
+*/
+/**
+
+@member {bool}
+@memberof game.Result_State
+@name initialized
+*/
+/**
+
+@member {bool}
+@memberof game.Result_State
+@name enabled
+*/
+/**
+
+@member {bool}
+@memberof game.Result_State
+@name onEnableCalled
+*/
+/**
+
+@member {bool}
+@memberof game.Result_State
+@name onDisableCalled
+*/
+/**
+
+@component
+@memberof game
 @name ScrollBackgroundBehavior_State
 */
 /**
@@ -510,9 +600,45 @@
 */
 /**
 
+@component
+@memberof game
+@name TakaBehavior_State
+*/
+/**
+
+@member {bool}
+@memberof game.TakaBehavior_State
+@name initialized
+*/
+/**
+
+@member {bool}
+@memberof game.TakaBehavior_State
+@name enabled
+*/
+/**
+
+@member {bool}
+@memberof game.TakaBehavior_State
+@name onEnableCalled
+*/
+/**
+
+@member {bool}
+@memberof game.TakaBehavior_State
+@name onDisableCalled
+*/
+/**
+
 @system
 @memberof game
 @name CollisionSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name MissButtonSystemJS
 */
 /**
 
@@ -554,6 +680,12 @@
 
 @system
 @memberof game
+@name Result_OnEntityEnableJS
+*/
+/**
+
+@system
+@memberof game
 @name ScrollBackgroundBehavior_OnEntityEnableJS
 */
 /**
@@ -561,6 +693,18 @@
 @system
 @memberof game
 @name ScrollBackgroundBehavior_OnEntityUpdateJS
+*/
+/**
+
+@system
+@memberof game
+@name TakaBehavior_OnEntityEnableJS
+*/
+/**
+
+@system
+@memberof game
+@name TakaBehavior_OnEntityUpdateJS
 */
 
 

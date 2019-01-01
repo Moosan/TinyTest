@@ -16,7 +16,8 @@
         { "$TypeId": 9, "Id": "3afa6b8d63e1484385f29f2f698a0154", "Name": "BackGround" },
         { "$TypeId": 9, "Id": "c663edb0895d4deda0bd593770a8371c", "Name": "BackGround" },
         { "$TypeId": 9, "Id": "cc65f94ab65940eb9c42b03d88e45ae6", "Name": "BackGround" },
-        { "$TypeId": 9, "Id": "b4cc73451c06472f8c8fa585f62723b8", "Name": "Spawner" }
+        { "$TypeId": 9, "Id": "b4cc73451c06472f8c8fa585f62723b8", "Name": "Spawner" },
+        { "$TypeId": 9, "Id": "26947f13adf0481aa34e34acdd446709", "Name": "Spawner" }
     ]
 },
 {
@@ -112,7 +113,7 @@
     }, {
         "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
         "Properties": {
-            "order": 2
+            "order": 4
         }
     }, {
         "Type": { "Id": "dad15a16473d1a6264af416ae1e47833", "Name": "RigidBody2D" },
@@ -210,7 +211,7 @@
     }, {
         "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
         "Properties": {
-            "order": 3
+            "order": 2
         }
     }, {
         "Type": { "Id": "be2f221c9af74ec5c0a4495a2d6769a3", "Name": "Sprite2DRendererOptions" },
@@ -625,10 +626,27 @@
     "Components": [{
         "Type": { "Id": "2be17b5928cf44c6a22546291ae9f993", "Name": "Spawner" },
         "Properties": {
-            "time": 3,
+            "time": 0,
             "delay": 3,
             "isPaused": true,
             "spawnedGroup": "game.OtosidamaGroup"
+        }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "26947f13adf0481aa34e34acdd446709",
+    "Name": "Spawner",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "2be17b5928cf44c6a22546291ae9f993", "Name": "Spawner" },
+        "Properties": {
+            "time": 1.5,
+            "delay": 4.1,
+            "isPaused": true,
+            "spawnedGroup": "game.TakaGroup"
         }
     }]
 }]

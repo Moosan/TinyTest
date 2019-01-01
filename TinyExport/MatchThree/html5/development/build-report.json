@@ -2198,8 +2198,8 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/MatchThree/html5/development/bin/entities.js",
-                "Size": 805453,
-                "CompressedSize": 96523
+                "Size": 805451,
+                "CompressedSize": 96521
             },
             "Children": [{
                 "Item": {
@@ -2247,13 +2247,13 @@
                 "Item": {
                     "Name": "Dinosaur",
                     "Size": 34352,
-                    "CompressedSize": 4326
+                    "CompressedSize": 4325
                 }
             }, {
                 "Item": {
                     "Name": "DinosaurLaserAttackBlackCover",
                     "Size": 6908,
-                    "CompressedSize": 1378
+                    "CompressedSize": 1377
                 }
             }, {
                 "Item": {
@@ -2421,7 +2421,7 @@
                 "Item": {
                     "Name": "ParticleExplosion",
                     "Size": 4600,
-                    "CompressedSize": 1147
+                    "CompressedSize": 1146
                 }
             }, {
                 "Item": {
@@ -2469,7 +2469,7 @@
                 "Item": {
                     "Name": "CollectedEgg",
                     "Size": 2382,
-                    "CompressedSize": 737
+                    "CompressedSize": 738
                 }
             }, {
                 "Item": {
@@ -2505,7 +2505,7 @@
                 "Item": {
                     "Name": "ScoreGainLabel",
                     "Size": 2542,
-                    "CompressedSize": 792
+                    "CompressedSize": 793
                 }
             }, {
                 "Item": {
@@ -2529,7 +2529,7 @@
                 "Item": {
                     "Name": "TutorialEggPointer",
                     "Size": 5495,
-                    "CompressedSize": 1194
+                    "CompressedSize": 1192
                 }
             }, {
                 "Item": {
@@ -2541,13 +2541,13 @@
                 "Item": {
                     "Name": "TutorialMatchPointer",
                     "Size": 2303,
-                    "CompressedSize": 735
+                    "CompressedSize": 734
                 }
             }, {
                 "Item": {
                     "Name": "TutorialSurvivalPointer",
                     "Size": 2311,
-                    "CompressedSize": 737
+                    "CompressedSize": 736
                 }
             }, {
                 "Item": {
@@ -2582,8 +2582,8 @@
             }, {
                 "Item": {
                     "Name": "MainMenu",
-                    "Size": 30878,
-                    "CompressedSize": 5101
+                    "Size": 30876,
+                    "CompressedSize": 5100
                 }
             }, {
                 "Item": {
@@ -2595,7 +2595,7 @@
                 "Item": {
                     "Name": "ScreenTransition",
                     "Size": 25459,
-                    "CompressedSize": 4215
+                    "CompressedSize": 4214
                 }
             }, {
                 "Item": {

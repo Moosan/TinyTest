@@ -1,0 +1,12 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "9901bcfafbcb462fbd764d87d74bcbbd",
+    "Name": "Taka",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "DefaultValue": {
+        "Type": { "Id": "9901bcfafbcb462fbd764d87d74bcbbd", "Name": "Taka" }
+    }
+}]

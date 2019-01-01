@@ -155,8 +155,8 @@
             "size": {
                 "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
-                    "x": 1106,
-                    "y": 1244
+                    "x": 824,
+                    "y": 756
                 }
             },
             "drawMode": {
@@ -260,7 +260,7 @@
             "size": {
                 "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
-                    "x": 906.8,
+                    "x": 624.8,
                     "y": 82
                 }
             }
@@ -359,7 +359,7 @@
             "size": {
                 "Type": { "Id": "3abb69286ddfc2d1c617a173c1eeb35d", "Name": "Vector2" },
                 "Properties": {
-                    "x": 906.8,
+                    "x": 624.8,
                     "y": 82
                 }
             }
