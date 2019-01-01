@@ -1,0 +1,19 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "e6ea682cbafe4978b0019853f61c6e38",
+    "Name": "Dream",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "Fields": [{
+        "Id": "8701a6347b6243ad847fe8e69c165ca5",
+        "Name": "isDream",
+        "FieldType": { "Id": "2b477f505af74487b7092b5617d88d3f", "Name": "Boolean" },
+        "Array": false,
+        "Visibility": 0
+    }],
+    "DefaultValue": {
+        "Type": { "Id": "e6ea682cbafe4978b0019853f61c6e38", "Name": "Dream" }
+    }
+}]

@@ -1,14 +1,68 @@
 {
     "Success": true,
     "Diagnostics": [],
-    "Systems": [],
-    "Filters": [
+    "Systems": [
         {
-            "Name": "AkeomeBehaviorFilter",
-            "QualifiedName": "game.AkeomeBehaviorFilter",
+            "Name": "CollisionSystem",
+            "QualifiedName": "game.CollisionSystem",
             "Description": "",
             "Source": {
-                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/CollisionSystem.ts",
+                "Line": 2,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "MissButtonSystem",
+            "QualifiedName": "game.MissButtonSystem",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/MissButtonSystem.ts",
+                "Line": 3,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "SetDreamSystem",
+            "QualifiedName": "game.SetDreamSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/SetDreamSystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "SpawnSystem",
+            "QualifiedName": "game.SpawnSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/SpawnSystem.ts",
+                "Line": 5,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "Time",
+            "QualifiedName": "ut.Time",
+            "Description": "Placeholder system to provide a UnityEngine.Time like API\r\n\r\ne.g. \r\n  let deltaTime = ut.Time.deltaTime();\r\n  let time = ut.Time.time();",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/Time.ts",
+                "Line": 12,
+                "Character": 17
+            },
+            "ExecuteBefore": [
+                "ut.Shared.UserCodeStart"
+            ]
+        }
+    ],
+    "Filters": [
+        {
+            "Name": "AkeomeBehaviourFilter",
+            "QualifiedName": "game.AkeomeBehaviourFilter",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehaviour.ts",
                 "Line": 4,
                 "Character": 17
             },
@@ -18,9 +72,9 @@
                     "QualifiedName": "ut.Core2D.TransformNode",
                     "Description": "",
                     "Source": {
-                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehaviour.ts",
                         "Line": 4,
-                        "Character": 64
+                        "Character": 65
                     },
                     "IsStatic": false,
                     "IsReadonly": false,
@@ -32,7 +86,7 @@
                     "QualifiedName": "ut.Core2D.TransformLocalRotation",
                     "Description": "",
                     "Source": {
-                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehaviour.ts",
                         "Line": 5,
                         "Character": 39
                     },
@@ -46,9 +100,131 @@
                     "QualifiedName": "game.Akeome",
                     "Description": "",
                     "Source": {
-                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehaviour.ts",
                         "Line": 6,
                         "Character": 57
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ]
+        },
+        {
+            "Name": "DreamBehaviorFilter",
+            "QualifiedName": "game.DreamBehaviorFilter",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/DreamBehavior.ts",
+                "Line": 4,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "dream",
+                    "QualifiedName": "game.Dream",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/DreamBehavior.ts",
+                        "Line": 4,
+                        "Character": 63
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ]
+        },
+        {
+            "Name": "OkaneBehavirFilter",
+            "QualifiedName": "game.OkaneBehavirFilter",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
+                "Line": 4,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "entity",
+                    "QualifiedName": "ut.Entity",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
+                        "Line": 4,
+                        "Character": 62
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "node",
+                    "QualifiedName": "ut.Core2D.TransformNode",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
+                        "Line": 5,
+                        "Character": 21
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "position",
+                    "QualifiedName": "ut.Core2D.TransformLocalPosition",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
+                        "Line": 6,
+                        "Character": 39
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": true,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "speed",
+                    "QualifiedName": "game.MoveSpeed",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
+                        "Line": 7,
+                        "Character": 53
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "bounds",
+                    "QualifiedName": "game.Boundaries",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
+                        "Line": 8,
+                        "Character": 25
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "otosi",
+                    "QualifiedName": "game.Otosidama",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
+                        "Line": 9,
+                        "Character": 27
                     },
                     "IsStatic": false,
                     "IsReadonly": false,
@@ -122,6 +298,60 @@
                     "IsReadonly": false,
                     "IsOptional": false,
                     "IsPublic": true
+                },
+                {
+                    "Name": "player",
+                    "QualifiedName": "game.Player",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
+                        "Line": 8,
+                        "Character": 57
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ]
+        },
+        {
+            "Name": "ResultFilter",
+            "QualifiedName": "game.ResultFilter",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/Result.ts",
+                "Line": 4,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "renderer",
+                    "QualifiedName": "ut.Text.Text2DRenderer",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/Result.ts",
+                        "Line": 4,
+                        "Character": 56
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "result",
+                    "QualifiedName": "game.ResultText",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/Result.ts",
+                        "Line": 5,
+                        "Character": 36
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
                 }
             ]
         },
@@ -178,26 +408,239 @@
                     "IsPublic": true
                 }
             ]
+        },
+        {
+            "Name": "TakaBehaviorFilter",
+            "QualifiedName": "game.TakaBehaviorFilter",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/TakaBehavior.ts",
+                "Line": 4,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "entity",
+                    "QualifiedName": "ut.Entity",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/TakaBehavior.ts",
+                        "Line": 4,
+                        "Character": 62
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "node",
+                    "QualifiedName": "ut.Core2D.TransformNode",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/TakaBehavior.ts",
+                        "Line": 5,
+                        "Character": 27
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "position",
+                    "QualifiedName": "ut.Core2D.TransformLocalPosition",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/TakaBehavior.ts",
+                        "Line": 6,
+                        "Character": 39
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": true,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "speed",
+                    "QualifiedName": "game.MoveSpeed",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/TakaBehavior.ts",
+                        "Line": 7,
+                        "Character": 53
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "bounds",
+                    "QualifiedName": "game.Boundaries",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/TakaBehavior.ts",
+                        "Line": 8,
+                        "Character": 25
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "speedChange",
+                    "QualifiedName": "game.ChangeOverTime",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/TakaBehavior.ts",
+                        "Line": 9,
+                        "Character": 27
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "taka",
+                    "QualifiedName": "game.Taka",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/TakaBehavior.ts",
+                        "Line": 10,
+                        "Character": 36
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ]
         }
     ],
     "Behaviours": [
         {
-            "Name": "AkeomeBehavior",
-            "QualifiedName": "game.AkeomeBehavior",
+            "Name": "AkeomeBehaviour",
+            "QualifiedName": "game.AkeomeBehaviour",
             "Description": "",
             "Source": {
-                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehaviour.ts",
                 "Line": 10,
                 "Character": 17
             },
             "Fields": [
                 {
                     "Name": "data",
-                    "QualifiedName": "game.AkeomeBehaviorFilter",
+                    "QualifiedName": "game.AkeomeBehaviourFilter",
                     "Description": "",
                     "Source": {
-                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehaviour.ts",
                         "Line": 10,
+                        "Character": 65
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ],
+            "Methods": [
+                "OnEntityUpdate"
+            ]
+        },
+        {
+            "Name": "DreamBehavior",
+            "QualifiedName": "game.DreamBehavior",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/DreamBehavior.ts",
+                "Line": 8,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "data",
+                    "QualifiedName": "game.DreamBehaviorFilter",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/DreamBehavior.ts",
+                        "Line": 8,
+                        "Character": 63
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "num",
+                    "QualifiedName": "game.DreamBehavior.num",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/DreamBehavior.ts",
+                        "Line": 10,
+                        "Character": 35
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ],
+            "Methods": [
+                "OnEntityEnable",
+                "OnEntityUpdate"
+            ]
+        },
+        {
+            "Name": "OkaneBehavir",
+            "QualifiedName": "game.OkaneBehavir",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
+                "Line": 13,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "data",
+                    "QualifiedName": "game.OkaneBehavirFilter",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
+                        "Line": 13,
+                        "Character": 62
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ],
+            "Methods": [
+                "OnEntityEnable",
+                "OnEntityUpdate"
+            ]
+        },
+        {
+            "Name": "PlayerBehavior",
+            "QualifiedName": "game.PlayerBehavior",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
+                "Line": 12,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "data",
+                    "QualifiedName": "game.PlayerBehaviorFilter",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
+                        "Line": 12,
                         "Character": 64
                     },
                     "IsStatic": false,
@@ -211,23 +654,23 @@
             ]
         },
         {
-            "Name": "PlayerBehavior",
-            "QualifiedName": "game.PlayerBehavior",
+            "Name": "Result",
+            "QualifiedName": "game.Result",
             "Description": "",
             "Source": {
-                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
-                "Line": 11,
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/Result.ts",
+                "Line": 9,
                 "Character": 17
             },
             "Fields": [
                 {
                     "Name": "data",
-                    "QualifiedName": "game.PlayerBehaviorFilter",
+                    "QualifiedName": "game.ResultFilter",
                     "Description": "",
                     "Source": {
-                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
-                        "Line": 11,
-                        "Character": 64
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/Result.ts",
+                        "Line": 9,
+                        "Character": 56
                     },
                     "IsStatic": false,
                     "IsReadonly": false,
@@ -236,7 +679,7 @@
                 }
             ],
             "Methods": [
-                "OnEntityUpdate"
+                "OnEntityEnable"
             ]
         },
         {
@@ -282,47 +725,88 @@
                 "OnEntityEnable",
                 "OnEntityUpdate"
             ]
+        },
+        {
+            "Name": "TakaBehavior",
+            "QualifiedName": "game.TakaBehavior",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/TakaBehavior.ts",
+                "Line": 14,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "data",
+                    "QualifiedName": "game.TakaBehaviorFilter",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/TakaBehavior.ts",
+                        "Line": 14,
+                        "Character": 62
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ],
+            "Methods": [
+                "OnEntityEnable",
+                "OnEntityUpdate"
+            ]
         }
     ],
     "Performance": [
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 101,
+            "Duration": 129,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 241,
+            "Duration": 286,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 943,
-            "Steps": 12
+            "Duration": 1068,
+            "Steps": 23
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 49,
+            "Duration": 105,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 9,
-            "Steps": 0
+            "Duration": 26,
+            "Steps": 5
         }
     ],
     "SourceFiles": [
-        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehavior.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehaviour.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/CollisionSystem.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/DreamBehavior.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/GameManager.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/MissButtonSystem.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/MoneyManager.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/OkaneBehavior.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/Result.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/SetDreamSystem.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/SpawnSystem.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/TakaBehavior.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/Time.ts",
         "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "c98509aefdeffb11d7f1f084b2bc47e0",
-    "GeneratedAt": "Sun Dec 30 2018 08:18:26 GMT+0900 (東京 (標準時))"
+    "InputHash": "dbd2f59592eec466f109c4673523535a",
+    "GeneratedAt": "Tue Jan 01 2019 11:19:09 GMT+0900 (東京 (標準時))"
 }

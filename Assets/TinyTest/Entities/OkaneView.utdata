@@ -57,7 +57,7 @@
         "Type": { "Id": "ebf6e4be1bc00e559ef91e165189cb3e", "Name": "Text2DStyleNativeFont" },
         "Properties": {
             "font": { "$TypeId": 9, "Id": "a12093194df14d22a80c2c146cf609da", "Name": "Sprite" },
-            "italic": true,
+            "italic": false,
             "weight": 400
         }
     }, {
@@ -112,7 +112,7 @@
         "Type": { "Id": "ebf6e4be1bc00e559ef91e165189cb3e", "Name": "Text2DStyleNativeFont" },
         "Properties": {
             "font": { "$TypeId": 9, "Id": "e950db644aa64bd4b806be8b22850279", "Name": "Sprite" },
-            "italic": true,
+            "italic": false,
             "weight": 400
         }
     }, {

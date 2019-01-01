@@ -13,8 +13,8 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/release/bin/runtime.js",
-                "Size": 917901,
-                "CompressedSize": 194581
+                "Size": 1062273,
+                "CompressedSize": 217539
             }
         }]
     }, {
@@ -26,12 +26,42 @@
         "Children": [{
             "Item": {
                 "Name": "JavaScript",
-                "Size": 3166,
+                "Size": 51022,
                 "CompressedSize": 0
             }
         }, {
             "Item": {
-                "Name": "Assets/Resorces/Images/animal_inoshishi.png",
+                "Name": "Assets/TinyTest/Resorces/Images/yume_man.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "65806d2b8d86fee4daa939daa8452e59", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Assets/yume_man.png",
+                    "Size": 105812,
+                    "CompressedSize": 80012,
+                    "Object": { "$TypeId": 10, "Guid": "65806d2b8d86fee4daa939daa8452e59", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/TinyTest/Resorces/Images/kid_job_boy_rich.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "3fb9c82c65b83af429c1ebb0224b266c", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Assets/kid_job_boy_rich.png",
+                    "Size": 113924,
+                    "CompressedSize": 86061,
+                    "Object": { "$TypeId": 10, "Guid": "3fb9c82c65b83af429c1ebb0224b266c", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/TinyTest/Resorces/Images/animal_inoshishi.png",
                 "Size": 0,
                 "CompressedSize": 0,
                 "Object": { "$TypeId": 10, "Guid": "6bf25799303d48e43b844ed8ff2a4ebd", "FileId": 2800000, "Type": 3 }
@@ -46,7 +76,37 @@
             }]
         }, {
             "Item": {
-                "Name": "Assets/Resorces/Images/osyougatsu_akemashite_omedetou.png",
+                "Name": "Assets/TinyTest/Resorces/Images/ichifuji_nitaka_sannasubi.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "a977d0f32b95fed4bbba9c2132a1f822", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Assets/ichifuji_nitaka_sannasubi.png",
+                    "Size": 174120,
+                    "CompressedSize": 131817,
+                    "Object": { "$TypeId": 10, "Guid": "a977d0f32b95fed4bbba9c2132a1f822", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Oswald Bold SDF.asset",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "0161d805a3764c089bef00bfe00793f5", "FileId": 11400000, "Type": 2 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Assets/Oswald Bold SDF.png",
+                    "Size": 191988,
+                    "CompressedSize": 145176,
+                    "Object": { "$TypeId": 10, "Guid": "0161d805a3764c089bef00bfe00793f5", "FileId": 11400000, "Type": 2 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/TinyTest/Resorces/Images/osyougatsu_akemashite_omedetou.png",
                 "Size": 0,
                 "CompressedSize": 0,
                 "Object": { "$TypeId": 10, "Guid": "1048c4c0283a21a49b6ed38469f698c7", "FileId": 2800000, "Type": 3 }
@@ -61,7 +121,7 @@
             }]
         }, {
             "Item": {
-                "Name": "Assets/Resorces/Images/bg_natural_sougen.jpg",
+                "Name": "Assets/TinyTest/Resorces/Images/bg_natural_sougen.jpg",
                 "Size": 0,
                 "CompressedSize": 0,
                 "Object": { "$TypeId": 10, "Guid": "c14c16b942150a34a909709e6a9537df", "FileId": 2800000, "Type": 3 }
@@ -74,6 +134,36 @@
                     "Object": { "$TypeId": 10, "Guid": "c14c16b942150a34a909709e6a9537df", "FileId": 2800000, "Type": 3 }
                 }
             }]
+        }, {
+            "Item": {
+                "Name": "Assets/TinyTest/Resorces/Images/money_1000.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "3e90858211eab834b8f781ed932e14c9", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Assets/money_1000.png",
+                    "Size": 649164,
+                    "CompressedSize": 491368,
+                    "Object": { "$TypeId": 10, "Guid": "3e90858211eab834b8f781ed932e14c9", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/TinyTest/Resorces/Images/animal_taka.png",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "a786594cdc94ef143913dfb982029ee2", "FileId": 2800000, "Type": 3 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Assets/animal_taka.png",
+                    "Size": 169744,
+                    "CompressedSize": 128408,
+                    "Object": { "$TypeId": 10, "Guid": "a786594cdc94ef143913dfb982029ee2", "FileId": 2800000, "Type": 3 }
+                }
+            }]
         }]
     }, {
         "Item": {
@@ -84,40 +174,76 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/release/bin/entities.js",
-                "Size": 13754,
-                "CompressedSize": 2581
+                "Size": 39415,
+                "CompressedSize": 5472
             },
             "Children": [{
                 "Item": {
+                    "Name": "DreamGroup",
+                    "Size": 358,
+                    "CompressedSize": 215
+                }
+            }, {
+                "Item": {
+                    "Name": "End",
+                    "Size": 11374,
+                    "CompressedSize": 2231
+                }
+            }, {
+                "Item": {
                     "Name": "MainGroup",
-                    "Size": 13674,
-                    "CompressedSize": 2498
+                    "Size": 17451,
+                    "CompressedSize": 3077
+                }
+            }, {
+                "Item": {
+                    "Name": "OkaneView",
+                    "Size": 3730,
+                    "CompressedSize": 871
+                }
+            }, {
+                "Item": {
+                    "Name": "Oops",
+                    "Size": 1908,
+                    "CompressedSize": 609
+                }
+            }, {
+                "Item": {
+                    "Name": "OtosidamaGroup",
+                    "Size": 2096,
+                    "CompressedSize": 698
+                }
+            }, {
+                "Item": {
+                    "Name": "TakaGroup",
+                    "Size": 2430,
+                    "CompressedSize": 772
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/release/bin/bindings.js",
-                "Size": 97729,
-                "CompressedSize": 7780
+                "Size": 163439,
+                "CompressedSize": 12477
             }
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/release/bin/code.js",
-                "Size": 9257,
-                "CompressedSize": 2059
+                "Size": 23882,
+                "CompressedSize": 3950
             },
             "Children": [{
                 "Item": {
                     "Name": "C:\\Users\\Washer\\p\\tinytest\\TinyExport\\TinyTest\\html5\\release\\ScriptAssemblies\\tsc-emit.js",
-                    "Size": 9175,
-                    "CompressedSize": 1983
+                    "Size": 23800,
+                    "CompressedSize": 3874
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/release/bin/main.js",
-                "Size": 7911,
-                "CompressedSize": 1524
+                "Size": 16819,
+                "CompressedSize": 2314
             }
         }]
     }]

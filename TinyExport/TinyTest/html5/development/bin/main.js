@@ -50,6 +50,26 @@ ut.main = function() {
             if (world.exists($entity)) { _this.Write(world, $entity); }
         });
     };
+    game.DreamBehaviorFilter._Components = [ut.Entity, 
+        game.Dream
+    ];
+    game.DreamBehaviorFilter.prototype.Read = function(world, entity) {
+        this.dream = world.getComponentData(entity, game.Dream);
+    };
+    game.DreamBehaviorFilter.prototype.Reset = function() {
+        this.dream = undefined;
+    };
+    game.DreamBehaviorFilter.prototype.Write = function(world, entity) {
+        world.setComponentData(entity, this.dream);
+    };
+    game.DreamBehaviorFilter.prototype.ForEach = function(world, callback) {
+        var _this = this;
+        world.forEach(this.constructor._Components, function($entity, dream) {
+            _this.Read(world, $entity);
+            callback($entity);
+            if (world.exists($entity)) { _this.Write(world, $entity); }
+        });
+    };
     game.OkaneBehavirFilter._Components = [ut.Entity, 
         ut.Core2D.TransformNode, game.MoveSpeed, game.Boundaries, game.Otosidama
     ];
@@ -204,6 +224,9 @@ ut.main = function() {
     game.AkeomeBehaviour.Instance = new game.AkeomeBehaviour();
     game.AkeomeBehaviour._StateType = game.AkeomeBehaviour_State;
     game.AkeomeBehaviour.prototype._GetFilter = function() { if (!this.data) { this.data = new game.AkeomeBehaviourFilter(); } return this.data; }
+    game.DreamBehavior.Instance = new game.DreamBehavior();
+    game.DreamBehavior._StateType = game.DreamBehavior_State;
+    game.DreamBehavior.prototype._GetFilter = function() { if (!this.data) { this.data = new game.DreamBehaviorFilter(); } return this.data; }
     game.OkaneBehavir.Instance = new game.OkaneBehavir();
     game.OkaneBehavir._StateType = game.OkaneBehavir_State;
     game.OkaneBehavir.prototype._GetFilter = function() { if (!this.data) { this.data = new game.OkaneBehavirFilter(); } return this.data; }
@@ -226,25 +249,30 @@ ut.main = function() {
     var scheduler = world.scheduler();
     game.CollisionSystemJS.update = new game.CollisionSystem()._MakeSystemFn();
     game.MissButtonSystemJS.update = new game.MissButtonSystem()._MakeSystemFn();
+    game.SetDreamSystemJS.update = new game.SetDreamSystem()._MakeSystemFn();
     game.SpawnSystemJS.update = new game.SpawnSystem()._MakeSystemFn();
     ut.TimeJS.update = new ut.Time()._MakeSystemFn();
+    game.DreamBehavior_OnEntityEnableJS.update = game.DreamBehavior.Instance._MakeOnEntityEnable();
     game.OkaneBehavir_OnEntityEnableJS.update = game.OkaneBehavir.Instance._MakeOnEntityEnable();
     game.Result_OnEntityEnableJS.update = game.Result.Instance._MakeOnEntityEnable();
     game.ScrollBackgroundBehavior_OnEntityEnableJS.update = game.ScrollBackgroundBehavior.Instance._MakeOnEntityEnable();
     game.TakaBehavior_OnEntityEnableJS.update = game.TakaBehavior.Instance._MakeOnEntityEnable();
     game.AkeomeBehaviour_OnEntityUpdateJS.update = game.AkeomeBehaviour.Instance._MakeOnEntityUpdate();
+    game.DreamBehavior_OnEntityUpdateJS.update = game.DreamBehavior.Instance._MakeOnEntityUpdate();
     game.OkaneBehavir_OnEntityUpdateJS.update = game.OkaneBehavir.Instance._MakeOnEntityUpdate();
     game.PlayerBehavior_OnEntityUpdateJS.update = game.PlayerBehavior.Instance._MakeOnEntityUpdate();
     game.ScrollBackgroundBehavior_OnEntityUpdateJS.update = game.ScrollBackgroundBehavior.Instance._MakeOnEntityUpdate();
     game.TakaBehavior_OnEntityUpdateJS.update = game.TakaBehavior.Instance._MakeOnEntityUpdate();
     scheduler.schedule(game.CollisionSystemJS);
     scheduler.schedule(game.MissButtonSystemJS);
+    scheduler.schedule(game.SetDreamSystemJS);
     scheduler.schedule(game.SpawnSystemJS);
     scheduler.schedule(ut.TimeJS);
     scheduler.schedule(ut.HTML.InputHandler);
     scheduler.schedule(ut.HTML.AssetLoader);
     scheduler.schedule(ut.Core2D.SequencePlayerSystem);
     scheduler.schedule(ut.HitBox2D.HitBox2DSystem);
+    scheduler.schedule(game.DreamBehavior_OnEntityEnableJS);
     scheduler.schedule(game.OkaneBehavir_OnEntityEnableJS);
     scheduler.schedule(game.Result_OnEntityEnableJS);
     scheduler.schedule(game.ScrollBackgroundBehavior_OnEntityEnableJS);
@@ -252,6 +280,7 @@ ut.main = function() {
     scheduler.schedule(ut.Shared.InputFence);
     scheduler.schedule(ut.Shared.UserCodeStart);
     scheduler.schedule(game.AkeomeBehaviour_OnEntityUpdateJS);
+    scheduler.schedule(game.DreamBehavior_OnEntityUpdateJS);
     scheduler.schedule(game.OkaneBehavir_OnEntityUpdateJS);
     scheduler.schedule(game.PlayerBehavior_OnEntityUpdateJS);
     scheduler.schedule(game.ScrollBackgroundBehavior_OnEntityUpdateJS);

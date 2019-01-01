@@ -1,6 +1,12 @@
 /**
 
 @component
+@memberof entities.game.DreamGroup
+@name Component
+*/
+/**
+
+@component
 @memberof entities.game.End
 @name Component
 */
@@ -92,6 +98,18 @@
 
 @component
 @memberof game
+@name Dream
+*/
+/**
+
+@member {bool}
+@memberof game.Dream
+@name isDream
+*/
+/**
+
+@component
+@memberof game
 @name IsGround
 */
 /**
@@ -177,6 +195,12 @@
 @member {float}
 @memberof game.ScrollBackground
 @name distance
+*/
+/**
+
+@component
+@memberof game
+@name SetDream
 */
 /**
 
@@ -482,6 +506,36 @@
 
 @component
 @memberof game
+@name DreamBehavior_State
+*/
+/**
+
+@member {bool}
+@memberof game.DreamBehavior_State
+@name initialized
+*/
+/**
+
+@member {bool}
+@memberof game.DreamBehavior_State
+@name enabled
+*/
+/**
+
+@member {bool}
+@memberof game.DreamBehavior_State
+@name onEnableCalled
+*/
+/**
+
+@member {bool}
+@memberof game.DreamBehavior_State
+@name onDisableCalled
+*/
+/**
+
+@component
+@memberof game
 @name OkaneBehavir_State
 */
 /**
@@ -644,6 +698,12 @@
 
 @system
 @memberof game
+@name SetDreamSystemJS
+*/
+/**
+
+@system
+@memberof game
 @name SpawnSystemJS
 */
 /**
@@ -657,6 +717,18 @@
 @system
 @memberof game
 @name AkeomeBehaviour_OnEntityUpdateJS
+*/
+/**
+
+@system
+@memberof game
+@name DreamBehavior_OnEntityEnableJS
+*/
+/**
+
+@system
+@memberof game
+@name DreamBehavior_OnEntityUpdateJS
 */
 /**
 

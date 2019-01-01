@@ -627,7 +627,7 @@
         "Type": { "Id": "2be17b5928cf44c6a22546291ae9f993", "Name": "Spawner" },
         "Properties": {
             "time": 0,
-            "delay": 3,
+            "delay": 3.5,
             "isPaused": true,
             "spawnedGroup": "game.OtosidamaGroup"
         }
@@ -643,8 +643,8 @@
     "Components": [{
         "Type": { "Id": "2be17b5928cf44c6a22546291ae9f993", "Name": "Spawner" },
         "Properties": {
-            "time": 1.5,
-            "delay": 4.1,
+            "time": 2,
+            "delay": 3.5,
             "isPaused": true,
             "spawnedGroup": "game.TakaGroup"
         }

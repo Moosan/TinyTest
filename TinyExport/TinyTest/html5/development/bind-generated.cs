@@ -1,4 +1,16 @@
 using Unity.Collections.LowLevel.Unsafe;
+namespace entities.game.DreamGroup
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Component : UTiny.IComponentData
+    {
+
+
+
+
+
+    }
+}
 namespace entities.game.End
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
@@ -116,6 +128,19 @@ namespace game
 namespace game
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct Dream : UTiny.IComponentData
+    {
+
+
+        public bool isDream;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
     public struct IsGround : UTiny.IComponentData
     {
 
@@ -222,6 +247,18 @@ namespace game
         public float speed;
         public float threshold;
         public float distance;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct SetDream : UTiny.IComponentData
+    {
+
+
 
 
 
@@ -474,6 +511,22 @@ namespace game
 {
     [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
     public struct AkeomeBehaviour_State : UTiny.IComponentData
+    {
+
+
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
+
+
+
+    }
+}
+namespace game
+{
+    [global::System.Runtime.InteropServices.StructLayout(global::System.Runtime.InteropServices.LayoutKind.Sequential)]
+    public struct DreamBehavior_State : UTiny.IComponentData
     {
 
 

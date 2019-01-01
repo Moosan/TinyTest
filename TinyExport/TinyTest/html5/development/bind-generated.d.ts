@@ -117,6 +117,18 @@ declare namespace game{
         static _tempHeapPtr(v: ChangeOverTime): number;
         static _dtorFn(v: ChangeOverTime): void;
     }
+    class Dream extends ut.Component {
+        constructor();
+        isDream: boolean;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Dream): Dream;
+        static _toPtr(p: number, v: Dream): void;
+        static _tempHeapPtr(v: Dream): number;
+        static _dtorFn(v: Dream): void;
+    }
     class IsGround extends ut.Component {
         constructor();
         isGround: boolean;
@@ -221,6 +233,17 @@ declare namespace game{
         static _toPtr(p: number, v: ScrollBackground): void;
         static _tempHeapPtr(v: ScrollBackground): number;
         static _dtorFn(v: ScrollBackground): void;
+    }
+    class SetDream extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: SetDream): SetDream;
+        static _toPtr(p: number, v: SetDream): void;
+        static _tempHeapPtr(v: SetDream): number;
+        static _dtorFn(v: SetDream): void;
     }
     class Spawner extends ut.Component {
         constructor();
@@ -385,6 +408,7 @@ declare namespace ut{
         [module: string]: any;
         game: {
             [data: string]: EntityGroupData;
+            DreamGroup: EntityGroupData;
             End: EntityGroupData;
             MainGroup: EntityGroupData;
             OkaneView: EntityGroupData;

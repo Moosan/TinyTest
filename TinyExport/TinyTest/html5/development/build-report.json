@@ -26,7 +26,7 @@
         "Children": [{
             "Item": {
                 "Name": "JavaScript",
-                "Size": 10639,
+                "Size": 54649,
                 "CompressedSize": 0
             }
         }, {
@@ -87,6 +87,21 @@
                     "Size": 174120,
                     "CompressedSize": 131817,
                     "Object": { "$TypeId": 10, "Guid": "a977d0f32b95fed4bbba9c2132a1f822", "FileId": 2800000, "Type": 3 }
+                }
+            }]
+        }, {
+            "Item": {
+                "Name": "Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Oswald Bold SDF.asset",
+                "Size": 0,
+                "CompressedSize": 0,
+                "Object": { "$TypeId": 10, "Guid": "0161d805a3764c089bef00bfe00793f5", "FileId": 11400000, "Type": 2 }
+            },
+            "Children": [{
+                "Item": {
+                    "Name": "TinyExport/Assets/Oswald Bold SDF.png",
+                    "Size": 191988,
+                    "CompressedSize": 145176,
+                    "Object": { "$TypeId": 10, "Guid": "0161d805a3764c089bef00bfe00793f5", "FileId": 11400000, "Type": 2 }
                 }
             }]
         }, {
@@ -159,26 +174,32 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/development/bin/entities.js",
-                "Size": 37582,
-                "CompressedSize": 5223
+                "Size": 39652,
+                "CompressedSize": 5535
             },
             "Children": [{
                 "Item": {
+                    "Name": "DreamGroup",
+                    "Size": 358,
+                    "CompressedSize": 215
+                }
+            }, {
+                "Item": {
                     "Name": "End",
-                    "Size": 9734,
-                    "CompressedSize": 1982
+                    "Size": 11492,
+                    "CompressedSize": 2265
                 }
             }, {
                 "Item": {
                     "Name": "MainGroup",
                     "Size": 17570,
-                    "CompressedSize": 3099
+                    "CompressedSize": 3097
                 }
             }, {
                 "Item": {
                     "Name": "OkaneView",
-                    "Size": 3777,
-                    "CompressedSize": 885
+                    "Size": 3730,
+                    "CompressedSize": 871
                 }
             }, {
                 "Item": {
@@ -195,15 +216,15 @@
             }, {
                 "Item": {
                     "Name": "TakaGroup",
-                    "Size": 2427,
-                    "CompressedSize": 769
+                    "Size": 2430,
+                    "CompressedSize": 772
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/development/bin/bindings.js",
-                "Size": 160882,
-                "CompressedSize": 12321
+                "Size": 173762,
+                "CompressedSize": 13157
             }
         }, {
             "Item": {
@@ -214,15 +235,15 @@
             "Children": [{
                 "Item": {
                     "Name": "C:\\Users\\Washer\\p\\tinytest\\TinyExport\\TinyTest\\html5\\development\\ScriptAssemblies\\tsc-emit.js",
-                    "Size": 21168,
-                    "CompressedSize": 3599
+                    "Size": 23798,
+                    "CompressedSize": 3872
                 }
             }]
         }, {
             "Item": {
                 "Name": "TinyExport/TinyTest/html5/development/bin/main.js",
-                "Size": 15388,
-                "CompressedSize": 2235
+                "Size": 16930,
+                "CompressedSize": 2359
             }
         }, {
             "Item": {

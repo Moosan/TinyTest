@@ -16,6 +16,12 @@ using UTiny.Text;
  */
 namespace entities.game
 {
+    namespace DreamGroup
+    {
+        public struct Component : IComponentData
+        {
+        }
+    }
     namespace End
     {
         public struct Component : IComponentData
@@ -71,6 +77,10 @@ namespace game
     {
         public float changePerSecond;
     }
+    public struct Dream : IComponentData
+    {
+        public bool isDream;
+    }
     public struct IsGround : IComponentData
     {
         public bool isGround;
@@ -103,6 +113,9 @@ namespace game
         public float speed;
         public float threshold;
         public float distance;
+    }
+    public struct SetDream : IComponentData
+    {
     }
     public struct Spawner : IComponentData
     {
@@ -281,6 +294,16 @@ namespace game
 }
 namespace game
 {
+    public struct DreamBehavior_State : IComponentData
+    {
+        public bool initialized;
+        public bool enabled;
+        public bool onEnableCalled;
+        public bool onDisableCalled;
+    }
+}
+namespace game
+{
     public struct OkaneBehavir_State : IComponentData
     {
         public bool initialized;
@@ -343,6 +366,12 @@ namespace game
 }
 namespace game
 {
+    public class SetDreamSystemJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
     public class SpawnSystemJS : IComponentSystem
     {
     }
@@ -359,6 +388,21 @@ namespace game
     [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
     [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
     public class AkeomeBehaviour_OnEntityUpdateJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    [UpdateBefore(typeof(UTiny.Shared.InputFence))]
+    public class DreamBehavior_OnEntityEnableJS : IComponentSystem
+    {
+    }
+}
+namespace game
+{
+    [UpdateBefore(typeof(UTiny.Shared.UserCodeEnd))]
+    [UpdateAfter(typeof(UTiny.Shared.UserCodeStart))]
+    public class DreamBehavior_OnEntityUpdateJS : IComponentSystem
     {
     }
 }

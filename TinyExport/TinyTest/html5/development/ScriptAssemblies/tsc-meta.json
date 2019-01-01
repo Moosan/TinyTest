@@ -15,10 +15,20 @@
         {
             "Name": "MissButtonSystem",
             "QualifiedName": "game.MissButtonSystem",
-            "Description": "New System",
+            "Description": "",
             "Source": {
                 "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/MissButtonSystem.ts",
-                "Line": 4,
+                "Line": 3,
+                "Character": 17
+            }
+        },
+        {
+            "Name": "SetDreamSystem",
+            "QualifiedName": "game.SetDreamSystem",
+            "Description": "New System",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/SetDreamSystem.ts",
+                "Line": 5,
                 "Character": 17
             }
         },
@@ -93,6 +103,32 @@
                         "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehaviour.ts",
                         "Line": 6,
                         "Character": 57
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ]
+        },
+        {
+            "Name": "DreamBehaviorFilter",
+            "QualifiedName": "game.DreamBehaviorFilter",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/DreamBehavior.ts",
+                "Line": 4,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "dream",
+                    "QualifiedName": "game.Dream",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/DreamBehavior.ts",
+                        "Line": 4,
+                        "Character": 63
                     },
                     "IsStatic": false,
                     "IsReadonly": false,
@@ -515,6 +551,50 @@
             ]
         },
         {
+            "Name": "DreamBehavior",
+            "QualifiedName": "game.DreamBehavior",
+            "Description": "",
+            "Source": {
+                "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/DreamBehavior.ts",
+                "Line": 8,
+                "Character": 17
+            },
+            "Fields": [
+                {
+                    "Name": "data",
+                    "QualifiedName": "game.DreamBehaviorFilter",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/DreamBehavior.ts",
+                        "Line": 8,
+                        "Character": 63
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                },
+                {
+                    "Name": "num",
+                    "QualifiedName": "game.DreamBehavior.num",
+                    "Description": "",
+                    "Source": {
+                        "File": "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/DreamBehavior.ts",
+                        "Line": 10,
+                        "Character": 35
+                    },
+                    "IsStatic": false,
+                    "IsReadonly": false,
+                    "IsOptional": false,
+                    "IsPublic": true
+                }
+            ],
+            "Methods": [
+                "OnEntityEnable",
+                "OnEntityUpdate"
+            ]
+        },
+        {
             "Name": "OkaneBehavir",
             "QualifiedName": "game.OkaneBehavir",
             "Description": "",
@@ -681,37 +761,38 @@
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 164,
+            "Duration": 104,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 306,
+            "Duration": 209,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 1764,
-            "Steps": 21
+            "Duration": 1134,
+            "Steps": 23
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 134,
+            "Duration": 110,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 30,
-            "Steps": 4
+            "Duration": 28,
+            "Steps": 5
         }
     ],
     "SourceFiles": [
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/AkeomeBehaviour.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/CollisionSystem.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/DreamBehavior.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/GameManager.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/MissButtonSystem.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/MoneyManager.ts",
@@ -719,12 +800,13 @@
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/PlayerBehavior.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/Result.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/ScrollBackgroundBehavior.ts",
+        "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/SetDreamSystem.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/SpawnSystem.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/TakaBehavior.ts",
         "C:/Users/Washer/p/tinytest/Assets/TinyTest/Scripts/Time.ts",
         "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "C:/Users/Washer/p/tinytest/Library/PackageCache/com.unity.tiny@0.13.4-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "37ff8206e2e4c722530f5c620ec47575",
-    "GeneratedAt": "Tue Jan 01 2019 09:13:21 GMT+0900 (東京 (標準時))"
+    "InputHash": "39203079ee030b0a713efdf6955ac3bd",
+    "GeneratedAt": "Tue Jan 01 2019 11:11:35 GMT+0900 (東京 (標準時))"
 }

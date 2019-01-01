@@ -1,6 +1,5 @@
 namespace game {
 
-    /** New System */
     export class MissButtonSystem extends ut.ComponentSystem {
         
         OnUpdate():void {

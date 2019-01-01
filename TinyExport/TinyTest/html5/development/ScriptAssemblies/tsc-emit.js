@@ -84,6 +84,44 @@ var game;
 })(game || (game = {}));
 var game;
 (function (game) {
+    var DreamBehaviorFilter = /** @class */ (function (_super) {
+        __extends(DreamBehaviorFilter, _super);
+        function DreamBehaviorFilter() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return DreamBehaviorFilter;
+    }(ut.EntityFilter));
+    game.DreamBehaviorFilter = DreamBehaviorFilter;
+    var DreamBehavior = /** @class */ (function (_super) {
+        __extends(DreamBehavior, _super);
+        function DreamBehavior() {
+            var _this = _super !== null && _super.apply(this, arguments) || this;
+            _this.num = 0;
+            return _this;
+            // this method is called for each entity matching the DreamBehaviorFilter signature, once when disabled
+            //OnEntityDisable():void { }
+        }
+        // ComponentBehaviour lifecycle events
+        // uncomment any method you need
+        // this method is called for each entity matching the DreamBehaviorFilter signature, once when enabled
+        DreamBehavior.prototype.OnEntityEnable = function () {
+        };
+        // this method is called for each entity matching the DreamBehaviorFilter signature, every frame it's enabled
+        DreamBehavior.prototype.OnEntityUpdate = function () {
+            if (ut.Runtime.Input.getMouseButton(0) && this.data.dream.isDream) {
+                document.write("<script>location.href = 'https://goodnightdream.cf';</script>");
+            }
+            this.num += ut.Time.deltaTime();
+            if (this.num > 5) {
+                this.data.dream.isDream = true;
+            }
+        };
+        return DreamBehavior;
+    }(ut.ComponentBehaviour));
+    game.DreamBehavior = DreamBehavior;
+})(game || (game = {}));
+var game;
+(function (game) {
     var GameManager = /** @class */ (function () {
         function GameManager() {
         }
@@ -108,13 +146,15 @@ var game;
             });
             ut.EntityGroup.instantiate(world, 'game.Oops');
         };
+        GameManager.SetDream = function (world) {
+            ut.EntityGroup.instantiate(world, 'game.DreamGroup');
+        };
         return GameManager;
     }());
     game.GameManager = GameManager;
 })(game || (game = {}));
 var game;
 (function (game) {
-    /** New System */
     var MissButtonSystem = /** @class */ (function (_super) {
         __extends(MissButtonSystem, _super);
         function MissButtonSystem() {
@@ -297,6 +337,26 @@ var game;
         return ScrollBackgroundBehavior;
     }(ut.ComponentBehaviour));
     game.ScrollBackgroundBehavior = ScrollBackgroundBehavior;
+})(game || (game = {}));
+var game;
+(function (game) {
+    /** New System */
+    var SetDreamSystem = /** @class */ (function (_super) {
+        __extends(SetDreamSystem, _super);
+        function SetDreamSystem() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        SetDreamSystem.prototype.OnUpdate = function () {
+            var _this = this;
+            this.world.forEach([game.SetDream], function (button) {
+                if (ut.Runtime.Input.getMouseButton(0)) {
+                    game.GameManager.SetDream(_this.world);
+                }
+            });
+        };
+        return SetDreamSystem;
+    }(ut.ComponentSystem));
+    game.SetDreamSystem = SetDreamSystem;
 })(game || (game = {}));
 var game;
 (function (game) {

@@ -90,6 +90,45 @@ declare namespace game{
         static _tempHeapPtr(v: Akeome): number;
         static _dtorFn(v: Akeome): void;
     }
+    class Boundaries extends ut.Component {
+        constructor();
+        minX: number;
+        maxX: number;
+        minY: number;
+        maxY: number;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Boundaries): Boundaries;
+        static _toPtr(p: number, v: Boundaries): void;
+        static _tempHeapPtr(v: Boundaries): number;
+        static _dtorFn(v: Boundaries): void;
+    }
+    class ChangeOverTime extends ut.Component {
+        constructor();
+        changePerSecond: number;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: ChangeOverTime): ChangeOverTime;
+        static _toPtr(p: number, v: ChangeOverTime): void;
+        static _tempHeapPtr(v: ChangeOverTime): number;
+        static _dtorFn(v: ChangeOverTime): void;
+    }
+    class Dream extends ut.Component {
+        constructor();
+        isDream: boolean;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Dream): Dream;
+        static _toPtr(p: number, v: Dream): void;
+        static _tempHeapPtr(v: Dream): number;
+        static _dtorFn(v: Dream): void;
+    }
     class IsGround extends ut.Component {
         constructor();
         isGround: boolean;
@@ -102,6 +141,28 @@ declare namespace game{
         static _tempHeapPtr(v: IsGround): number;
         static _dtorFn(v: IsGround): void;
     }
+    class MissButton extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: MissButton): MissButton;
+        static _toPtr(p: number, v: MissButton): void;
+        static _tempHeapPtr(v: MissButton): number;
+        static _dtorFn(v: MissButton): void;
+    }
+    class MoneyUI extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: MoneyUI): MoneyUI;
+        static _toPtr(p: number, v: MoneyUI): void;
+        static _tempHeapPtr(v: MoneyUI): number;
+        static _dtorFn(v: MoneyUI): void;
+    }
     class Move extends ut.Component {
         constructor();
         upForce: ut.Math.Vector2;
@@ -113,6 +174,51 @@ declare namespace game{
         static _toPtr(p: number, v: Move): void;
         static _tempHeapPtr(v: Move): number;
         static _dtorFn(v: Move): void;
+    }
+    class MoveSpeed extends ut.Component {
+        constructor();
+        speed: number;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: MoveSpeed): MoveSpeed;
+        static _toPtr(p: number, v: MoveSpeed): void;
+        static _tempHeapPtr(v: MoveSpeed): number;
+        static _dtorFn(v: MoveSpeed): void;
+    }
+    class Otosidama extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Otosidama): Otosidama;
+        static _toPtr(p: number, v: Otosidama): void;
+        static _tempHeapPtr(v: Otosidama): number;
+        static _dtorFn(v: Otosidama): void;
+    }
+    class Player extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Player): Player;
+        static _toPtr(p: number, v: Player): void;
+        static _tempHeapPtr(v: Player): number;
+        static _dtorFn(v: Player): void;
+    }
+    class ResultText extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: ResultText): ResultText;
+        static _toPtr(p: number, v: ResultText): void;
+        static _tempHeapPtr(v: ResultText): number;
+        static _dtorFn(v: ResultText): void;
     }
     class ScrollBackground extends ut.Component {
         constructor();
@@ -127,6 +233,43 @@ declare namespace game{
         static _toPtr(p: number, v: ScrollBackground): void;
         static _tempHeapPtr(v: ScrollBackground): number;
         static _dtorFn(v: ScrollBackground): void;
+    }
+    class SetDream extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: SetDream): SetDream;
+        static _toPtr(p: number, v: SetDream): void;
+        static _tempHeapPtr(v: SetDream): number;
+        static _dtorFn(v: SetDream): void;
+    }
+    class Spawner extends ut.Component {
+        constructor();
+        time: number;
+        delay: number;
+        isPaused: boolean;
+        spawnedGroup: string;
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Spawner): Spawner;
+        static _toPtr(p: number, v: Spawner): void;
+        static _tempHeapPtr(v: Spawner): number;
+        static _dtorFn(v: Spawner): void;
+    }
+    class Taka extends ut.Component {
+        constructor();
+        static readonly cid: number;
+        static readonly _view: any;
+        static readonly _isSharedComp: boolean;
+        static _size: number;
+        static _fromPtr(p: number, v?: Taka): Taka;
+        static _toPtr(p: number, v: Taka): void;
+        static _tempHeapPtr(v: Taka): number;
+        static _dtorFn(v: Taka): void;
     }
 }
 declare namespace ut{
@@ -265,7 +408,13 @@ declare namespace ut{
         [module: string]: any;
         game: {
             [data: string]: EntityGroupData;
+            DreamGroup: EntityGroupData;
+            End: EntityGroupData;
             MainGroup: EntityGroupData;
+            OkaneView: EntityGroupData;
+            Oops: EntityGroupData;
+            OtosidamaGroup: EntityGroupData;
+            TakaGroup: EntityGroupData;
         }
     }
 }

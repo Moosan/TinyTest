@@ -3,6 +3,16 @@
  * @project TinyTest
  */
 
+entities.game.DreamGroup.name = "DreamGroup";
+entities.game.DreamGroup.load = function(world) {
+    var arch0 = world.createArchetype(game.Dream, this.Component, ut.layers.Default)
+    var e0 = world.createEntity(arch0);
+    world.setEntityName(e0, "Entity");
+    var c0 = new game.Dream();
+    world.setComponentData(e0, c0);
+    return [e0];
+}
+
 entities.game.End.name = "End";
 entities.game.End.load = function(world) {
     var arch0 = world.createArchetype(this.Component, ut.Core2D.LayerSorting, ut.Core2D.Sprite2DRenderer, ut.Core2D.Sprite2DRendererOptions, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformLocalRotation, ut.Core2D.TransformLocalScale, ut.Core2D.TransformNode, ut.layers.Default)
@@ -20,6 +30,9 @@ entities.game.End.load = function(world) {
     world.setEntityName(e4, "Sprite3");
     var e5 = world.createEntity(arch0);
     world.setEntityName(e5, "Sprite4");
+    var arch3 = world.createArchetype(game.SetDream, this.Component, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformLocalRotation, ut.Core2D.TransformLocalScale, ut.Core2D.TransformNode, ut.layers.Default, ut.Text.Text2DRenderer, ut.Text.Text2DStyle, ut.Text.Text2DStyleBitmapFont)
+    var e6 = world.createEntity(arch3);
+    world.setEntityName(e6, "Entity");
     var c0 = new ut.Core2D.TransformNode();
     world.setComponentData(e0, c0);
     var c1 = new ut.Core2D.TransformLocalPosition();
@@ -112,7 +125,7 @@ entities.game.End.load = function(world) {
     var c15 = new ut.Core2D.TransformLocalPosition();
     var s10 = new ut.Math.Vector3();
     s10.x = 0;
-    s10.y = -0.44;
+    s10.y = -2.01;
     s10.z = 0;
     c15.position = s10;
     world.setComponentData(e2, c15);
@@ -147,7 +160,7 @@ entities.game.End.load = function(world) {
     s14.b = 1;
     s14.a = 1;
     c19.color = s14;
-    c19.size = 0.5;
+    c19.size = 0.4;
     world.setComponentData(e2, c19);
     var c20 = new ut.Text.Text2DStyleNativeFont();
     c20.font = e2;
@@ -290,7 +303,52 @@ entities.game.End.load = function(world) {
     c41.size = s29;
     c41.drawMode = 2;
     world.setComponentData(e5, c41);
-    return [e0, e1, e2, e3, e4, e5];
+    var c42 = new ut.Core2D.TransformNode();
+    world.setComponentData(e6, c42);
+    var c43 = new ut.Core2D.TransformLocalPosition();
+    var s30 = new ut.Math.Vector3();
+    s30.x = 0;
+    s30.y = -3.36;
+    s30.z = 0;
+    c43.position = s30;
+    world.setComponentData(e6, c43);
+    var c44 = new ut.Core2D.TransformLocalRotation();
+    var s31 = new ut.Math.Quaternion();
+    s31.x = 0;
+    s31.y = 0;
+    s31.z = 0;
+    s31.w = 1;
+    c44.rotation = s31;
+    world.setComponentData(e6, c44);
+    var c45 = new ut.Core2D.TransformLocalScale();
+    var s32 = new ut.Math.Vector3();
+    s32.x = 1;
+    s32.y = 1;
+    s32.z = 1;
+    c45.scale = s32;
+    world.setComponentData(e6, c45);
+    var c46 = new ut.Text.Text2DRenderer();
+    c46.style = e6;
+    c46.text = "Have a Good Dream!";
+    var s33 = new ut.Math.Vector2();
+    s33.x = 0.5;
+    s33.y = 0.5;
+    c46.pivot = s33;
+    c46.blending = 0;
+    world.setComponentData(e6, c46);
+    var c47 = new ut.Text.Text2DStyle();
+    var s34 = new ut.Core2D.Color();
+    s34.r = 0;
+    s34.g = 1;
+    s34.b = 0.6982074;
+    s34.a = 1;
+    c47.color = s34;
+    c47.size = 0.6;
+    world.setComponentData(e6, c47);
+    var c48 = new ut.Text.Text2DStyleBitmapFont();
+    c48.font = ut.EntityLookupCache.getByName(world, 'assets/fonts/Oswald Bold SDF');
+    world.setComponentData(e6, c48);
+    return [e0, e1, e2, e3, e4, e5, e6];
 }
 
 entities.game.MainGroup.name = "MainGroup";
@@ -793,13 +851,13 @@ entities.game.MainGroup.load = function(world) {
     c74.drawMode = 2;
     world.setComponentData(e10, c74);
     var c75 = new game.Spawner();
-    c75.delay = 3;
+    c75.delay = 3.5;
     c75.isPaused = true;
     c75.spawnedGroup = "game.OtosidamaGroup";
     world.setComponentData(e11, c75);
     var c76 = new game.Spawner();
-    c76.time = 1.5;
-    c76.delay = 4.1;
+    c76.time = 2;
+    c76.delay = 3.5;
     c76.isPaused = true;
     c76.spawnedGroup = "game.TakaGroup";
     world.setComponentData(e12, c76);
@@ -858,7 +916,6 @@ entities.game.OkaneView.load = function(world) {
     world.setComponentData(e0, c5);
     var c6 = new ut.Text.Text2DStyleNativeFont();
     c6.font = e0;
-    c6.italic = true;
     c6.weight = 400;
     world.setComponentData(e0, c6);
     var c7 = new ut.Text.NativeFont();
@@ -909,7 +966,6 @@ entities.game.OkaneView.load = function(world) {
     world.setComponentData(e1, c13);
     var c14 = new ut.Text.Text2DStyleNativeFont();
     c14.font = e1;
-    c14.italic = true;
     c14.weight = 400;
     world.setComponentData(e1, c14);
     var c15 = new ut.Text.NativeFont();
@@ -1083,7 +1139,7 @@ entities.game.TakaGroup.load = function(world) {
     c5.order = 5;
     world.setComponentData(e0, c5);
     var c6 = new game.MoveSpeed();
-    c6.speed = 3;
+    c6.speed = 2.7;
     world.setComponentData(e0, c6);
     var c7 = new game.Boundaries();
     c7.minX = -9;
@@ -1099,7 +1155,7 @@ entities.game.TakaGroup.load = function(world) {
     c8.drawMode = 2;
     world.setComponentData(e0, c8);
     var c9 = new game.ChangeOverTime();
-    c9.changePerSecond = 0.1;
+    c9.changePerSecond = 0.05;
     world.setComponentData(e0, c9);
     var c10 = new ut.HitBox2D.RectHitBox2D();
     var s5 = new ut.Math.Rect();

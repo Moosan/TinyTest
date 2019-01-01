@@ -1,0 +1,21 @@
+﻿[{
+    "$TypeId": 4,
+    "Id": "cd00eb895f194b3e90cb068ca352860d",
+    "Name": "DreamGroup",
+    "ExportFlags": 0,
+    "SerializedVersion": 0,
+    "Entities": [
+        { "$TypeId": 9, "Id": "df0ed73700da447583d10a6f57a619a2", "Name": "Entity" }
+    ]
+},
+{
+    "$TypeId": 5,
+    "Id": "df0ed73700da447583d10a6f57a619a2",
+    "Name": "Entity",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "e6ea682cbafe4978b0019853f61c6e38", "Name": "Dream" }
+    }]
+}]

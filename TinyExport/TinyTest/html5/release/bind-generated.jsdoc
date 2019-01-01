@@ -1,7 +1,43 @@
 /**
 
 @component
+@memberof entities.game.DreamGroup
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.End
+@name Component
+*/
+/**
+
+@component
 @memberof entities.game.MainGroup
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.OkaneView
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.Oops
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.OtosidamaGroup
+@name Component
+*/
+/**
+
+@component
+@memberof entities.game.TakaGroup
 @name Component
 */
 /**
@@ -20,6 +56,60 @@
 
 @component
 @memberof game
+@name Boundaries
+*/
+/**
+
+@member {float}
+@memberof game.Boundaries
+@name minX
+*/
+/**
+
+@member {float}
+@memberof game.Boundaries
+@name maxX
+*/
+/**
+
+@member {float}
+@memberof game.Boundaries
+@name minY
+*/
+/**
+
+@member {float}
+@memberof game.Boundaries
+@name maxY
+*/
+/**
+
+@component
+@memberof game
+@name ChangeOverTime
+*/
+/**
+
+@member {float}
+@memberof game.ChangeOverTime
+@name changePerSecond
+*/
+/**
+
+@component
+@memberof game
+@name Dream
+*/
+/**
+
+@member {bool}
+@memberof game.Dream
+@name isDream
+*/
+/**
+
+@component
+@memberof game
 @name IsGround
 */
 /**
@@ -32,6 +122,18 @@
 
 @component
 @memberof game
+@name MissButton
+*/
+/**
+
+@component
+@memberof game
+@name MoneyUI
+*/
+/**
+
+@component
+@memberof game
 @name Move
 */
 /**
@@ -39,6 +141,36 @@
 @member {ut.Math.Vector2}
 @memberof game.Move
 @name upForce
+*/
+/**
+
+@component
+@memberof game
+@name MoveSpeed
+*/
+/**
+
+@member {float}
+@memberof game.MoveSpeed
+@name speed
+*/
+/**
+
+@component
+@memberof game
+@name Otosidama
+*/
+/**
+
+@component
+@memberof game
+@name Player
+*/
+/**
+
+@component
+@memberof game
+@name ResultText
 */
 /**
 
@@ -63,6 +195,48 @@
 @member {float}
 @memberof game.ScrollBackground
 @name distance
+*/
+/**
+
+@component
+@memberof game
+@name SetDream
+*/
+/**
+
+@component
+@memberof game
+@name Spawner
+*/
+/**
+
+@member {float}
+@memberof game.Spawner
+@name time
+*/
+/**
+
+@member {float}
+@memberof game.Spawner
+@name delay
+*/
+/**
+
+@member {bool}
+@memberof game.Spawner
+@name isPaused
+*/
+/**
+
+@member {string}
+@memberof game.Spawner
+@name spawnedGroup
+*/
+/**
+
+@component
+@memberof game
+@name Taka
 */
 /**
 
@@ -302,30 +476,90 @@
 
 @component
 @memberof game
-@name AkeomeBehavior_State
+@name AkeomeBehaviour_State
 */
 /**
 
 @member {bool}
-@memberof game.AkeomeBehavior_State
+@memberof game.AkeomeBehaviour_State
 @name initialized
 */
 /**
 
 @member {bool}
-@memberof game.AkeomeBehavior_State
+@memberof game.AkeomeBehaviour_State
 @name enabled
 */
 /**
 
 @member {bool}
-@memberof game.AkeomeBehavior_State
+@memberof game.AkeomeBehaviour_State
 @name onEnableCalled
 */
 /**
 
 @member {bool}
-@memberof game.AkeomeBehavior_State
+@memberof game.AkeomeBehaviour_State
+@name onDisableCalled
+*/
+/**
+
+@component
+@memberof game
+@name DreamBehavior_State
+*/
+/**
+
+@member {bool}
+@memberof game.DreamBehavior_State
+@name initialized
+*/
+/**
+
+@member {bool}
+@memberof game.DreamBehavior_State
+@name enabled
+*/
+/**
+
+@member {bool}
+@memberof game.DreamBehavior_State
+@name onEnableCalled
+*/
+/**
+
+@member {bool}
+@memberof game.DreamBehavior_State
+@name onDisableCalled
+*/
+/**
+
+@component
+@memberof game
+@name OkaneBehavir_State
+*/
+/**
+
+@member {bool}
+@memberof game.OkaneBehavir_State
+@name initialized
+*/
+/**
+
+@member {bool}
+@memberof game.OkaneBehavir_State
+@name enabled
+*/
+/**
+
+@member {bool}
+@memberof game.OkaneBehavir_State
+@name onEnableCalled
+*/
+/**
+
+@member {bool}
+@memberof game.OkaneBehavir_State
 @name onDisableCalled
 */
 /**
@@ -362,6 +596,36 @@
 
 @component
 @memberof game
+@name Result_State
+*/
+/**
+
+@member {bool}
+@memberof game.Result_State
+@name initialized
+*/
+/**
+
+@member {bool}
+@memberof game.Result_State
+@name enabled
+*/
+/**
+
+@member {bool}
+@memberof game.Result_State
+@name onEnableCalled
+*/
+/**
+
+@member {bool}
+@memberof game.Result_State
+@name onDisableCalled
+*/
+/**
+
+@component
+@memberof game
 @name ScrollBackgroundBehavior_State
 */
 /**
@@ -390,15 +654,105 @@
 */
 /**
 
+@component
+@memberof game
+@name TakaBehavior_State
+*/
+/**
+
+@member {bool}
+@memberof game.TakaBehavior_State
+@name initialized
+*/
+/**
+
+@member {bool}
+@memberof game.TakaBehavior_State
+@name enabled
+*/
+/**
+
+@member {bool}
+@memberof game.TakaBehavior_State
+@name onEnableCalled
+*/
+/**
+
+@member {bool}
+@memberof game.TakaBehavior_State
+@name onDisableCalled
+*/
+/**
+
 @system
 @memberof game
-@name AkeomeBehavior_OnEntityUpdateJS
+@name CollisionSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name MissButtonSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name SetDreamSystemJS
+*/
+/**
+
+@system
+@memberof game
+@name SpawnSystemJS
+*/
+/**
+
+@system
+@memberof ut
+@name TimeJS
+*/
+/**
+
+@system
+@memberof game
+@name AkeomeBehaviour_OnEntityUpdateJS
+*/
+/**
+
+@system
+@memberof game
+@name DreamBehavior_OnEntityEnableJS
+*/
+/**
+
+@system
+@memberof game
+@name DreamBehavior_OnEntityUpdateJS
+*/
+/**
+
+@system
+@memberof game
+@name OkaneBehavir_OnEntityEnableJS
+*/
+/**
+
+@system
+@memberof game
+@name OkaneBehavir_OnEntityUpdateJS
 */
 /**
 
 @system
 @memberof game
 @name PlayerBehavior_OnEntityUpdateJS
+*/
+/**
+
+@system
+@memberof game
+@name Result_OnEntityEnableJS
 */
 /**
 
@@ -411,6 +765,18 @@
 @system
 @memberof game
 @name ScrollBackgroundBehavior_OnEntityUpdateJS
+*/
+/**
+
+@system
+@memberof game
+@name TakaBehavior_OnEntityEnableJS
+*/
+/**
+
+@system
+@memberof game
+@name TakaBehavior_OnEntityUpdateJS
 */
 
 

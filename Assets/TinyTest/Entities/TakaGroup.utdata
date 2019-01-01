@@ -38,7 +38,7 @@
     }, {
         "Type": { "Id": "03f0e9409fad4523bf428dccd1b4e965", "Name": "MoveSpeed" },
         "Properties": {
-            "speed": 3
+            "speed": 2.7
         }
     }, {
         "Type": { "Id": "879152b99a2840429aac304132ced551", "Name": "Boundaries" },
@@ -62,7 +62,7 @@
     }, {
         "Type": { "Id": "20acd38580c947869a64859c64b66929", "Name": "ChangeOverTime" },
         "Properties": {
-            "changePerSecond": 0.1
+            "changePerSecond": 0.07
         }
     }, {
         "Type": { "Id": "a015bc52c7befa4d7484891d74d2b574", "Name": "RectHitBox2D" },

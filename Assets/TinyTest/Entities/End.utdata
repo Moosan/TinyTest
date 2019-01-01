@@ -10,7 +10,8 @@
         { "$TypeId": 9, "Id": "886ea83fd3e645cbb319748604094a9c", "Name": "Sprite2" },
         { "$TypeId": 9, "Id": "20ebf858d3904e91a0202963bbae353b", "Name": "Camera" },
         { "$TypeId": 9, "Id": "a838dfd22f874bc49e63f51853a298b7", "Name": "Sprite3" },
-        { "$TypeId": 9, "Id": "a65df248f05d4993bccda90284c0e40d", "Name": "Sprite4" }
+        { "$TypeId": 9, "Id": "a65df248f05d4993bccda90284c0e40d", "Name": "Sprite4" },
+        { "$TypeId": 9, "Id": "4dcb9acc5f6b43168dd1548c124e22b1", "Name": "Entity" }
     ]
 },
 {
@@ -133,7 +134,7 @@
                 "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
                 "Properties": {
                     "x": 0,
-                    "y": -0.44
+                    "y": -2.01
                 }
             }
         }
@@ -150,7 +151,16 @@
     }, {
         "Type": { "Id": "ced0260f12f72499bae7fea4e1df92b7", "Name": "Text2DStyle" },
         "Properties": {
-            "size": 0.5
+            "color": {
+                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
+                "Properties": {
+                    "r": 1,
+                    "g": 1,
+                    "b": 1,
+                    "a": 1
+                }
+            },
+            "size": 0.4
         }
     }, {
         "Type": { "Id": "ebf6e4be1bc00e559ef91e165189cb3e", "Name": "Text2DStyleNativeFont" },
@@ -316,5 +326,57 @@
                 }
             }
         }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "4dcb9acc5f6b43168dd1548c124e22b1",
+    "Name": "Entity",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "y": -3.36
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "2266a95f5d16ca1ddde710d7c047ba69", "Name": "TransformLocalRotation" }
+    }, {
+        "Type": { "Id": "f11fe490eefc969bbc3fde5eab5ccd1e", "Name": "TransformLocalScale" }
+    }, {
+        "Type": { "Id": "617fd26299c944d58b61164e0c9c9353", "Name": "Text2DRenderer" },
+        "Properties": {
+            "style": { "$TypeId": 9, "Id": "4dcb9acc5f6b43168dd1548c124e22b1", "Name": "Entity" },
+            "text": "Have a Good Dream!"
+        }
+    }, {
+        "Type": { "Id": "ced0260f12f72499bae7fea4e1df92b7", "Name": "Text2DStyle" },
+        "Properties": {
+            "color": {
+                "Type": { "Id": "2a90a1633d6dc16cd37cdfaca7b93cea", "Name": "Color" },
+                "Properties": {
+                    "r": 0,
+                    "g": 1,
+                    "b": 0.6982074,
+                    "a": 1
+                }
+            },
+            "size": 0.6
+        }
+    }, {
+        "Type": { "Id": "0481d22c456081a992e7c7ee42da6c19", "Name": "Text2DStyleBitmapFont" },
+        "Properties": {
+            "font": { "$TypeId": 10, "Guid": "0161d805a3764c089bef00bfe00793f5", "FileId": 11400000, "Type": 2 }
+        }
+    }, {
+        "Type": { "Id": "191ffe2a6dc1445d9132b694502e51a4", "Name": "SetDream" }
     }]
 }]

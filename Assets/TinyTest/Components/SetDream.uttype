@@ -1,0 +1,12 @@
+﻿[{
+    "$TypeId": 3,
+    "Id": "191ffe2a6dc1445d9132b694502e51a4",
+    "Name": "SetDream",
+    "ExportFlags": 0,
+    "Unlisted": false,
+    "Visibility": 0,
+    "TypeCode": "Component",
+    "DefaultValue": {
+        "Type": { "Id": "191ffe2a6dc1445d9132b694502e51a4", "Name": "SetDream" }
+    }
+}]

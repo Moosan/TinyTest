@@ -22,5 +22,8 @@ namespace game {
 			})
             ut.EntityGroup.instantiate(world, 'game.Oops');
 		}
+		static SetDream(world:ut.World){
+            ut.EntityGroup.instantiate(world, 'game.DreamGroup');
+		}
     }
 }
